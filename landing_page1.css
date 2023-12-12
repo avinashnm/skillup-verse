@@ -7,7 +7,14 @@
   min-height: 100vh;
   min-width: 50vw;
   padding-left: 50px;
+  background-color: black;
 }
+.nav_logo
+{
+  height: 50px;
+  width: 100px;
+}
+
 .home-card
 {
   display: flex;
@@ -39,24 +46,27 @@
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: bold;
 }
-.ca_btn {
-  background-color: #007bff;
+.signup_btn {
+  background-color: #2fdeb2;
   color: white;
-  font-weight: bold;
-  border-radius: 10px;
-  padding: 5px 75px;
+  border-radius: 5px;
+  padding: 5px 20px;
   border: none;
-  border-radius: 30px;
   cursor: pointer;
 }
 .ca_btn:hover {
   background-color: rgb(29 ,155 ,240);
 }
+.login-link
+{
+  color: #2fdeb2 !important;
+  font-weight: bold !important;
+}
 .si_btn {
   font-weight: bold;
   padding: 5px 100px;
-  background-color: White; /* Button background color */
-  color: Black; /* Button text color */
+  background-color: White;
+  color: Black;
   border: 1px solid rgb(189 ,225 ,255);
   border-radius: 30px;
   cursor: pointer;
