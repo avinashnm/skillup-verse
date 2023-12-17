@@ -48,53 +48,14 @@
 }
 .signup_btn {
   background-color: #2fdeb2;
-  color: white;
+  color: black;
   border-radius: 5px;
   padding: 5px 20px;
   border: none;
   cursor: pointer;
 }
-.ca_btn:hover {
-  background-color: rgb(29 ,155 ,240);
-}
-.login-link
-{
-  color: #2fdeb2 !important;
-  font-weight: bold !important;
-}
-.si_btn {
-  font-weight: bold;
-  padding: 5px 100px;
-  background-color: White;
-  color: Black;
-  border: 1px solid rgb(189 ,225 ,255);
-  border-radius: 30px;
-  cursor: pointer;
-}
-.si_btn:hover {
-  background-color: rgb(189 ,225 ,255);
-}
-.si-capt
-{
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: bold;
-}
-.separator {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 50%;
-}
 
-.separator-line {
-  flex: 1;
-  height: 1px;
-  background-color: #ccc; /* Line color */
-  margin: 0 10px; /* Adjust margin as needed */
-}
-
-.separator-text {
-  font-weight: bold;
-  color: #333; /* Text color */
-  margin: 0 5px; /* Adjust margin as needed */
-}
+.carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      font-weight: bold;
+      font-size: 1.5rem; /* Adjust size as needed */

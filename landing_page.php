@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="landing_page1.css">
+    <link rel="stylesheet" type="text/css" href="landing_page.css">
 </head>
 <body>
   <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
@@ -17,7 +17,7 @@
         <div class="navbar-nav">
           <ul class="nav nav-underline">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Majors</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#">Business Administration</a></li>
   <li><a class="dropdown-item" href="#">Computer Science</a></li>
@@ -27,7 +27,7 @@
   <li><a class="dropdown-item" href="#">Mathematics</a></li>
   <li><a class="dropdown-item" href="#">Chemistry</a></li>
   <li><a class="dropdown-item" href="#">Physics</a></li>
-  
+
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Separated link</a></li>
               </ul>
@@ -38,13 +38,155 @@
             <li class="nav-item">
               <a class="nav-link" href="new_user.html"><button class="signup_btn">Sign up</button></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="About.html">About</a>
-            </li>
           </ul>
         </div>
       </div>
     </div>
   </nav>
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="carousal-1.png" class="d-block w-100 h-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="carousal-2.png" class="d-block w-100" alt="...">
+      <button class='explore-courses-btn'>Explore Courses</button>
+    </div>
+    <div class="carousel-item">
+      <img src="carousal-3.png" class="d-block w-100" alt="...">
+      <button class='discover-instructors-btn'>Discover Instructors</button>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4" id="famous-courses">
+  <div class="col">
+    <div class="card h-100" id="course-card">
+      <img src="course-1.webp" class="card-img-top" id="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" id="course-title">PHP and MYSQL</h5>
+        <p class="card-text" id="course-desc">Explore the Backbone of Dynamic Websites:</br> Dive into PHP and MySQL for Robust Web Development. Learn to Build Interactive Web Applications and Dynamic Content Management Systems with this Comprehensive Course.</p>
+      </div>
+      <div class="card-footer">
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100" id="course-card">
+      <img src="course-2.jpg" class="card-img-top" id="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" id="course-title">Web Programming with ASP.NET</h5>
+        <p class="card-text" id="course-desc">Master ASP.NET for Dynamic Web Development: Dive into Web Programming with ASP.NET to Learn the Foundations of Building Scalable, Secure, and Interactive Web Applications.</p>
+      </div>
+      <div class="card-footer">
+          <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100" id="course-card">
+      <img src="course-3.png" class="card-img-top" id="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" id="course-title">Data Communication and Networks</h5>
+        <p class="card-text" id="course-desc">Explore Data Communication and Networks: Delve into the Intricacies of Data Transmission, Networking Protocols, and Infrastructure Essentials, Empowering Your Understanding of Modern Communication Technologies.</p>
+      </div>
+      <div class="card-footer">
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100" id="course-card">
+      <img src="course-4.jpeg" class="card-img-top" id="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" id="course-title">Cyber Security</h5>
+        <p class="card-text" id="course-desc">Embark on a Journey into Cybersecurity: Uncover Threats, Defenses, and Strategies in Safeguarding Digital Assets. Equip Yourself with the Tools to Protect, Detect, and Respond to Cyber Threats.</p>
+      </div>
+      <div class="card-footer">
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100" id="course-card">
+      <img src="course-5.jpeg" class="card-img-top" id="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" id="course-title">Data Structures</h5>
+        <p class="card-text" id="course-desc">Unlock the World of Data Structures: Delve into Fundamental Concepts and Algorithms, Mastering the Art of Organizing, Storing, and Accessing Data Efficiently for Optimal Problem-Solving.</p>
+      </div>
+      <div class="card-footer">
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100" id="course-card">
+      <img src="course-6.jpg" class="card-img-top" id="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" id="course-title">Web Programming</h5>
+        <p class="card-text" id="course-desc">Empower Your Web Development Journey: Learn the Core Principles, Languages, and Technologies Behind Web Programming, Crafting Dynamic and Interactive Websites and Applications.</p>
+      </div>
+      <div class="card-footer">
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100" id="course-card">
+      <img src="course-7.jpg" class="card-img-top" id="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" id="course-title">Computer Organization and Architecture</h5>
+        <p class="card-text" id="course-desc">Dive into Computer Organization and Architecture: Explore the Inner Workings of Computing Systems, Understanding Hardware, Memory, and Processing Structures that Shape Modern Computing.</p>
+      </div>
+      <div class="card-footer">
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100" id="course-card">
+      <img src="course-8.png" class="card-img-top" id="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" id="course-title">Mathematics for Computer Science</h5>
+        <p class="card-text" id="course-desc">Unlock the Power of Mathematics in Computer Science: Dive into Mathematical Foundations, Algorithms, and Logic, Equipping Yourself with Essential Tools for Solving Complex Computational Challenges.</p>
+      </div>
+      <div class="card-footer">
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100" id="course-card">
+      <img src="course-9.jpg" class="card-img-top" id="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" id="course-title">Object Oriented Programming using C++</h5>
+        <p class="card-text" id="course-desc">Master Object-Oriented Programming with C++: Explore Classes, Inheritance, Polymorphism, and Data Abstraction, Unleashing the Power of OOP Concepts in Crafting Efficient and Scalable Solutions.</p>
+      </div>
+      <div class="card-footer">
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100" id="course-card">
+      <img src="course-10.jpg" class="card-img-top" id="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" id="course-title">Operating Systems</h5>
+        <p class="card-text" id="course-desc">Journey into Operating Systems: Explore the Core Concepts, Processes, Memory Management, and File Systems that Power Computer Operations and Facilitate Seamless User Experiences.</p>
+      </div>
+      <div class="card-footer">
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
