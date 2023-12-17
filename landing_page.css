@@ -114,3 +114,7 @@
   justify-content:space-between;
   overflow-x: scroll;
 }
+.featured-courses-title
+{
+  margin-left: 10px;
+}
