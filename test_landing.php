@@ -68,7 +68,7 @@
 </div>
 <div class="featured-courses-section">
   <h4 class="featured-courses-title">FEATURED COURSES</h4>
-<div class="featured-courses-container">
+<div class="famous-courses-section">
   <div class="card h-100" id="course-card">
     <img src="course-1.webp" class="card-img-top" id="card-img" alt="...">
     <div class="card-body">
