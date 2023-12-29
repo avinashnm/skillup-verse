@@ -50,7 +50,7 @@
 .welcome{
   font-family: 'Kanit', sans-serif;
   color: black;
-  margin: 20px 0px 10px 50px;
+  margin: 20px 0px 0px 50px;
 }
 .break
 {
@@ -58,15 +58,34 @@ color: hsl(168, 50%, 40%);
 }
 .features-section
 {
+  margin-top: 20px;
   min-width: 50vw;
   display: flex;
   justify-content: center;
 }
-.
 .features
 {
-  margin-top: 10px;
-  font-size: 250px;
+  font-family: 'Titillium Web', sans-serif;
+  color: White;
+  min-width: 320px;
+  max-width: 320px;
+  margin: 20px 10px 20px 10px;
+  font-size: 20px;
+  background-color: hsl(168, 50%, 40%);
+  padding: 10px 0px 10px 0px;
+  border: none;
+  border-radius: 10px;
+}
+.icons
+{
+  height: 50px !important;
+  width: 50px !important;
+  margin-right: 30px;
+
+}
+.features-right
+{
+  margin-left: 10px;
 }
 .signup-form
 {
@@ -80,6 +99,10 @@ color: hsl(168, 50%, 40%);
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.students-img
+{
+  min-width: 50vw;
 }
 .hdn-section
 {
