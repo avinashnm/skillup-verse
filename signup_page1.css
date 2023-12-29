@@ -48,7 +48,8 @@
   background-color : hsl(168, 95%, 95%);
 }
 .welcome{
-  color: white;
+  color: black;
+margin-left: 100px;
 }
 .signup-form
 {
@@ -272,7 +273,6 @@ margin-right: 20px;
 .dob-input
 {
 margin-right: 10px;
-}
 a {
     text-decoration: none;
     color: #007bff;

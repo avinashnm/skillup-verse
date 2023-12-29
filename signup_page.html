@@ -2,7 +2,7 @@
 <html>
 <head>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="signup_page.css">
+    <link rel="stylesheet" type="text/css" href="signup_page1.css">
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="Bootstrap/JS/bootstrap.min.js"></script>
 </head>
@@ -15,11 +15,13 @@
       <h3 class="skillup">SKILLUP</h3> <h3 class="verse">VERSE</h3>
     </div>
     </div>
+    <div class="intro-desc">
+    <h1 class="welcome">Welcome to Your Personalized Learning Platform</h1>
+</div>
   </div>
   <div class="entire-signup-section">
     <div class="signup-cards-container">
   <div class="signup-section">
-    <div class="signup-card"></div>
     <div class="signup-card"></div>
     <div class="signup-card"></div>
       <form method="post" action="new_user.php" class="signup-form" onsubmit="return validateForm();">
@@ -76,20 +78,23 @@
               <label for="confirmpassword">Confirm Password</label>
           </div>
         </div>
-        <div class="btn_si">
-        <div class="btn_section">
+        <div class="btn-section">
+        <div class="signup-btn-container">
           <a href="Welcome.php"><input type="submit" name="signup-btn" class="signup-btn" value="Sign Up"></a>
         </div>
-        <div class="su_section">
-          <p> Have an account already?  </p>
-          <a class="signin_link"  href="sign_in.html"></t>Log in</a>
+        <div class="or-divider">
+    <div class="or-line"></div>
+    <div class="or-text">Or</div>
+    <div class="or-line"></div>
+  </div>
+        <div class="login-btn-container">
+          <a href="Welcome.php"><input type="submit" name="signup-btn" class="login-btn" value="Login"></a>
         </div>
       </div>
       </form>
   </div>
 </div>
 </div>
-
 <script src="new_user.js"></script>
 </body>
 </html>
