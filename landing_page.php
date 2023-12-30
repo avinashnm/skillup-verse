@@ -36,7 +36,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link login-link login-link" href="sign_in.html">Login</a>
+              <a class="nav-link login-link login-link" href="student-login-page.html">Login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="signup_page.html"><button class="signup-btn">Sign up</button></a>

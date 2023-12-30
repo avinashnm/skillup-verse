@@ -3,8 +3,8 @@
 <head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Oswald:wght@300&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="signup_page2.css">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Kanit:wght@300&family=Oswald:wght@300&family=Raleway&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="prof-login-page.css">
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="Bootstrap/JS/bootstrap.min.js"></script>
 </head>
@@ -18,7 +18,7 @@
     </div>
     </div>
     <div class="intro-desc">
-    <h1 class="welcome">Welcome to Your <div class="break">Personalized Learning Platform !</div> </h1>
+    <h1 class="welcome">Back in the <div class="break">Learning Zone !</div> </h1>
 </div>
 <div class="features-section">
   <div class="features-left">
@@ -42,44 +42,28 @@
       <form method="post" action="new_user.php" class="signup-form" onsubmit="return validateForm();">
         <div class="hdn-section">
           <div class="error-message "></div>
-        <h1 class="signup-hdn">Sign Up</h1>
+        <h1 class="login-hdn">Login</h1>
       </div>
-      <div class="fullname-container">
-        <div class="form-floating mb-3">
-          <input type="text" name="full_name" class="form-control border-0" id="fullname" placeholder="Enter your Username">
-          <label for="fullname">Full Name</label>
+      <div class="choose-section">
+        <div class="student-section">
+          <a href="student-login-page.html">
+        <img src="student-icon.png" class="login-choose-icon"/>
+        <p class="login-icon-desc">STUDENT</p>
+      </a>
       </div>
-        </div>
+      <div class="professor-section">
+        <img src="professor-icon.png" class="login-choose-icon"/>
+        <p class="login-icon-desc">PROFESSOR</p>
+      </div>
+      </div>
+      <div class="message-container">
+        <p class="message">Greetings, Professor ! </br>Ready to Empower the Next Generation ?</p>
+      </div>
         <div class="dept-num-container">
           <div class="form-floating mb-3">
             <input type="text" name="dept-num" class="form-control border-0" id="dept-num" placeholder="eg: 21-ucs-008">
-            <label for="dept-num">Department Number</label>
+            <label for="dept-num">Username</label>
         </div>
-          </div>
-          <!---<div class="dob_gender">
-              <div class="form-group dob-group">
-                <div class="form-floating mb-3">
-                  <input name="dob" type="date" class="form-control" id="dob" placeholder="Enter your DOB">
-                  <label for="dob" class="dob-label">Date Of Birth</label>
-              </div>
-              </div>
-              <div class="form-group gender-group">
-                <div class="form-floating">
-                    <select name="gender" class="form-select" id="gender" aria-label="Floating label select example">
-                      <option selected>Select your Gender</option>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
-                      <option value="Other">Other</option>
-                    </select>
-                    <label for="gender" id="gender">Gender</label>
-                    </div>
-              </div>
-          </div>-->
-            <div class="mail_section">
-              <div class="form-floating mb-3">
-                <input  name="email" type="email" class="form-control" id="mail" placeholder="example@gmail.com">
-                <label for="mail">Email Address </label>
-            </div>
           </div>
           <div class="pw_section">
             <div class="form-floating mb-3">
@@ -87,24 +71,18 @@
               <label for="password">Password</label>
           </div>
           </div>
-          <div class="cpw_section">
-            <div class="form-floating mb-3">
-              <input name="confirm_password" type="password" class="form-control" id="confirmpassword" placeholder="Re-enter your Password">
-              <label for="confirmpassword">Confirm Password</label>
-          </div>
-        </div>
         <div class="btn-section">
-        <div class="signup-btn-container">
-          <a href="Welcome.php"><input type="submit" name="signup-btn" class="signup-btn" value="Sign Up"></a>
-        </div>
+          <div class="login-btn-container">
+            <a href="Welcome.php"><input type="submit" name="signup-btn" class="login-btn" value="Login"></a>
+          </div>
         <div class="or-divider">
     <div class="or-line"></div>
     <div class="or-text">Or</div>
     <div class="or-line"></div>
   </div>
-        <div class="login-btn-container">
-          <a href="student-login-page.html"><button class="login-btn">Login</button></a>
-        </div>
+  <div class="signup-btn-container">
+    <a href="signup_page.html"><input type="submit" name="signup-btn" class="signup-btn" value="Sign Up"></a>
+  </div>
       </div>
       </form>
   </div>

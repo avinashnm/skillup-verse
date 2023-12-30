@@ -1,0 +1,363 @@
+.entire-bg
+{
+  overflow: hidden;
+}
+.logo-container
+{
+  margin-top: 30px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.logo
+{
+  height: 60px;
+  width: 60px;
+  margin-left: 10px;
+}
+.logo-desc
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 5px;
+}
+.skillup
+{
+  font-size: 20px;
+  color: hsl(168, 50%, 53%);
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.verse
+{
+  font-size: 20px;
+  color:  hsl(0, 0%, 70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.intro-section
+{
+  min-height: 100vh;
+  min-width: 50vw;
+  margin-bottom: 50px;
+  background-color : hsl(230, 60%, 30%);
+}
+.welcome{
+  font-family: 'Kanit', sans-serif;
+  color: White;
+  margin: 20px 0px 0px 50px;
+}
+.break
+{
+  color: hsl(45, 100%, 50%) ;
+}
+.features-section
+{
+  margin-top: 20px;
+  min-width: 50vw;
+  display: flex;
+  justify-content: center;
+}
+.features
+{
+  font-family: 'Titillium Web', sans-serif;
+  color: White;
+  font-weight: bold;
+  min-width: 320px;
+  max-width: 320px;
+  margin: 20px 10px 20px 10px;
+  font-size: 20px;
+  background-color: hsl(230, 50%, 50%) ;
+  padding: 10px 0px 10px 0px;
+  border: none;
+  border-radius: 10px;
+}
+.icons
+{
+  height: 50px !important;
+  width: 50px !important;
+  margin-right: 30px;
+
+}
+.features-right
+{
+  margin-left: 10px;
+}
+.signup-form
+{
+  z-index: 4;
+  min-width: 70%;
+  min-height: 90vh;
+  margin: 50px 100px 100px 100px;
+  padding: 20px 30px 20px 30px;
+  background-color: White;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.students-img
+{
+  min-width: 50vw;
+}
+.hdn-section
+{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login-hdn {
+  font-family: 'Oswald', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    color: hsl(230, 50%, 50%);
+}
+.choose-section{
+display: flex;
+justify-content:center;
+}
+.student-section, .professor-section{
+  background-color: hsl(0, 0%, 90%);
+    border: 1px solid hsl(0, 0%, 70%);
+    padding: 2px 10px 0px 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.student-section{
+border: 2px solid hsl(230, 50%, 50%);
+}
+.professor-section:hover
+{
+box-shadow: 0 0 10px 5px hsl(230, 50%, 50%);
+}
+.professor-section
+{
+  margin-left: 40px;
+}
+.login-choose-icon
+{
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+}
+.login-icon-desc
+{
+color: hsl(230, 50%, 50%);
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  font-family: 'Kanit', sans-serif;
+}
+.message
+{
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 15px;
+text-align: center;
+}
+.signup-fullsection
+{
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+.signup-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+    min-width: 50vw;
+    height: 100vh;
+    background-color : hsl(230, 80%, 80%);
+}
+label {
+  font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color : hsl(230, 80%, 80%);
+    margin-bottom: 5px;
+}
+.dob-label, #dob, #gender
+{
+  font-size: 15px !important;
+  font-weight: bold !important;
+  color : hsl(230, 80%, 80%) !important;
+}
+.input
+{
+    border: none !important;
+    padding: 25px;
+    width: 100%;
+}
+.form-control, #gender
+{
+margin-top: 5px;
+  background-color: hsla(230, 90%, 90%, 0.2) !important;
+  border: none !important;
+}
+.dob_gender {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.signup-cards-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  max-width: 400px;
+  height: 200px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-90px); /* Adjust as needed */
+  transition: transform 0.3s ease-in-out;
+}
+
+.signup-card:nth-child(1) {
+  z-index: 3;
+  transform: translateY(35px); /* Adjust as needed */
+  min-width: 450px;
+  margin-left: 138px;
+}
+
+.signup-card:nth-child(2) {
+  z-index: 2;
+  transform: translateY(15px); /* Adjust as needed */
+  max-width: 400px;
+  margin-left: 165px;
+}
+
+.signup-card:nth-child(3) {
+  z-index: 1;
+  transform: translateY(10px); /* Adjust as needed */
+  max-width: 350px;
+  margin-left: 187px;
+}
+
+.form-group label,
+.form-group input {
+    margin: 5px;
+}
+.dob-group
+{
+margin-right: 20px;
+}
+
+.signup-btn{
+  font-family: 'Roboto Slab', sans-serif;
+  background-color: hsl(230, 50%, 53%);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: white;
+    padding: 10px 120px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.signup-btn:hover{
+    background-color: hsl(230, 40%, 43%);
+}
+.login-btn
+{
+  font-family: 'Roboto Slab', sans-serif;
+  background-color: hsl(230, 50%, 50%) !important;
+  color: White;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  padding: 10px 128px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.login-btn:hover{
+  background-color: hsl(230, 60%, 30%) !important ;
+  color: White ;
+}
+.or-divider {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.or-divider .or-line {
+  height: 1px;
+  width: 100px;
+  background-color: black;
+}
+
+.or-divider .or-text {
+  padding: 0 10px;
+  color: #999;
+  font-weight: bold;
+}
+
+
+.dob-input
+{
+margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.btn-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signup-btn-container
+{
+  margin-top: 10px;
+}
+.login-btn-container
+{
+ margin-top: 5px;
+ padding-bottom: 10px;
+}
+.dob_gender {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label,
+.form-group input {
+    margin: 5px;
+}
+.dob-group
+{
+margin-right: 20px;
+}
+.dob-input
+{
+margin-right: 10px;
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+a:hover {
+    text-decoration: underline;
+}
