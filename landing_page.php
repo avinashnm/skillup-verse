@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Oswald:wght@300&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="landing_page1.css">
+    <link rel="stylesheet" type="text/css" href="landing_page.css">
 </head>
 <body>
   <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
@@ -15,7 +18,7 @@
       <img src="skillup_logo1.png" class="nav_logo"/>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <ul class="nav nav-underline">
+          <ul class="nav">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Majors</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -33,10 +36,10 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link login-link" href="sign_in.html">Login</a>
+              <a class="nav-link login-link login-link" href="sign_in.html">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="signup_page.html"><button class="signup_btn">Sign up</button></a>
+              <a class="nav-link" href="signup_page.html"><button class="signup-btn">Sign up</button></a>
             </li>
           </ul>
         </div>

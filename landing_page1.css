@@ -4,6 +4,7 @@
   width: 100px;
 }
 .signup_btn {
+    font-family: 'Roboto Slab', sans-serif;
   background-color: #2fdeb2;
   color: White;
   border-radius: 5px;

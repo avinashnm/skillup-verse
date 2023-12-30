@@ -3,13 +3,27 @@
   height: 50px;
   width: 100px;
 }
-.signup_btn {
-  background-color: #2fdeb2;
+.signup-btn {
+    font-family: 'Roboto Slab', sans-serif;
+    background-color: hsl(168, 50%, 53%);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   color: White;
+  margin-left: 10px;
   border-radius: 5px;
   padding: 5px 20px;
   border: none;
   cursor: pointer;
+}
+.signup-btn:hover{
+    background-color: hsl(168, 40%, 43%);
+}
+.login-link
+{
+  font-family: 'Roboto Slab', sans-serif;
+  color: hsla(168, 50%, 50%);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-size: 18px;
+margin-top: 5px;
 }
 .carousel-item {
       position: relative;
@@ -113,8 +127,12 @@
   flex-direction: row;
   justify-content:space-between;
   overflow-x: scroll;
+  margin-bottom: 50px;
 }
 .featured-courses-title
 {
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
   margin-left: 10px;
+  color: #000080;
 }
