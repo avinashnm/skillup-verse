@@ -1,75 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="sign_in.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Oswald:wght@300&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="signup_page2.css">
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="Bootstrap/JS/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body class="entire-bg">
-  <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <ul class="nav nav-underline">
-  <li class="nav-item">
-    <a class="nav-link"  href="Home.php">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="new_user.html">Sign up</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="sign_in.html">Sign in</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="About.html">About</a>
-  </li>
-</ul>
-        </div>
-      </div>
+<div class="signup-fullsection">
+  <div class="intro-section">
+    <div class="logo-container">
+      <img class="logo" src="skillup_logo.png"/>
+      <div class="logo-desc">
+      <h3 class="skillup">SKILLUP</h3> <h3 class="verse">VERSE</h3>
     </div>
-  </nav>
-    <div class="signin_fullsection">
-    <div class="signin_section">
-      <div class="hdn_logo">
-        <form method="Post" class="signin_form" action="sign_in.php" onsubmit="return validateForm();">
-          <div class="logo_section">
-          <img src="logo1.png" alt="FitGen Logo" width="80" height="74">
-        </div>
-          <div class="hdn_section">
-          <h1 class="signin_hdn">Sign in to Fit Gen</h1>
-        </div>
+    </div>
+    <div class="intro-desc">
+    <h1 class="welcome">Back in the <div class="break">Learning Zone !</div> </h1>
+</div>
+<div class="features-section">
+  <div class="features-left">
+  <button class="features f1"><img src="teacher-integration-icon.png" class="icons"/>Faculty Integration</button>
+  <button class="features f2"><img src="resource-library-icon.png" class="icons"/>Rich Resource Library</buttton>
+  <button class="features f3"><img src="learning-icon.png" class="icons"/>Personalized Learning</buttton>
+</div>
+<div class="featues-right">
+  <button class="features f4"><img src="performance-analytics-icon.png" class="icons"/>Performance Analytics</buttton>
+  <button class="features f5"><img src="supportive-community-icon.png" class="icons"/>Supportive Community</buttton>
+  <button class="features f6"><img src="course-specific-icon.png" class="icons"/>Course-Specific Tools</buttton>
+</div>
+</div>
+<img src="students.png" class="students-img">
+  </div>
+  <div class="entire-signup-section">
+    <div class="signup-cards-container">
+  <div class="signup-section">
+    <div class="signup-card"></div>
+    <div class="signup-card"></div>
+      <form method="post" action="new_user.php" class="signup-form" onsubmit="return validateForm();">
+        <div class="hdn-section">
+          <div class="error-message "></div>
+        <h1 class="signup-hdn">Sign Up</h1>
       </div>
-        <div class="un_section">
-          <div class="form-floating mb-3">
-            <input name="username" type="text" class="form-control border-0 border-bottom col-12 input" id="floatingUsername" placeholder="Enter your Username" style="width: 100%;">
-            <label for="floatingUsername label">Username</label>
+      <div class="fullname-container">
+        <div class="form-floating mb-3">
+          <input type="text" name="full_name" class="form-control border-0" id="fullname" placeholder="Enter your Username">
+          <label for="fullname">Full Name</label>
+      </div>
         </div>
+        <div class="dept-num-container">
+          <div class="form-floating mb-3">
+            <input type="text" name="dept-num" class="form-control border-0" id="dept-num" placeholder="eg: 21-ucs-008">
+            <label for="dept-num">Department Number</label>
+        </div>
+          </div>
+          <!---<div class="dob_gender">
+              <div class="form-group dob-group">
+                <div class="form-floating mb-3">
+                  <input name="dob" type="date" class="form-control" id="dob" placeholder="Enter your DOB">
+                  <label for="dob" class="dob-label">Date Of Birth</label>
+              </div>
+              </div>
+              <div class="form-group gender-group">
+                <div class="form-floating">
+                    <select name="gender" class="form-select" id="gender" aria-label="Floating label select example">
+                      <option selected>Select your Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <label for="gender" id="gender">Gender</label>
+                    </div>
+              </div>
+          </div>-->
+            <div class="mail_section">
+              <div class="form-floating mb-3">
+                <input  name="email" type="email" class="form-control" id="mail" placeholder="example@gmail.com">
+                <label for="mail">Email Address </label>
+            </div>
           </div>
           <div class="pw_section">
             <div class="form-floating mb-3">
-              <input name="password" type="password" class="form-control input" id="floatingPw" placeholder="Enter your Password">
-              <label for="floatingPw label">Password</label>
+              <input name="password" type="password" class="form-control" id="password" placeholder="Enter your Password">
+              <label for="password">Password</label>
           </div>
           </div>
-          <div class="btn_si">
-          <div class="btn_section">
-            <button name="signin-btn" class="signin_btn">Sign In</button><br><br>
-            <div class="btn_section">
-              <button name="forgotpw_btn" class="forgotpw_btn">Forgot password?</button><br><br>
-          </div>
-          <div class="su_section">
-            <p> Don't have an account?  </p>
-            <a class="signup_link"  href="new_user.html"></t>Sign-up</a>
+          <div class="cpw_section">
+            <div class="form-floating mb-3">
+              <input name="confirm_password" type="password" class="form-control" id="confirmpassword" placeholder="Re-enter your Password">
+              <label for="confirmpassword">Confirm Password</label>
           </div>
         </div>
-          </div>
-        </form>
-    </div>
+        <div class="btn-section">
+        <div class="signup-btn-container">
+          <a href="Welcome.php"><input type="submit" name="signup-btn" class="signup-btn" value="Sign Up"></a>
+        </div>
+        <div class="or-divider">
+    <div class="or-line"></div>
+    <div class="or-text">Or</div>
+    <div class="or-line"></div>
   </div>
-  <!---<script src="sign_in.js"></script>--->
+        <div class="login-btn-container">
+          <a href="Welcome.php"><input type="submit" name="signup-btn" class="login-btn" value="Login"></a>
+        </div>
+      </div>
+      </form>
+  </div>
+</div>
+</div>
+<script src="new_user.js"></script>
 </body>
 </html>
