@@ -17,7 +17,7 @@
 }
 .logo-container
 {
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: 20px;
   display: flex;
   flex-direction: row;
@@ -142,6 +142,20 @@ justify-content:center;
 .student-section{
 border: 2px solid hsl(230, 50%, 50%);
 }
+.approve-icon
+{
+  position: absolute;
+  max-height: 600px;
+  height: 25px;
+  width: 25px;
+  margin-left: 100px;
+  top: 305px;
+  right: 206px;
+}
+.prof-icon-desc
+{
+  text-decoration: none;
+}
 .professor-section:hover
 {
 box-shadow: 0 0 10px 5px hsl(230, 50%, 50%);
@@ -150,8 +164,8 @@ box-shadow: 0 0 10px 5px hsl(230, 50%, 50%);
 {
   margin-left: 40px;
 }
-.login-choose-icon
-{
+.login-choose-icon{
+  text-decoration: none !important;
   display: flex;
   justify-content: center;
   height: 100px;
@@ -160,6 +174,7 @@ box-shadow: 0 0 10px 5px hsl(230, 50%, 50%);
 .login-icon-desc
 {
 color: hsl(230, 50%, 50%);
+text-decoration: none;
   font-size: 13px;
   font-weight: bold;
   display: flex;
@@ -271,19 +286,19 @@ margin-top: 5px;
 {
 margin-right: 20px;
 }
-
-.signup-btn{
-  font-family: 'Roboto Slab', sans-serif;
-  background-color: hsl(230, 50%, 53%);
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    color: white;
-    padding: 10px 120px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.signup-link{
+  text-decoration: none;
+  color: hsl(168, 50%, 53%);
+  font-weight: bold;
 }
-.signup-btn:hover{
-    background-color: hsl(230, 40%, 43%);
+.signup-link-container{
+  width: 90%;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.signup-link:hover{
+    text-decoration: underline;
+    color: hsl(168, 40%, 43%);
 }
 .login-btn
 {
