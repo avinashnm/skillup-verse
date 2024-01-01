@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="landing_page1.css">
+    <link rel="stylesheet" type="text/css" href="landing_page.css">
 </head>
 <body>
   <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
@@ -20,7 +20,7 @@
         <div class="navbar-nav">
           <ul class="nav">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Majors</a>
+              <a class="nav-link dropdown-toggle majors-dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Majors</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#">Business Administration</a></li>
   <li><a class="dropdown-item" href="#">Computer Science</a></li>

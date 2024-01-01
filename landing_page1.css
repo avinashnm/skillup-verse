@@ -19,12 +19,19 @@
 }
 .login-link
 {
-  font-weight: bold;
   font-family: 'Roboto Slab', sans-serif;
-  color: hsla(168, 50%, 50%);
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  color: hsl(230, 50%, 50%);
+  transition: font-weight 0.3s ease-in-out, color 0.3s ease-in-out;
 margin-top: 5px;
 cursor: pointer;
+}
+.login-link:hover{
+  color: hsl(230, 60%, 30%);
+  font-weight: bold;
+}
+.majors-dropdown
+{
+  margin-top: 5px;
 }
 .carousel-item {
       position: relative;

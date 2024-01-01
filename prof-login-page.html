@@ -3,14 +3,17 @@
 <head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Kanit:wght@300&family=Oswald:wght@300&family=Raleway&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="prof-login-page.css">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Kanit:wght@300&family=Oswald:wght@300&family=Raleway&family=Roboto+Condensed:wght@300&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="prof-login-page1.css">
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="Bootstrap/JS/bootstrap.min.js"></script>
 </head>
 <body class="entire-bg">
 <div class="signup-fullsection">
   <div class="intro-section">
+    <div class="back-icon-container">
+      <a href="landing_page.php"><img class="back-icon"src="back-icon.png" /></a>
+    </div>
     <div class="logo-container">
       <img class="logo" src="skillup_logo.png"/>
       <div class="logo-desc">
@@ -46,7 +49,7 @@
       </div>
       <div class="choose-section">
         <div class="student-section">
-          <a href="student-login-page.html">
+          <a class="student-icon-desc" href="student-login-page.html">
         <img src="student-icon.png" class="login-choose-icon"/>
         <p class="login-icon-desc">STUDENT</p>
       </a>
@@ -75,13 +78,8 @@
           <div class="login-btn-container">
             <a href="Welcome.php"><input type="submit" name="signup-btn" class="login-btn" value="Login"></a>
           </div>
-        <div class="or-divider">
-    <div class="or-line"></div>
-    <div class="or-text">Or</div>
-    <div class="or-line"></div>
-  </div>
-  <div class="signup-btn-container">
-    <a href="signup_page.html"><input type="submit" name="signup-btn" class="signup-btn" value="Sign Up"></a>
+  <div class="signup-link-container">
+    <p class="signup-link-message">Not a member ? Let's get started - <a class="signup-link"href="signup_page.html">Sign Up</a> !</p>
   </div>
       </div>
       </form>

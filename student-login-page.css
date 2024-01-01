@@ -2,6 +2,19 @@
 {
   overflow: hidden;
 }
+.back-icon{
+  padding: 5px 8px 5px 5px;
+    margin: 10px 0px 0px 10px;
+    height: 30px;
+    width: 30px;
+    transition: background-color 0.3s ease-in-out;
+    background-color: hsl(230, 50%, 50%);
+    border: 2 px solid black;
+    border-radius: 100px;
+}
+.back-icon:hover{
+  background-color: hsl(230, 80%, 50%)
+}
 .logo-container
 {
   margin-top: 30px;

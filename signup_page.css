@@ -48,8 +48,44 @@
   background-color : hsl(168, 95%, 95%);
 }
 .welcome{
+  font-family: 'Kanit', sans-serif;
   color: black;
-margin-left: 100px;
+  margin: 20px 0px 0px 50px;
+}
+.break
+{
+color: hsl(168, 50%, 40%);
+}
+.features-section
+{
+  margin-top: 20px;
+  min-width: 50vw;
+  display: flex;
+  justify-content: center;
+}
+.features
+{
+  font-family: 'Titillium Web', sans-serif;
+  color: White;
+  min-width: 320px;
+  max-width: 320px;
+  margin: 20px 10px 20px 10px;
+  font-size: 20px;
+  background-color: hsl(168, 50%, 40%);
+  padding: 10px 0px 10px 0px;
+  border: none;
+  border-radius: 10px;
+}
+.icons
+{
+  height: 50px !important;
+  width: 50px !important;
+  margin-right: 30px;
+
+}
+.features-right
+{
+  margin-left: 10px;
 }
 .signup-form
 {
@@ -64,6 +100,10 @@ margin-left: 100px;
   flex-direction: column;
   justify-content: center;
 }
+.students-img
+{
+  min-width: 50vw;
+}
 .hdn-section
 {
   text-align: center;
@@ -71,7 +111,7 @@ margin-left: 100px;
 }
 .signup-hdn {
   font-family: 'Oswald', sans-serif;
-    font-size: 300px;
+    font-size: 35px;
     color: hsl(168, 50%, 53%);
     margin: 10px 0px 0px 10px;
 }
@@ -179,10 +219,10 @@ margin-right: 20px;
 }
 
 .signup-btn{
+  font-family: 'Roboto Slab', sans-serif;
   background-color: hsl(168, 50%, 53%);
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     color: white;
-    font-weight: bold;
     padding: 10px 120px;
     border: none;
     border-radius: 4px;
@@ -193,11 +233,11 @@ margin-right: 20px;
 }
 .login-btn
 {
+  font-family: 'Roboto Slab', sans-serif;
   background-color: hsla(168, 60%, 60%, 0.2) !important;
   color: hsla(168, 50%, 50%);
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    font-weight: bold;
-    padding: 10px 128px;
+  padding: 10px 128px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
