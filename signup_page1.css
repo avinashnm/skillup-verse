@@ -148,6 +148,7 @@ color: hsl(168, 50%, 40%);
     background-color : hsl(168, 80%, 80%);
 }
 label {
+  font-family: 'Raleway', sans-serif;
     font-size: 15px;
     font-weight: bold;
     color : hsl(168, 80%, 80%);

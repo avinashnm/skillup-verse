@@ -3,11 +3,11 @@
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Oswald:wght@300&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Kanit:wght@300&family=Oswald:wght@300&family=Raleway&family=Roboto+Condensed:wght@300&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="landing_page.css">
+    <link rel="stylesheet" type="text/css" href="landing_page1.css">
 </head>
 <body>
   <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
@@ -79,7 +79,7 @@
       <p class="card-text" id="course-desc">Explore the Backbone of Dynamic Websites:</br> Dive into PHP and MySQL for Robust Web Development. Learn to Build Interactive Web Applications and Dynamic Content Management Systems with this Comprehensive Course.</p>
     </div>
     <div class="card-footer">
-      <button class="enroll-btn">Enroll Now</button>
+      <button class="enroll-btn" id="enroll-btn">Enroll Now</button>
     </div>
   </div>
 
@@ -90,7 +90,7 @@
       <p class="card-text" id="course-desc">Master ASP.NET for Dynamic Web Development: Dive into Web Programming with ASP.NET to Learn the Foundations of Building Scalable, Secure, and Interactive Web Applications.</p>
     </div>
     <div class="card-footer">
-        <button class="enroll-btn">Enroll Now</button>
+        <button class="enroll-btn" id="enroll-btn">Enroll Now</button>
     </div>
   </div>
 
@@ -101,7 +101,7 @@
       <p class="card-text" id="course-desc">Explore Data Communication and Networks: Delve into the Intricacies of Data Transmission, Networking Protocols, and Infrastructure Essentials, Empowering Your Understanding of Modern Communication Technologies.</p>
     </div>
     <div class="card-footer">
-      <button class="enroll-btn">Enroll Now</button>
+      <button class="enroll-btn" id="enroll-btn">Enroll Now</button>
     </div>
   </div>
 
@@ -112,7 +112,7 @@
       <p class="card-text" id="course-desc">Embark on a Journey into Cybersecurity: Uncover Threats, Defenses, and Strategies in Safeguarding Digital Assets. Equip Yourself with the Tools to Protect, Detect, and Respond to Cyber Threats.</p>
     </div>
     <div class="card-footer">
-      <button class="enroll-btn">Enroll Now</button>
+      <button class="enroll-btn" id="enroll-btn">Enroll Now</button>
     </div>
   </div>
 
@@ -123,7 +123,7 @@
       <p class="card-text" id="course-desc">Unlock the World of Data Structures: Delve into Fundamental Concepts and Algorithms, Mastering the Art of Organizing, Storing, and Accessing Data Efficiently for Optimal Problem-Solving.</p>
     </div>
     <div class="card-footer">
-      <button class="enroll-btn">Enroll Now</button>
+      <button class="enroll-btn" id="enroll-btn">Enroll Now</button>
     </div>
   </div>
 
@@ -134,7 +134,7 @@
       <p class="card-text" id="course-desc">Empower Your Web Development Journey: Learn the Core Principles, Languages, and Technologies Behind Web Programming, Crafting Dynamic and Interactive Websites and Applications.</p>
     </div>
     <div class="card-footer">
-      <button class="enroll-btn">Enroll Now</button>
+      <button class="enroll-btn" id="enroll-btn">Enroll Now</button>
     </div>
   </div>
 
@@ -145,7 +145,7 @@
       <p class="card-text" id="course-desc">Dive into Computer Organization and Architecture: Explore the Inner Workings of Computing Systems, Understanding Hardware, Memory, and Processing Structures that Shape Modern Computing.</p>
     </div>
     <div class="card-footer">
-      <button class="enroll-btn">Enroll Now</button>
+      <button class="enroll-btn" id="enroll-btn">Enroll Now</button>
     </div>
   </div>
 
@@ -156,7 +156,7 @@
       <p class="card-text" id="course-desc">Unlock the Power of Mathematics in Computer Science: Dive into Mathematical Foundations, Algorithms, and Logic, Equipping Yourself with Essential Tools for Solving Complex Computational Challenges.</p>
     </div>
     <div class="card-footer">
-      <button class="enroll-btn">Enroll Now</button>
+      <button class="enroll-btn" id="enroll-btn">Enroll Now</button>
     </div>
   </div>
 
@@ -167,7 +167,7 @@
       <p class="card-text" id="course-desc">Master Object-Oriented Programming with C++: Explore Classes, Inheritance, Polymorphism, and Data Abstraction, Unleashing the Power of OOP Concepts in Crafting Efficient and Scalable Solutions.</p>
     </div>
     <div class="card-footer">
-      <button class="enroll-btn">Enroll Now</button>
+      <button class="enroll-btn" id="enroll-btn">Enroll Now</button>
     </div>
   </div>
 
@@ -178,10 +178,31 @@
       <p class="card-text" id="course-desc">Journey into Operating Systems: Explore the Core Concepts, Processes, Memory Management, and File Systems that Power Computer Operations and Facilitate Seamless User Experiences.</p>
     </div>
     <div class="card-footer">
-      <button class="enroll-btn">Enroll Now</button>
+      <button class="enroll-btn" id="enroll-btn">Enroll Now</button>
     </div>
   </div>
 </div>
 </div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="popup-content">
+    <h2 class="popup-hdn">Excellent Pick !</h2>
+    <p class="popup-subhdn">Get ready for an enriching learning experience</p>
+    <p class="popup-message">Sign Up or Login to get started</p>
+    <div class="popup-btn-section">
+      <a class="nav-link" href="signup_page.html"><button id="signup-btn" class="signup-btn">Sign up</button></a>
+      <div class="or-divider">
+    <div class="or-line"></div>
+    <div class="or-text">Or</div>
+    <div class="or-line"></div>
+  </div>
+      <a href="student-login-page.html"><input type="submit" name="signup-btn" class="login-btn" value="Login"></a>
+    </div>
+  </div>
+  <img class="professor-image" src="professor-approval-image.png"/>
+</div>
+</div>
+<script src="landing_page.js"></script>
 </body>
 </html>
