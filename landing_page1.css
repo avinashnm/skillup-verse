@@ -92,10 +92,17 @@ cursor: pointer;
 .course-card{
   min-height: 370px !important;
   width: 270px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.course-card:hover
+{
+box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
 }
 .card-img{
   height: 120px;
   width: 240px;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
 }
 .course-title
 {

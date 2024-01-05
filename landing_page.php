@@ -215,7 +215,7 @@ $(document).ready(function(){
     center: true,
     dots: true,
     autoplay: true, // Enable autoplay
-    autoplayTimeout: 2000, // Set autoplay timeout
+    autoplayTimeout: 3000, // Set autoplay timeout
     margin: 20, // Adjust margins between items
     responsiveClass: true,
     responsive: {
