@@ -255,3 +255,7 @@ cursor: pointer;
   position: absolute;
   left: 470px;
 }
+.owl-carousel .owl-item.active.center {
+  transform: scale(1.2); /* Increase the size of the center item */
+  z-index: 1;
+}

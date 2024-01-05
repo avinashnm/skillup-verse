@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="landing_page.css">
+    <link rel="stylesheet" type="text/css" href="landing_page1.css">
 </head>
 <body>
   <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
@@ -73,7 +73,7 @@
 </div>
 <div class="featured-courses-section">
   <h4 class="featured-courses-title">FEATURED COURSES</h4>
-<div class="featured-courses-container owl-carousel">
+<div class="featured-courses-container owl-carousel owl-theme">
   <div class="card h-100 course-card">
     <img src="course-1.webp" class="card-img-top card-img"    alt="...">
     <div class="card-body">
@@ -221,26 +221,22 @@ $(document).ready(function(){
     responsive: {
       0:{
         items:1,
-        nav:true,
         dots: true,
         loop:true
       },
       600:{
         items:3,
-        nav:false,
         dots: true,
         loop:true
       },
       1000:{
-        items:4,
-        nav:true,
+        items:5,
         dots: true,
         loop:true
       }
     }
   });
 });
-
 </script>
 <script src="landing_page.js"></script>
 </body>

@@ -89,32 +89,31 @@ cursor: pointer;
   font-size: 3rem; /* Adjust the icon size */
   color: #000; /* Set the color */
 }
-#famous-courses{
-  margin: 20px 10px 0px 10px;
-}
 .course-card{
-  height: 380px !important;
-  min-width: 300px;
-  margin-right: 20px;
+  min-height: 370px !important;
+  width: 270px;
 }
-#card-img{
-  height: 150px;
-  width: 300px;
+.card-img{
+  height: 120px;
+  width: 240px;
 }
-#course-title
+.course-title
 {
-  font-size: 20px;
+  font-size: 18px;
 }
-#course-desc
+.course-desc
 {
   font-size: 12px;
+}
+.card-footer
+{
+  text-align: center;
 }
 .enroll-btn{
   background-color: #2fdeb2;
   color: White;
   border-radius: 5px;
-  padding: 5px 30px;
-  margin-left: 65px;
+  padding: 5px 20px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -125,16 +124,14 @@ cursor: pointer;
 .featured-courses-section
 {
   margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
+  padding-right: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 .featured-courses-container
 {
   margin: 10px 10px 10px 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content:space-between;
-  overflow-x: scroll;
+  padding-right: 10px;
   margin-bottom: 50px;
 }
 .featured-courses-title
@@ -142,6 +139,7 @@ cursor: pointer;
   font-family: 'Kanit', sans-serif;
   font-weight: bold;
   margin-left: 10px;
+  margin-bottom: 20px;
   color: #000080;
 }
 /* Styles for the modal */
