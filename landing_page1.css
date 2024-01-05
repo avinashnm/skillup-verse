@@ -92,7 +92,7 @@ cursor: pointer;
 #famous-courses{
   margin: 20px 10px 0px 10px;
 }
-#course-card{
+.course-card{
   height: 380px !important;
   min-width: 300px;
   margin-right: 20px;
