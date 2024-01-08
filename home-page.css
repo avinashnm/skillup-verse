@@ -1,0 +1,38 @@
+.logo-container
+{
+  margin-top: 10px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.logo
+{
+  height: 60px;
+  width: 60px;
+  margin-left: 10px;
+}
+.logo-desc
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 5px;
+}
+.skillup
+{
+  font-size: 20px;
+  color: hsl(168, 50%, 53%);
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.verse
+{
+  font-size: 20px;
+  color:  hsl(0, 0%, 70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
