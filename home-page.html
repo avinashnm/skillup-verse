@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="home-page.css">
+    <link rel="stylesheet" type="text/css" href="home-page1.css">
 </head>
 <body>
   <div class="left-sidebar">
@@ -55,7 +55,144 @@
 
   </div>
   <div class="right-sidebar">
+    <div class="recommended-courses">
+      <p class="rc-title">Recommended courses</p>
+      <div class="featured-courses-container owl-carousel owl-theme">
+        <div class="card h-100 course-card">
+          <img src="course-1.webp" class="card-img-top card-img"    alt="...">
+          <div class="card-body">
+            <h5 class="card-title course-title"   >PHP and MYSQL</h5>
+          </div>
+          <div class="card-footer">
+            <button class="enroll-btn"   >Enroll Now</button>
+          </div>
+        </div>
+
+        <div class="card h-100 course-card"  >
+          <img src="course-2.jpg" class="card-img-top card-img"    alt="...">
+          <div class="card-body">
+            <h5 class="card-title course-title"   >Web Programming with ASP.NET</h5>
+          </div>
+          <div class="card-footer">
+              <button class="enroll-btn"   >Enroll Now</button>
+          </div>
+        </div>
+
+        <div class="card h-100 course-card"  >
+          <img src="course-3.png" class="card-img-top card-img"    alt="...">
+          <div class="card-body">
+            <h5 class="card-title course-title"   >Data Communication and Networks</h5>
+          </div>
+          <div class="card-footer">
+            <button class="enroll-btn"   >Enroll Now</button>
+          </div>
+        </div>
+
+        <div class="card h-100 course-card"  >
+          <img src="course-4.jpeg" class="card-img-top card-img"    alt="...">
+          <div class="card-body">
+            <h5 class="card-title course-title"   >Cyber Security</h5>
+          </div>
+          <div class="card-footer">
+            <button class="enroll-btn"   >Enroll Now</button>
+          </div>
+        </div>
+
+        <div class="card h-100 course-card"  >
+          <img src="course-5.jpeg" class="card-img-top card-img"    alt="...">
+          <div class="card-body">
+            <h5 class="card-title course-title"   >Data Structures</h5>
+          </div>
+          <div class="card-footer">
+            <button class="enroll-btn"   >Enroll Now</button>
+          </div>
+        </div>
+
+        <div class="card h-100 course-card"  >
+          <img src="course-6.jpg" class="card-img-top card-img"    alt="...">
+          <div class="card-body">
+            <h5 class="card-title course-title"   >Web Programming</h5>
+          </div>
+          <div class="card-footer">
+            <button class="enroll-btn"   >Enroll Now</button>
+          </div>
+        </div>
+
+        <div class="card h-100 course-card"  >
+          <img src="course-7.jpg" class="card-img-top card-img"    alt="...">
+          <div class="card-body">
+            <h5 class="card-title course-title"   >Computer Organization and Architecture</h5>
+          </div>
+          <div class="card-footer">
+            <button class="enroll-btn"   >Enroll Now</button>
+          </div>
+        </div>
+
+        <div class="card h-100 course-card"  >
+          <img src="course-8.png" class="card-img-top card-img"    alt="...">
+          <div class="card-body">
+            <h5 class="card-title course-title"   >Mathematics for Computer Science</h5>
+          </div>
+          <div class="card-footer">
+            <button class="enroll-btn"   >Enroll Now</button>
+          </div>
+        </div>
+
+        <div class="card h-100 course-card"  >
+          <img src="course-9.jpg" class="card-img-top card-img"    alt="...">
+          <div class="card-body">
+            <h5 class="card-title course-title"   >Object Oriented Programming using C++</h5>
+          </div>
+          <div class="card-footer">
+            <button class="enroll-btn"   >Enroll Now</button>
+          </div>
+        </div>
+
+        <div class="card h-100 course-card"  >
+          <img src="course-10.jpg" class="card-img-top card-img"    alt="...">
+          <div class="card-body">
+            <h5 class="card-title course-title"   >Operating Systems</h5>
+          </div>
+          <div class="card-footer">
+            <button class="enroll-btn"   >Enroll Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+  $(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+      items: 4, // Change as needed
+      loop: true, // Enable loop
+      center: true,
+      dots: true,
+      autoplay: true, // Enable autoplay
+      autoplayTimeout: 3000, // Set autoplay timeout
+      margin: 20, // Adjust margins between items
+      responsiveClass: true,
+      responsive: {
+        0:{
+          items:1,
+          dots: true,
+          loop:true
+        },
+        600:{
+          items:3,
+          dots: true,
+          loop:true
+        },
+        1000:{
+          items:1,
+          dots: true,
+          loop:true
+        }
+      }
+    });
+  });
+  </script>
   </body>
   </html>

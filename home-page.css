@@ -118,3 +118,7 @@ color:hsl(0, 0%, 80%);
   min-width: 45vw;
   min-height: 100vh;
 }
+.rc-title
+{
+  text-align: center;
+}

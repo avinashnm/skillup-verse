@@ -1,4 +1,9 @@
-.sidebar
+body{
+  display: flex;
+  flex-direction: row;
+  background-color: hsl(230, 50%, 30%);
+}
+.left-sidebar
 {
   display: flex;
   flex-direction: column;
@@ -9,8 +14,8 @@
 }
 .logo-container
 {
+  width: 20vw;
   padding-top: 20px;
-  margin-left: 20px;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -20,7 +25,7 @@
   margin-top: 10px;
   height: 100px;
   width: 100px;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 .logo-desc
 {
@@ -99,4 +104,83 @@ a
 {
 background-color: hsla(230, 90%, 60%, 0.1);
 color:hsl(0, 0%, 80%);
+}
+.main-section
+{
+  background-color: White;
+  min-width: 55vw;
+  min-height: 100vh;
+  border-radius: 30px 0px 0px 30px;
+}
+.right-sidebar
+{
+  background-color: hsl(0, 0%, 80%);
+  min-width: 25vw;
+  min-height: 100vh;
+}
+.rc-title
+{
+  text-align: center;
+  margin-top: 20px;
+}
+.course-card{
+  height: 240px !important;
+  width: 270px;
+  transition: box-shadow 0.3s ease-in-out;
+  margin-left: 40px;
+}
+.course-card:hover
+{
+box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+}
+.card-img{
+  height: 120px;
+  width: 240px;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+.card-body
+{
+  max-height: 70px;
+}
+.course-title
+{
+  font-size: 18px;
+}
+.card-footer
+{
+  text-align: center;
+}
+.enroll-btn{
+  background-color: #2fdeb2;
+  color: White;
+  border-radius: 5px;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.enroll-btn:hover{
+  background-color: #1ca982;
+}
+.featured-courses-section
+{
+  margin-top: 20px;
+  padding-right: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.featured-courses-container
+{
+  margin: 10px 10px 10px 10px;
+  padding-right: 10px;
+  margin-bottom: 50px;
+}
+.featured-courses-title
+{
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  color: #000080;
 }
