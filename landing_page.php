@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="landing_page1.css">
+    <link rel="stylesheet" type="text/css" href="landing_page2.css">
 </head>
 <body>
   <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
@@ -88,7 +88,7 @@
   <div class="card h-100 course-card"  >
     <img src="course-2.jpg" class="card-img-top card-img"    alt="...">
     <div class="card-body">
-      <h5 class="card-title course-title"   >Web Programming with ASP.NET</h5>
+      <h5 class="card-title course-title double-line-title"   >Web Programming with ASP.NET</h5>
       <p class="card-text course-desc"   >Master ASP.NET for Dynamic Web Development: Dive into Web Programming with ASP.NET to Learn the Foundations of Building Scalable, Secure, and Interactive Web Applications.</p>
     </div>
     <div class="card-footer">
@@ -99,7 +99,7 @@
   <div class="card h-100 course-card"  >
     <img src="course-3.png" class="card-img-top card-img"    alt="...">
     <div class="card-body">
-      <h5 class="card-title course-title"   >Data Communication and Networks</h5>
+      <h5 class="card-title course-title double-line-title"   >Data Communication and Networks</h5>
       <p class="card-text course-desc"   >Explore Data Communication and Networks: Delve into the Intricacies of Data Transmission, Networking Protocols, and Infrastructure Essentials, Empowering Your Understanding of Modern Communication Technologies.</p>
     </div>
     <div class="card-footer">
@@ -143,7 +143,7 @@
   <div class="card h-100 course-card"  >
     <img src="course-7.jpg" class="card-img-top card-img"    alt="...">
     <div class="card-body">
-      <h5 class="card-title course-title"   >Computer Organization and Architecture</h5>
+      <h5 class="card-title course-title double-line-title"   >Computer Organization and Architecture</h5>
       <p class="card-text course-desc"   >Dive into Computer Organization and Architecture: Explore the Inner Workings of Computing Systems, Understanding Hardware, Memory, and Processing Structures that Shape Modern Computing.</p>
     </div>
     <div class="card-footer">
@@ -154,7 +154,7 @@
   <div class="card h-100 course-card"  >
     <img src="course-8.png" class="card-img-top card-img"    alt="...">
     <div class="card-body">
-      <h5 class="card-title course-title"   >Mathematics for Computer Science</h5>
+      <h5 class="card-title course-title double-line-title"   >Mathematics for Computer Science</h5>
       <p class="card-text course-desc"   >Unlock the Power of Mathematics in Computer Science: Dive into Mathematical Foundations, Algorithms, and Logic, Equipping Yourself with Essential Tools for Solving Complex Computational Challenges.</p>
     </div>
     <div class="card-footer">
@@ -165,7 +165,7 @@
   <div class="card h-100 course-card"  >
     <img src="course-9.jpg" class="card-img-top card-img"    alt="...">
     <div class="card-body">
-      <h5 class="card-title course-title"   >Object Oriented Programming using C++</h5>
+      <h5 class="card-title course-title vdouble-line-title"   >Object Oriented Programming using C++</h5>
       <p class="card-text course-desc"   >Master Object-Oriented Programming with C++: Explore Classes, Inheritance, Polymorphism, and Data Abstraction, Unleashing the Power of OOP Concepts in Crafting Efficient and Scalable Solutions.</p>
     </div>
     <div class="card-footer">
