@@ -170,6 +170,44 @@ color:hsl(0, 0%, 80%);
   font-size: 2rem; /* Adjust the icon size */
   color: #000; /* Set the color */
 }
+.benefits-title-container
+{
+  display: flex;
+  flex-direction: row;
+  margin-left: 15px;
+}
+.features-section
+{
+  margin-top: 20px;
+  min-width: 50vw;
+  display: flex;
+  justify-content: center;
+}
+.features
+{
+  font-family: 'Titillium Web', sans-serif;
+  color: White;
+  font-weight: bold;
+  min-width: 320px;
+  max-width: 320px;
+  margin: 20px 10px 20px 10px;
+  font-size: 20px;
+  background-color: hsl(230, 50%, 50%) ;
+  padding: 10px 0px 10px 0px;
+  border: none;
+  border-radius: 10px;
+}
+.icons
+{
+  height: 50px !important;
+  width: 50px !important;
+  margin-right: 30px;
+
+}
+.features-right
+{
+  margin-left: 10px;
+}
 .right-sidebar
 {
   background-color: hsl(0, 0%, 80%);
