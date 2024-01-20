@@ -1,7 +1,47 @@
-.nav_logo
+body{
+  background-image: url('landing-page-bg.jpg');
+}
+.logo-container
 {
-  height: 50px;
-  width: 100px;
+  width: 30vw;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.logo
+{
+  height: 80px;
+  width: 80px;
+  margin-left: 30px;
+}
+.logo-desc
+{
+  position: absolute;
+  margin-left: 115px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.skillup
+{
+  font-size: 27px;
+  color: hsl(168, 50%, 53%);
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.verse
+{
+  position: absolute;
+  margin-top: 55px;
+  font-size: 34px;
+  color:  hsl(0, 0%, 80%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .signup-btn {
     font-family: 'Roboto Slab', sans-serif;
@@ -33,64 +73,27 @@ cursor: pointer;
 {
   margin-top: 5px;
 }
-.carousel-item {
-      position: relative;
-    }
-.explore-courses-btn{
-  font-size: 20px;
-  font-weight: bolder;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  background-color: #87CEEB;
-  color: #000080;
-  border-radius: 5px;
-  padding: 5px 20px;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  bottom: 40px;
-  margin-left: 125px;
-  transform: translateX(-50%);
-  z-index: 1; /* Ensure button is above the image */
+.main-section
+{
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
 }
-.explore-courses-btn:hover {
-  background-color: #8A2BE2;
-  color: #FFFFFF;
+.desc-section
+{
+  width: 50vw;
 }
-.discover-instructors-btn{
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  font-size: 20px;
-  font-weight: bolder;
-  background-color: #87CEEB;
-  color: #000080;
-  border-radius: 5px;
-  padding: 5px 20px;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  bottom: 40px;
-  margin-left: 150px;
-  transform: translateX(-50%);
-  z-index: 1; /* Ensure button is above the image */
+.desc-heading
+{
+  color: white;
+  margin-left: 100px;
 }
-.discover-instructors-btn:hover {
-  background-color: #4169E1;
-  color: #FFFFFF; /* White text color */
-}
-.carousel-control-prev, .carousel-control-next {
-  height: auto; /* Set height to auto */
-  width: auto; /* Set width to auto */
-  background: transparent; /* Make background transparent */
-  top: 50%; /* Position vertically in the middle */
-  transform: translateY(-50%);
-}
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  font-size: 3rem; /* Adjust the icon size */
-  color: #000; /* Set the color */
+.img-section
+{
+  width: 50vw;
 }
 .course-card{
-  min-height: 370px !important;
+  min-height: 360px !important;
   width: 270px;
   transition: box-shadow 0.3s ease-in-out;
 }
@@ -106,11 +109,22 @@ box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
 }
 .course-title
 {
+  font-weight: bold;
   font-size: 18px;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  margin-bottom: 20px;
+}
+.double-line-title{
+  margin-bottom: 10px !important;
 }
 .course-desc
 {
   font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Titillium Web', sans-serif;
 }
 .card-footer
 {

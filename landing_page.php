@@ -9,15 +9,20 @@
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="landing_page2.css">
+    <link rel="stylesheet" type="text/css" href="landing_page.css">
 </head>
 <body>
-  <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar sticky-top navbar-expand-lg bg-transparent">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <img src="skillup_logo1.png" class="nav_logo"/>
+      <div class="logo-container">
+        <img class="logo" src="skillup_logo.png"/>
+        <div class="logo-desc">
+        <h3 class="skillup">SKILLUP</h3> <h3 class="verse">VERSE</h3>
+      </div>
+    </div>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <ul class="nav">
@@ -48,28 +53,13 @@
       </div>
     </div>
   </nav>
-  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="carousal-1.png" class="d-block w-100 h-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="carousal-2.png" class="d-block w-100" alt="...">
-      <button class='explore-courses-btn'>Explore Courses</button>
-    </div>
-    <div class="carousel-item">
-      <img src="carousal-3.png" class="d-block w-100" alt="...">
-      <button class='discover-instructors-btn'>Discover Instructors</button>
-    </div>
+<div class="main-section">
+  <div class="desc-section">
+    <h1 class="desc-heading">Your Gateway to </br>the world of knowledge</h1>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+  <div class="img-section">
+    <img class="student-img" src="student-learning.jpg"/>
+  </div>
 </div>
 <div class="featured-courses-section">
   <h4 class="featured-courses-title">FEATURED COURSES</h4>
