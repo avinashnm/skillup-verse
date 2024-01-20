@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="landing_page.css">
+    <link rel="stylesheet" type="text/css" href="landing_page2.css">
 </head>
 <body>
   <nav class="navbar sticky-top navbar-expand-lg bg-transparent">
@@ -55,10 +55,29 @@
   </nav>
 <div class="main-section">
   <div class="desc-section">
-    <h1 class="desc-heading">Your Gateway to </br>the world of knowledge</h1>
-  </div>
+    <h1 class="desc-heading">Your Gateway to </br>The World of  Knowledge.</h1>
+    <div class="desc">
+      <p>Free-To-Learn</p>
+      <div class="vertical-line"></div>
+        <p>Loyola - Exclusive</p>
+        <div class="vertical-line"></div>
+        <p>Curriculum - Focused</p>
+    </div>
+    <div class="gs-btn-container">
+    <a href=# class="getstarted-link">
+  <button class="get-started-btn">Get Started</button>
+  </div></a>
+</div>
   <div class="img-section">
-    <img class="student-img" src="student-learning.jpg"/>
+    <div class="img-container img1-container">
+      <img src="student-standing-1.png" class="student-img student-img1"/>
+    </div>
+    <div class="img-container img2-container">
+      <img src="student-standing-3.png" class="student-img student-img2"/>
+    </div>
+    <div class="img-container img3-container">
+      <img src="student-standing-2.png" class="student-img student-img3"/>
+    </div>
   </div>
 </div>
 <div class="featured-courses-section">

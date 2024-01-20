@@ -1,7 +1,49 @@
-.nav_logo
+body{
+  background-image: url('landing-page-bg.jpg');
+  background-size: 100% 45%;
+  background-repeat: no-repeat;
+}
+.logo-container
 {
-  height: 50px;
-  width: 100px;
+  width: 30vw;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.logo
+{
+  height: 80px;
+  width: 80px;
+  margin-left: 30px;
+}
+.logo-desc
+{
+  position: absolute;
+  margin-left: 115px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.skillup
+{
+  font-size: 27px;
+  color: hsl(168, 50%, 53%);
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.verse
+{
+  position: absolute;
+  margin-top: 55px;
+  font-size: 34px;
+  color:  hsl(0, 0%, 80%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .signup-btn {
     font-family: 'Roboto Slab', sans-serif;
@@ -20,74 +62,127 @@
 .login-link
 {
   font-family: 'Roboto Slab', sans-serif;
-  color: hsl(230, 50%, 50%);
+  color: color:  hsl(0, 0%, 80%);
   transition: font-weight 0.3s ease-in-out, color 0.3s ease-in-out;
 margin-top: 5px;
 cursor: pointer;
 }
 .login-link:hover{
-  color: hsl(230, 60%, 30%);
+  color: #CCCCCC;
   font-weight: bold;
+}
+.login-link:visited
+{
+  color: hsl(0, 0%, 80%);
+}
+.majors-dropdown, .login-link, .signup-btn
+{
+  font-size: 18px;
+  margin-right: 10px;
 }
 .majors-dropdown
 {
   margin-top: 5px;
+  color:hsl(0, 0%, 80%);
 }
-.carousel-item {
-      position: relative;
-    }
-.explore-courses-btn{
+.main-section
+{
+  min-height: 100vh;
+  min-width: 100vw;
+}
+.desc-section
+{
+
+}
+.desc-heading
+{
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+.desc
+{
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 520px 40px 520px;
+  color:hsl(0, 0%, 80%);
+}
+.vertical-line {
+  height: 25px; /* Set the desired height of the vertical line */
+  width: 1px; /* Set the width to create a thin line */
+  background-color: red; /* Set the color of the vertical line */
+  margin: 0 auto; /* Center the line horizontally (optional) */
+}
+.gs-btn-container
+{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.get-started-btn
+{
+  padding: 5px 30px;
+  background-color: hsl(0, 100%, 60%);
+  color: White;
+  border: none;
+  border-radius: 0px 10px;
+transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.get-started-btn:hover
+{
+  background-color: hsl(0, 100%, 30%);
+}
+.getstarted-link
+{
+  text-decoration: none !important;
+  color: White;
+  text-align: center;
   font-size: 20px;
-  font-weight: bolder;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  background-color: #87CEEB;
-  color: #000080;
-  border-radius: 5px;
-  padding: 5px 20px;
-  border: none;
-  cursor: pointer;
+}
+.getstarted-link:visited
+{
+  color: White;
+}
+.img-section
+{
+  display: flex;
+  justify-content: space-between;
+  margin: 110px 150px 10px 150px;
+}
+.student-img
+{
+  height: 450px;
+  width: 300px;
   position: absolute;
-  bottom: 40px;
-  margin-left: 125px;
-  transform: translateX(-50%);
-  z-index: 1; /* Ensure button is above the image */
+  top: 405px;
 }
-.explore-courses-btn:hover {
-  background-color: #8A2BE2;
-  color: #FFFFFF;
+.img-container
+{
+  height: 368px;
+  width: 300px;
+  border-radius: 0px 30px 0px 30px;
 }
-.discover-instructors-btn{
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  font-size: 20px;
-  font-weight: bolder;
-  background-color: #87CEEB;
-  color: #000080;
-  border-radius: 5px;
-  padding: 5px 20px;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  bottom: 40px;
-  margin-left: 150px;
-  transform: translateX(-50%);
-  z-index: 1; /* Ensure button is above the image */
+.img1-container{
+  background-color: yellow;
 }
-.discover-instructors-btn:hover {
-  background-color: #4169E1;
-  color: #FFFFFF; /* White text color */
+.img2-container
+{
+  background-color: pink;
 }
-.carousel-control-prev, .carousel-control-next {
-  height: auto; /* Set height to auto */
-  width: auto; /* Set width to auto */
-  background: transparent; /* Make background transparent */
-  top: 50%; /* Position vertically in the middle */
-  transform: translateY(-50%);
+.img3-container
+{
+  background-color: orange;
 }
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  font-size: 3rem; /* Adjust the icon size */
-  color: #000; /* Set the color */
+.student-img1
+{
+  left: 120px;
+}
+.student-img3
+{
+margin-left: 25px;
 }
 .course-card{
   min-height: 360px !important;
