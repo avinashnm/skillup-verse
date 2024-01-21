@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="landing_page2.css">
+    <link rel="stylesheet" type="text/css" href="landing_page1.css">
 </head>
 <body>
   <nav class="navbar sticky-top navbar-expand-lg bg-transparent">
@@ -26,6 +26,9 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link courses-link" href=#>Courses</a>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle majors-dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Majors</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -54,6 +57,17 @@
     </div>
   </nav>
 <div class="main-section">
+  <!--<div class="icons-section">
+    <img class="decorative-icon satellite" src="satellite.png"/>
+    <img class="decorative-icon rocket" src="rocket.png"/>
+    <img class="decorative-icon planet" src="planet.png"/>
+    <img class="decorative-icon startup" src="startup.png"/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+    <img src=""/>
+  </div>-->
   <div class="desc-section">
     <h1 class="desc-heading">Your Gateway to </br>The World of  Knowledge.</h1>
     <div class="desc">
@@ -78,6 +92,20 @@
     <div class="img-container img3-container">
       <img src="student-standing-2.png" class="student-img student-img3"/>
     </div>
+  </div>
+</div>
+<div class="benefits-section">
+  <h1 class="benefits-hdn">Why SkillUp Verse ?</h1>
+  <div class="b-container b1-container">
+    <div class="desc-container">
+    <p class="benefits-title">Custom Curriculum Integration for Loyola Students.</p>
+    <p class="benefits-desc">Elevate your academic experience with our platform, meticulously designed to align seamlessly with Loyola College's curriculum. Our exclusive integration ensures a personalized and enriching learning journey tailored specifically for Loyola students, fostering academic excellence and success.</p>
+  </div>
+  <div class="b-img-container b1-img-container">
+    <img src="tailored-curriculum.jpg" class="b-image b1-image"/>
+    <img src="online-learning.jpg" class="online-learning-img"/>
+    <img class="loyola-logo" src="Loyola-logo.png"/>
+  </div>
   </div>
 </div>
 <div class="featured-courses-section">
