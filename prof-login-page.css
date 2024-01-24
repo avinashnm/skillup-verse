@@ -13,7 +13,7 @@
     border-radius: 100px;
 }
 .back-icon:hover{
-  background-color: hsl(230, 80%, 50%);
+  background-color: hsl(230, 80%, 50%)
 }
 .logo-container
 {
@@ -148,6 +148,16 @@ box-shadow: 0 0 10px 5px hsl(230, 50%, 50%);
   margin-left: 40px;
   border: 2px solid hsl(230, 50%, 50%);
 }
+.approve-icon
+{
+  position: absolute;
+  max-height: 600px;
+  height: 25px;
+  width: 25px;
+  margin-left: 100px;
+  top: 305px;
+  right: 218px;
+}
 .login-choose-icon
 {
   display: flex;
@@ -155,11 +165,15 @@ box-shadow: 0 0 10px 5px hsl(230, 50%, 50%);
   height: 100px;
   width: 100px;
 }
-.login-icon-desc
+.student-icon-desc
 {
   text-decoration: none;
+}
+.login-icon-desc
+{
+  text-decoration: none !important;
 color: hsl(230, 50%, 50%);
-  font-size: 130px;
+  font-size: 13px;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -226,7 +240,6 @@ margin-top: 5px;
   flex-direction: column;
   align-items: center;
 }
-
 .signup-card {
   position: absolute;
   top: 0;
@@ -240,21 +253,18 @@ margin-top: 5px;
   transform: translateY(-90px); /* Adjust as needed */
   transition: transform 0.3s ease-in-out;
 }
-
 .signup-card:nth-child(1) {
   z-index: 3;
   transform: translateY(35px); /* Adjust as needed */
   min-width: 450px;
   margin-left: 138px;
 }
-
 .signup-card:nth-child(2) {
   z-index: 2;
   transform: translateY(15px); /* Adjust as needed */
   max-width: 400px;
   margin-left: 165px;
 }
-
 .signup-card:nth-child(3) {
   z-index: 1;
   transform: translateY(10px); /* Adjust as needed */
@@ -270,19 +280,19 @@ margin-top: 5px;
 {
 margin-right: 20px;
 }
-
-.signup-btn{
-  font-family: 'Roboto Slab', sans-serif;
-  background-color: hsl(230, 50%, 53%);
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    color: white;
-    padding: 10px 120px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.signup-link{
+  text-decoration: none;
+  color: hsl(168, 50%, 53%);
+  font-weight: bold;
 }
-.signup-btn:hover{
-    background-color: hsl(230, 40%, 43%);
+.signup-link-container{
+  width: 90%;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.signup-link:hover{
+    text-decoration: underline;
+    color: hsl(168, 40%, 43%);
 }
 .login-btn
 {
@@ -299,25 +309,6 @@ margin-right: 20px;
   background-color: hsl(230, 60%, 30%) !important ;
   color: White ;
 }
-.or-divider {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-}
-
-.or-divider .or-line {
-  height: 1px;
-  width: 100px;
-  background-color: black;
-}
-
-.or-divider .or-text {
-  padding: 0 10px;
-  color: #999;
-  font-weight: bold;
-}
-
-
 .dob-input
 {
 margin-right: 10px;

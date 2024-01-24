@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="landing_page1.css">
+    <link rel="stylesheet" type="text/css" href="landing_page.css">
 </head>
 <body>
   <nav class="navbar sticky-top navbar-expand-lg bg-transparent">
@@ -97,9 +97,9 @@
 <div class="benefits-section">
   <h1 class="benefits-hdn">Why SkillUp Verse ?</h1>
   <div class="b-container b1-container">
-    <div class="desc-container">
+    <div class="desc-container-left">
     <p class="benefits-title">Custom Curriculum Integration for Loyola Students.</p>
-    <p class="benefits-desc">Elevate your academic experience with our platform, meticulously designed to align seamlessly with Loyola College's curriculum. Our exclusive integration ensures a personalized and enriching learning journey tailored specifically for Loyola students, fostering academic excellence and success.</p>
+    <p class="benefits-desc-left">Elevate your academic experience with our platform, meticulously designed to align seamlessly with Loyola College's curriculum. Our exclusive integration ensures a personalized and enriching learning journey tailored specifically for Loyola students, fostering academic excellence and success.</p>
   </div>
   <div class="b-img-container b1-img-container">
     <img src="tailored-curriculum.jpg" class="b-image b1-image"/>
@@ -107,9 +107,27 @@
     <img class="loyola-logo" src="Loyola-logo.png"/>
   </div>
   </div>
+  <div class="b-container b2-container">
+  <div class="b-img-container b2-img-container">
+    <img src="rich-library.jpg" class="b-image b2-image"/>
+    <img src="rich-library-side.jpg" class="books-hands-img"/>
+  </div>
+  <div class="desc-container-right">
+  <p class="benefits-title">Rich Learning Materials: Your Gateway to Comprehensive Learning.</p>
+  <p class="benefits-desc-right">Dive into a vast collection of learning materials carefully curated to provide you with a thorough and engaging educational experience. Our comprehensive resources cover a wide range of subjects, ensuring you have everything you need to succeed in your academic journey.</p>
+  <div class="benefits-btn-container bs-explore-courses-btn-container">
+  <a href=# class="benefits-link bs-explore-courses-link">
+  <button class="benefits-btn bs-explore-courses-btn">Explore Courses</button>
+  </div></a>
+</div>
+  </div>
+
 </div>
 <div class="featured-courses-section">
-  <h4 class="featured-courses-title">FEATURED COURSES</h4>
+  <h4 class="featured-courses-title">Our Most Popular Courses</h4>
+  <div class="fc-tagline-container">
+  <p class="featured-courses-tagline">Unleash Your Potential: Immerse Yourself in Our Handpicked Featured Courses, Elevate Your Expertise, and Transform Your Future Success.</p>
+</div>
 <div class="featured-courses-container owl-carousel owl-theme">
   <div class="card h-100 course-card">
     <img src="course-1.webp" class="card-img-top card-img"    alt="...">
@@ -220,6 +238,19 @@
       <button class="enroll-btn"   >Enroll Now</button>
     </div>
   </div>
+</div>
+</div>
+<div class="benefits-section">
+<div class="b-container b3-container">
+  <div class="desc-container-left">
+  <p class="benefits-title">Dashboards for Personalized Learning and Progress Tracking.</p>
+  <p class="benefits-desc-left">Explore a seamless learning experience with SkillUp Verse, where custom-curated dashboards empower students with personalized insights, progress tracking, and an immersive educational journey. Discover a tailored approach to education that puts you in control of your learning adventure.</p>
+</div>
+<div class="b-img-container b3-img-container">
+  <img src="dashboard-img.jpg" class="b-image b3-image"/>
+  <img src="improvement-vector-img.jpg" class="improvement-img"/>
+  <img src="bargraph-img.jpg" class="bargraph-img"/>
+</div>
 </div>
 </div>
 <div id="myModal" class="modal">
