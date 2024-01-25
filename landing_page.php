@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="landing_page.css">
+    <link rel="stylesheet" type="text/css" href="landing_page1.css">
 </head>
 <body>
   <nav class="navbar sticky-top navbar-expand-lg bg-transparent">
@@ -100,10 +100,11 @@
     <div class="desc-container-left">
     <p class="benefits-title">Custom Curriculum Integration for Loyola Students.</p>
     <p class="benefits-desc-left">Elevate your academic experience with our platform, meticulously designed to align seamlessly with Loyola College's curriculum. Our exclusive integration ensures a personalized and enriching learning journey tailored specifically for Loyola students, fostering academic excellence and success.</p>
+<img src="icons8-paper-plane-64.png" class="paper-plane-icon"/>
   </div>
   <div class="b-img-container b1-img-container">
     <img src="tailored-curriculum.jpg" class="b-image b1-image"/>
-    <img src="online-learning.jpg" class="online-learning-img"/>
+    <img src="online-learning.jpg" class="laptop-img"/>
     <img class="loyola-logo" src="Loyola-logo.png"/>
   </div>
   </div>
@@ -252,6 +253,156 @@
   <img src="bargraph-img.jpg" class="bargraph-img"/>
 </div>
 </div>
+<div class="b-container b4-container">
+<div class="b-img-container b4-img-container">
+  <img src="professor-teaching.jpg" class="b-image b4-image"/>
+  <img src="student-learning-online.jpg" class="online-learning-img"/>
+  <img src="online-learning-benefit.jpg" class="learning-screen-img"/>
+</div>
+<div class="desc-container-right">
+<p class="benefits-title">Immerse Yourself in Personalized Guidance from  your College Professors.</p>
+<p class="benefits-desc-right">Connect directly with your esteemed college professors on our platform, ensuring personalized guidance and mentorship tailored to your academic journey. Benefit from personalized interactions, insightful discussions, and expert-led sessions that enhance your learning, setting you on the path to success.</p>
+<div class="benefits-btn-container bs-explore-courses-btn-container">
+<a href=# class="benefits-link bs-explore-courses-link">
+<button class="benefits-btn bs-disc-inst-btn">Discover Intructors</button>
+</div></a>
+</div>
+</div>
+</div>
+<div class="instructors-section">
+  <h4 class="instructors-section-title">Top Professors Panel</h4>
+  <div class="inst-tagline-container">
+  <p class="instructors-tagline">Elevate Your Learning Experience: Receive Personalized Mentorship from Renowned College Professors on Our Platform.</p>
+</div>
+<div class="instructors-container owl-carousel owl-theme">
+  <div class="card h-100 instructor-card">
+    <img src="professor-profile.jpg" class="card-img-top instructor-profile"    alt="...">
+    <div class="card-body">
+      <h5 class="card-title instructor-name"   >Professor</h5>
+      <p class="card-text subject"   >Subject</p>
+    </div>
+  </div>
+
+  <div class="card h-100 instructor-card"  >
+    <img src="professor-profile.jpg" class="card-img-top instructor-profile"    alt="...">
+    <div class="card-body">
+      <h5 class="card-title instructor-name "   >Professor</h5>
+      <p class="card-text subject"   >Subject</p>
+    </div>
+
+  </div>
+
+  <div class="card h-100 instructor-card"  >
+    <img src="professor-profile.jpg" class="card-img-top instructor-profile"    alt="...">
+    <div class="card-body">
+      <h5 class="card-title instructor-name "   >Professor</h5>
+      <p class="card-text subject"   >Subject</p>
+    </div>
+
+  </div>
+
+  <div class="card h-100 instructor-card"  >
+    <img src="professor-profile.jpg" class="card-img-top instructor-profile"    alt="...">
+    <div class="card-body">
+      <h5 class="card-title instructor-name"   >Professor</h5>
+      <p class="card-text subject"   >Subject</p>
+    </div>
+
+  </div>
+
+  <div class="card h-100 instructor-card"  >
+    <img src="professor-profile.jpg" class="card-img-top instructor-profile"    alt="...">
+    <div class="card-body">
+      <h5 class="card-title instructor-name"   >Professor</h5>
+      <p class="card-text subject"   >Subject</p>
+    </div>
+
+  </div>
+
+  <div class="card h-100 instructor-card"  >
+    <img src="professor-profile.jpg" class="card-img-top instructor-profile"    alt="...">
+    <div class="card-body">
+      <h5 class="card-title instructor-name"   >Professor</h5>
+      <p class="card-text subject"   >Subject</p>
+    </div>
+
+  </div>
+
+  <div class="card h-100 instructor-card"  >
+    <img src="professor-profile.jpg" class="card-img-top instructor-profile"    alt="...">
+    <div class="card-body">
+      <h5 class="card-title instructor-name "   >Professor</h5>
+      <p class="card-text subject"   >Subject</p>
+    </div>
+
+  </div>
+
+  <div class="card h-100 instructor-card"  >
+    <img src="professor-profile.jpg" class="card-img-top instructor-profile"    alt="...">
+    <div class="card-body">
+      <h5 class="card-title instructor-name "   >Professor</h5>
+      <p class="card-text subject"   >Subject</p>
+    </div>
+  </div>
+
+  <div class="card h-100 instructor-card"  >
+    <img src="professor-profile.jpg" class="card-img-top instructor-profile"    alt="...">
+    <div class="card-body">
+      <h5 class="card-title instructor-name "   >Professor</h5>
+      <p class="card-text subject"   >Subject</p>
+    </div>
+  </div>
+
+  <div class="card h-100 instructor-card"  >
+    <img src="professor-profile.jpg" class="card-img-top instructor-profile"    alt="...">
+    <div class="card-body">
+      <h5 class="card-title instructor-name"   >Professor</h5>
+      <p class="card-text subject"   >Subject</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="benefits-section">
+  <div class="b-container b5-container">
+    <div class="desc-container-left b5-desc-container">
+    <p class="benefits-title">Unlock Your Learning Journey with Us!</br>Join SkillUp Verse Now.</p>
+    <p class="benefits-desc-left">Discover a world of endless possibilities as you take the first step towards academic excellence. Join our platform to unlock a personalized learning journey, connect with top-notch professors, and achieve your educational aspirations. Your future begins here!</p>
+    <div class="benefits-btn-container bs-explore-courses-btn-container">
+    <a href=# class="benefits-link bs-explore-courses-link">
+    <button class="benefits-btn bs-join-now-btn">Join Now</button>
+    </div></a>
+  </div>
+  <div class="b-img-container b5-img-container">
+    <img src="start-learning-img.jpg" class="b-image b5-image"/>
+    <img src="student-upskill1.jpg" class="upskill1-img"/>
+    <img src="student-upskill2.jpg" class="upskill2-img"/>
+  </div>
+  </div>
+  <div class="stats-section">
+    <div class="stats-vertical-line"></div>
+    <div class="stat-container stat-1">
+    <div class="stats-title-container">
+      <p class="stats-title"><div class="stat">100+</div> <div class="stat-side">Students</div></p>
+    </div>
+    <p class="stat-desc stat1-desc">Join our vibrant community of  students and embark on a transformative learning experience. Connect, collaborate, and thrive with like-minded individuals on your educational journey!</p>
+  </div>
+
+    <div class="stats-vertical-line"></div>
+    <div class="stat-container stat-2">
+      <div class="stats-title-container">
+      <p class="stats-title"><div class="stat">20+</div> <div class="stat-side">Courses</div></p>
+    </div>
+      <p class="stat-desc stat2-desc">Unlock a world of knowledge with our diverse offering of courses. Tailored for success, each course is designed to empower and enrich your academic experience.</p>
+    </div>
+
+      <div class="stats-vertical-line"></div>
+      <div class="stat-container stat-3">
+        <div class="stats-title-container">
+      <p class="stats-title"><div class="stat">10+</div> <div class="stat-side">mentors</div></p>
+    </div>
+      <p class="stat-desc stat3-desc">Benefit from the mentorship of 10+ accomplished educators who are dedicated to shaping your academic journey and fostering your growth.</p>
+    </div>
+  </div>
 </div>
 <div id="myModal" class="modal">
   <div class="modal-content">
