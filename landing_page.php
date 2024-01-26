@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="landing_page1.css">
+    <link rel="stylesheet" type="text/css" href="landing_page.css">
 </head>
 <body>
   <nav class="navbar sticky-top navbar-expand-lg bg-transparent">

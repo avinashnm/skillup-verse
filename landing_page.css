@@ -1,6 +1,6 @@
 body{
-  background: url('landing-page-bg.jpg'), hsl(40, 20%, 90%);
-  background-size: 100% 35%, 100% 65%;
+  background: url('landing-page-bg1.png'), hsl(40, 20%, 90%);
+  background-size: 100% 650px, 100% 100%;
   background-repeat: no-repeat;
   overflow-x: hidden;
 }
@@ -142,7 +142,7 @@ position: absolute;
 {
   font-family: 'Roboto Slab', sans-serif;
   padding: 5px 30px;
-  background-color: hsl(0, 100%, 50%);
+  background-color: #FF2359;
   color: White;
   border: none;
   border-radius: 0px 10px;
@@ -281,7 +281,7 @@ margin-left: 25px;
   top: 1020px;
   position: absolute;
 }
-.online-learning-img
+.laptop-img
 {
   border-radius: 20px;
   border: 5px solid white;
@@ -325,12 +325,63 @@ margin-left: 25px;
   right: 590px;
   top: 2750px;
 }
+.paper-plane-icon{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 1350px;
+  left: 50px;
+}
+.online-learning-img
+{
+  position: absolute;
+  height: 150px;
+  width: 250px;
+  border-radius: 20px;
+  border: 5px solid white;
+  box-shadow: 5px 5px 2px hsl(0, 0%, 40%);
+  left: 100px;
+  top: 2900px;
+}
+.learning-screen-img
+{
+  position: absolute;
+  height: 250px;
+  width: 150px;
+  border-radius: 20px;
+  border: 5px solid white;
+  box-shadow: 5px 5px 2px hsl(0, 0%, 40%);
+  left: 580px;
+  top: 3100px;
+}
+.upskill1-img
+{
+  position: absolute;
+  height: 150px;
+  width: 250px;
+  border-radius: 20px;
+  border: 5px solid white;
+  box-shadow: 5px 5px 2px hsl(0, 0%, 40%);
+  left: 650px;
+  top: 4170px;
+}
+.upskill2-img
+{
+  position: absolute;
+  height: 150px;
+  width: 250px;
+  border-radius: 20px;
+  border: 5px solid white;
+  box-shadow: 5px 5px 2px hsl(0, 0%, 40%);
+  right: 50px;
+  top: 3970px;
+}
 .benefits-btn
 {
   margin-top: 20px;
   font-family: 'Roboto Slab', sans-serif;
   padding: 5px 30px;
-  background-color: hsl(0, 100%, 50%);
+  background-color: #FF2359;
   color: White;
   border: none;
   border-radius: 0px 10px;
@@ -356,7 +407,7 @@ transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   width: 270px;
   transition: box-shadow 0.3s ease-in-out;
 }
-.course-card:hover
+.course-card:hover, .instructor-card:hover
 {
 box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
 }
@@ -401,21 +452,21 @@ box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
 .enroll-btn:hover{
   background-color: #1ca982;
 }
-.featured-courses-section
+.featured-courses-section, .instructors-section
 {
   margin-top: 20px;
   padding-right: 10px;
-  background: url('landing-page-bg.jpg');
+  background: url('landing-page-bg2.png');
   margin-bottom: 20px;
 }
-.featured-courses-container
+.featured-courses-container, .instructors-container
 {
   margin: 10px 10px 10px 10px;
   padding-right: 10px;
   padding-bottom: 20px;
   margin-bottom: 50px;
 }
-.featured-courses-title
+.featured-courses-title, .instructors-section-title
 {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
@@ -424,19 +475,85 @@ box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
   margin-bottom: 20px;
   color: White;
 }
-.fc-tagline-container
+.fc-tagline-container, .inst-tagline-container
 {
   width: 100vw;
   display: flex;
   justify-content: center;
 }
-.featured-courses-tagline
+.featured-courses-tagline, .instructors-tagline
 {
 text-align: center;
 color: White;
 margin-bottom: 50px;
 font-family: 'Raleway', sans-serif;
 width: 600px;
+}
+.instructors-section
+{
+  margin-top: 40px;
+}
+.instructor-profile
+{
+  height: 200px;
+  width: 100px;
+  border-radius: 0px 10px;
+}
+.instructor-name
+{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+font-weight: bold;
+}
+.instructor-card
+{
+  padding: 10px;
+  border-radius: 0px 10px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.subject
+{
+  text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    color:  hsl(0, 0%, 50%);
+}
+.stats-section
+{
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 100px 10px 40px 0px;
+  font-weight: bold;
+}
+.stats-vertical-line {
+  height: 150px; /* Set the desired height of the vertical line */
+  width: 8px; /* Set the width to create a thin line */
+  background-color: orange; /* Set the color of the vertical line */
+  margin: 0 auto; /* Center the line horizontally (optional) */
+}
+.stats-title-container
+{
+  display: flex;
+}
+.stat
+{
+  color: orange;
+  font-size: 50px;
+  margin-left: 10px;
+}
+.stat-side
+{
+  margin: 25px 0px 0px 5px;
+  font-size: 25px;
+}
+.stat-desc
+{
+  color:hsl(0, 0%, 50%);
+  margin: 5px 20px 0px 10px;
+}
+.stat3-desc
+{
+  margin-right: 0px !important;
 }
 /* Styles for the modal */
 .modal {
