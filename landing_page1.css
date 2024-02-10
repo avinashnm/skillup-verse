@@ -1,5 +1,5 @@
 body{
-  background: url('landing-page-bg1.png'), hsl(40, 20%, 90%);
+  background: url('assets/images/landing-page-bg1.png'), hsl(40, 20%, 90%);
   background-size: 100% 650px, 100% 100%;
   background-repeat: no-repeat;
   overflow-x: hidden;
@@ -456,7 +456,7 @@ box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
 {
   margin-top: 20px;
   padding-right: 10px;
-  background: url('landing-page-bg.jpg');
+  background: url('assets/images/landing-page-bg2.png');
   margin-bottom: 20px;
 }
 .featured-courses-container, .instructors-container
