@@ -4,12 +4,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Kanit:wght@300&family=Oswald:wght@300&family=Raleway&family=Roboto+Condensed:wght@300&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="landing_page1.css">
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="landing_page1.css">
 </head>
 <body>
   <nav class="navbar sticky-top navbar-expand-lg bg-transparent">
@@ -131,7 +130,7 @@
 </div>
 <div class="featured-courses-container owl-carousel owl-theme">
   <div class="card h-100 course-card">
-    <img src="assets/images/course-1.webp" class="card-img-top card-img"    alt="...">
+    <img src="assets/images/course-1.jpg" class="card-img-top card-img"    alt="...">
     <div class="card-body">
       <h5 class="card-title course-title"   >PHP and MYSQL</h5>
       <p class="card-text course-desc"   >Explore the Backbone of Dynamic Websites:</br> Dive into PHP and MySQL for Robust Web Development. Learn to Build Interactive Web Applications and Dynamic Content Management Systems with this Comprehensive Course.</p>
@@ -424,8 +423,8 @@
   <img class="professor-image" src="assets/images/professor-approval-image.png"/>
 </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="jquery/jquery-3.7.1.min.js"></script>
+<script src="owlcarousel/owl.carousel.min.js"></script>
 <script>
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
