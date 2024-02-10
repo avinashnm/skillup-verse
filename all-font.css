@@ -1,0 +1,62 @@
+/* Josefin Sans */
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/skillup_verse/assets/fonts/josefin-sans-v15-latin-300.woff2') format('woff2'), /* Modern Browsers */
+         url('/skillup_verse/assets/fonts/josefin-sans-v15-latin-300.woff') format('woff'); /* Older Browsers */
+}
+
+/* Kanit */
+@font-face {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/skillup_verse/assets/fonts/kanit-v6-latin-300.woff2') format('woff2'), /* Modern Browsers */
+         url('/skillup_verse/assets/fonts/kanit-v6-latin-300.woff') format('woff'); /* Older Browsers */
+}
+
+/* Oswald */
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/skillup_verse/assets/fonts/oswald-v36-latin-300.woff2') format('woff2'), /* Modern Browsers */
+         url('/skillup_verse/assets/fonts/oswald-v36-latin-300.woff') format('woff'); /* Older Browsers */
+}
+
+/* Raleway */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400; /* Default weight, change as needed */
+    src: url('/skillup_verse/assets/fonts/raleway-v20-latin-regular.woff2') format('woff2'), /* Modern Browsers */
+         url('/skillup_verse/assets/fonts/raleway-v20-latin-regular.woff') format('woff'); /* Older Browsers */
+}
+
+/* Roboto Condensed */
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/skillup_verse/assets/fonts/roboto-condensed-v21-latin-300.woff2') format('woff2'), /* Modern Browsers */
+         url('/skillup_verse/assets/fonts/roboto-condensed-v21-latin-300.woff') format('woff'); /* Older Browsers */
+}
+
+/* Roboto Slab */
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400; /* Default weight, change as needed */
+    src: url('/skillup_verse/assets/fonts/roboto-slab-v13-latin-regular.woff2') format('woff2'), /* Modern Browsers */
+         url('/skillup_verse/assets/fonts/roboto-slab-v13-latin-regular.woff') format('woff'); /* Older Browsers */
+}
+
+/* Titillium Web */
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400; /* Default weight, change as needed */
+    src: url('/skillup_verse/assets/fonts/titillium-web-v15-latin-regular.woff2') format('woff2'), /* Modern Browsers */
+         url('/skillup_verse/assets/fonts/titillium-web-v15-latin-regular.woff') format('woff'); /* Older Browsers */
+}

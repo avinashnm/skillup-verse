@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Kanit:wght@300&family=Oswald:wght@300&family=Raleway&family=Roboto+Condensed:wght@300&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="all-font.css"/>
   <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
   <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
