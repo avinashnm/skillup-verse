@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="all-font.css"/>
 <link rel="stylesheet" type="text/css" href="signup_page.css">
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="Bootstrap/JS/bootstrap.min.js"></script>
@@ -26,13 +23,13 @@
 <div class="features-section">
   <div class="features-left">
   <button class="features f1"><img src="assets\icons\teacher-integration-icon.png" class="icons"/>Faculty Integration</button>
-  <button class="features f2"><img src="assets\icons\resource-library-icon.png" class="icons"/>Rich Resource Library</buttton>
-  <button class="features f3"><img src="assets\icons\learning-icon.png" class="icons"/>Personalized Learning</buttton>
+  <button class="features f2"><img src="assets\icons\resource-library-icon.png" class="icons"/>Rich Resource Library</button>
+  <button class="features f3"><img src="assets\icons\learning-icon.png" class="icons"/>Personalized Learning</button>
 </div>
 <div class="featues-right">
-  <button class="features f4"><img src="assets\icons\performance-analytics-icon.png" class="icons"/>Performance Analytics</buttton>
-  <button class="features f5"><img src="assets\icons\supportive-community-icon.png" class="icons"/>Supportive Community</buttton>
-  <button class="features f6"><img src="assets\icons\course-specific-icon.png" class="icons"/>Course-Specific Tools</buttton>
+  <button class="features f4"><img src="assets\icons\performance-analytics-icon.png" class="icons"/>Performance Analytics</button>
+  <button class="features f5"><img src="assets\icons\supportive-community-icon.png" class="icons"/>Supportive Community</button>
+  <button class="features f6"><img src="assets\icons\course-specific-icon.png" class="icons"/>Course-Specific Tools</button>
 </div>
 </div>
 <img src="assets\images\students.png" class="students-img">
@@ -42,20 +39,20 @@
   <div class="signup-section">
     <div class="signup-card"></div>
     <div class="signup-card"></div>
-      <form method="post" action="new_user.php" class="signup-form" onsubmit="return validateForm();">
+      <form method="post" action="signup_page.php" class="signup-form" onsubmit="return validateForm();">
         <div class="hdn-section">
           <div class="error-message "></div>
         <h1 class="signup-hdn">Sign Up</h1>
       </div>
       <div class="fullname-container">
         <div class="form-floating mb-3">
-          <input type="text" name="full_name" class="form-control border-0" id="fullname" placeholder="Enter your Username">
+          <input type="text" name="full_name" class="form-control border-0" id="fullname" placeholder="Enter your fullname" required>
           <label for="fullname">Full Name</label>
       </div>
         </div>
         <div class="dept-num-container">
           <div class="form-floating mb-3">
-            <input type="text" name="dept-num" class="form-control border-0" id="dept-num" placeholder="eg: 21-ucs-008">
+            <input type="text" name="dept-num" class="form-control border-0" id="dept-num" placeholder="eg: 21-ucs-008" required>
             <label for="dept-num">Department Number</label>
         </div>
           </div>
@@ -80,25 +77,25 @@
           </div>-->
             <div class="mail_section">
               <div class="form-floating mb-3">
-                <input  name="email" type="email" class="form-control" id="mail" placeholder="example@gmail.com">
+                <input  name="email" type="email" class="form-control" id="mail" placeholder="example@gmail.com" required>
                 <label for="mail">Email Address </label>
             </div>
           </div>
           <div class="pw_section">
             <div class="form-floating mb-3">
-              <input name="password" type="password" class="form-control" id="password" placeholder="Enter your Password">
+              <input name="password" type="password" class="form-control" id="password" placeholder="Enter your Password" minlength="8" required>
               <label for="password">Password</label>
           </div>
           </div>
           <div class="cpw_section">
             <div class="form-floating mb-3">
-              <input name="confirm_password" type="password" class="form-control" id="confirmpassword" placeholder="Re-enter your Password">
+              <input name="confirm_password" type="password" class="form-control" id="confirmpassword" placeholder="Re-enter your Password" required>
               <label for="confirmpassword">Confirm Password</label>
           </div>
         </div>
         <div class="btn-section">
         <div class="signup-btn-container">
-          <a href="Welcome.php"><input type="submit" name="signup-btn" class="signup-btn" value="Sign Up"></a>
+          <a href="#"><input type="submit" name="signup-btn" class="signup-btn" value="Sign Up"></a>
         </div>
         <div class="login-link-container">
           <p class="login-link-message">Back for another chapter ? - <a class="login-link" href="student-login-page.html">Login</a> !</p>
@@ -108,6 +105,6 @@
   </div>
 </div>
 </div>
-<script src="new_user.js"></script>
+<script src="signup_page.js"></script>
 </body>
 </html>
