@@ -1,0 +1,301 @@
+body{
+  overflow-x: hidden;
+}
+.navigationbar{
+  background-color: black;
+}
+.logo-container
+{
+  width: 30vw;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.logo
+{
+  height: 60px;
+  width: 60px;
+  margin-left: 10px;
+}
+.logo-desc
+{
+  position: absolute;
+  margin-left: 75px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.skillup
+{
+  font-size: 20px;
+  color: hsl(168, 50%, 53%);
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.verse
+{
+  position: absolute;
+  margin-top: 40px;
+  font-size: 25px;
+  color:  hsl(0, 0%, 80%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.signup-btn {
+    font-family: 'Roboto Slab', sans-serif;
+    background-color: hsl(168, 50%, 53%);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  color: White;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+}
+.signup-btn:hover{
+    background-color: hsl(168, 40%, 43%);
+}
+.login-link
+{
+  font-family: 'Roboto Slab', sans-serif;
+  color: color:  hsl(0, 0%, 80%);
+  transition: font-weight 0.3s ease-in-out, color 0.3s ease-in-out;
+margin-top: 5px;
+cursor: pointer;
+}
+.login-link:hover, .majors-dropdown:hover, .courses-link:hover{
+  color: #CCCCCC;
+  font-weight: bold;
+}
+.login-link:visited
+{
+  color: hsl(0, 0%, 80%);
+}
+.majors-dropdown, .login-link, .signup-btn, .courses-link
+{
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.majors-dropdown, .courses-link
+{
+  margin-top: 5px;
+  color:hsl(0, 0%, 80%);
+}
+.course-row
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.course-card{
+  height: 360px !important;
+  width: 19%;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.course-card:hover, .instructor-card:hover
+{
+box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
+}
+.card-img{
+  height: 120px;
+  width: 100%;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+.course-body
+{
+  width: 100%;
+}
+.course-title
+{
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  margin-bottom: 20px;
+}
+.double-line-title{
+  margin-bottom: 10px !important;
+}
+.course-desc
+{
+  font-size: 12px;
+  display: flex;
+  text-align: justify;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Titillium Web', sans-serif;
+}
+.card-footer
+{
+  text-align: center;
+}
+.enroll-btn{
+  background-color: #2fdeb2;
+  color: White;
+  border-radius: 5px;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.enroll-btn:hover{
+  background-color: #1ca982;
+}
+.featured-courses-section
+{
+  background: url('assets/images/landing-page-bg2.png');
+}
+.featured-courses-container
+{
+  margin: 10px 20px 10px 20px;
+  padding-bottom: 20px;
+}
+.featured-courses-title
+{
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  color: White;
+}
+.fc-tagline-container
+{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.featured-courses-tagline
+{
+text-align: center;
+color: White;
+margin-bottom: 50px;
+font-family: 'Raleway', sans-serif;
+width: 600px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  animation-name: modalopen;
+  animation-duration: 0.5s; /* Adjust the duration for smoother effect */
+}
+/* Animation for modal open */
+@keyframes modalopen{
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.popup-content{
+  text-align: center;
+  padding: 10px 40px 10px 40px;
+}
+.popup-hdn{
+  font-size: 40px;
+  color: hsl(230, 60%, 30%);
+  font-family: 'Kanit', sans-serif;
+}
+.popup-subhdn
+{
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 40px;
+}
+.popup-message
+{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.close {
+  color: #aaa;
+  max-width: 40px;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.or-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.or-divider .or-line {
+  height: 1px;
+  width: 100px;
+  background-color: black;
+}
+
+.or-divider .or-text {
+  padding: 0 10px;
+  color: #999;
+  font-weight: bold;
+}
+.popup-btn-section
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#signup-btn
+{
+  padding: 10px 120px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.login-btn
+{
+  font-family: 'Roboto Slab', sans-serif;
+  background-color: hsl(230, 50%, 50%) !important;
+  color: White;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  padding: 10px 128px;
+  margin-left: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.login-btn:hover{
+  background-color: hsl(230, 60%, 30%) !important ;
+  color: White ;
+}
+.professor-image
+{
+  position: absolute;
+  left: 470px;
+}

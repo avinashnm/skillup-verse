@@ -24,7 +24,7 @@
         <div class="navbar-nav">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link courses-link" href=#>Courses</a>
+              <a class="nav-link courses-link" href="courses-page.html">Courses</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle majors-dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Majors</a>
@@ -114,7 +114,7 @@
   <p class="benefits-title">Rich Learning Materials: Your Gateway to Comprehensive Learning.</p>
   <p class="benefits-desc-right">Dive into a vast collection of learning materials carefully curated to provide you with a thorough and engaging educational experience. Our comprehensive resources cover a wide range of subjects, ensuring you have everything you need to succeed in your academic journey.</p>
   <div class="benefits-btn-container bs-explore-courses-btn-container">
-  <a href=# class="benefits-link bs-explore-courses-link">
+  <a href="courses-page.html" class="benefits-link bs-explore-courses-link">
   <button class="benefits-btn bs-explore-courses-btn">Explore Courses</button>
   </div></a>
 </div>
