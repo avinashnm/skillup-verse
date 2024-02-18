@@ -40,7 +40,7 @@ if (isset($_POST['signup-btn'])) {
                         VALUES ('$full_name', '$deptno', '$email', '$hashed_password')";
 
                 if (mysqli_query($conn, $sql)) {
-                    header("Location: home-page.html");
+                    header("Location: student-home-page.html");
                     exit(); // stop further execution
                 } else {
                     echo "Error: " . $sql . "<br>" . mysqli_error($conn);

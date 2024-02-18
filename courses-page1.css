@@ -161,6 +161,7 @@ box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
 }
 .featured-courses-title
 {
+  font-size: 40px;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   text-align: center;
