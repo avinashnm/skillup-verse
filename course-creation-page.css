@@ -1,0 +1,292 @@
+﻿body {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(230, 50%, 30%);
+}
+
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(230, 50%, 30%);
+    max-width: 20vw;
+    min-height: 100vh;
+    padding-right: 10px;
+}
+
+.logo-container {
+    width: 20vw;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.logo {
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    margin-left: 30px;
+}
+
+.logo-desc {
+    position: absolute;
+    left: 100;
+    top: 40;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 35px;
+}
+
+.skillup {
+    font-size: 34px;
+    color: hsl(168, 50%, 53%);
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.verse {
+    position: absolute;
+    margin-top: 65px;
+    font-size: 44px;
+    color: hsl(0, 0%, 80%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-container {
+    margin-top: 45px;
+}
+
+.full-nav {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 50px 0px 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-family: 'Kanit', sans-serif;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: hsl(0, 0%, 50%);
+}
+
+.create-course-nav {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+#create-course-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+.create-course-desc {
+    color: hsla(230, 50%, 90%) !important;
+    font-weight: bold;
+}
+
+.icon {
+    margin-top: 2px;
+    height: 25px;
+    width: 25px;
+}
+
+.nav-desc {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.full-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.1);
+    color: hsl(0, 0%, 80%);
+}
+
+.main-section {
+    background-color: hsl(168, 80%, 80%);
+    min-width: 55vw;
+    min-height: 100vh;
+    border-radius: 30px 0px 0px 30px;
+}
+.create-course-title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.signup-form {
+    z-index: 4;
+    min-width: 70%;
+    min-height: 90vh;
+    margin: 50px 100px 100px 100px;
+    padding: 20px 30px 20px 30px;
+    background-color: White;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.students-img {
+    min-width: 50vw;
+}
+
+.hdn-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.create-course-hdn {
+    font-family: 'Oswald', sans-serif;
+    font-size: 35px;
+    color: hsl(168, 50%, 53%);
+    margin: 10px 0px 50px 10px;
+}
+
+.hdn1 {
+    margin-bottom: 20px;
+}
+
+.signup-fullsection {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    overflow-y: hidden;
+}
+
+.signup-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-width: 50vw;
+    height: 100vh;
+    background-color: hsl(168, 80%, 80%);
+}
+
+label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: hsl(168, 80%, 70%);
+    margin-bottom: 5px;
+}
+
+.category-label, #category, #semester {
+    font-size: 15px !important;
+    font-weight: bold !important;
+    color: hsl(168, 80%, 80%) !important;
+}
+
+.input {
+    border: none !important;
+    padding: 25px;
+    width: 100%;
+}
+
+.form-control, #semester, #category {
+    margin-top: 5px;
+    background-color: hsla(168, 90%, 90%, 0.2) !important;
+    border: none !important;
+}
+
+.category_semester {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-cards-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group label,
+.form-group input {
+    margin: 5px;
+}
+
+.category-group {
+    margin-right: 20px;
+}
+
+.create-btn {
+    font-family: 'Roboto Slab', sans-serif;
+    background-color: hsl(168, 50%, 53%);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: white;
+    padding: 10px 120px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0px 10px 0px;
+}
+
+    .create-btn:hover {
+        background-color: hsl(168, 40%, 43%);
+    }
+
+
+.category-input {
+    margin-right: 10px;
+}  
+
+.btn-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-btn-container {
+    margin-top: 10px;
+}
+
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+    .form-group label,
+    .form-group input {
+        margin: 5px;
+    }
+
+.category-group {
+    margin-right: 20px;
+}
+
+.category-input {
+    margin-right: 10px;
+}
+.err-msg-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.err-message {
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.right-sidebar {
+    background-color: hsl(0, 0%, 80%);
+    min-width: 25vw;
+    min-height: 100vh;
+}
+

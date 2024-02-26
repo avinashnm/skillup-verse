@@ -36,7 +36,17 @@
           </div>
         </div>
       </a>
-      <a href="#">
+      <a href="course-details-page.php">
+        <div class="full-nav course-details-nav">
+          <div class="icon-container">
+            <img class="icon courses-icon" src="assets/icons/book-icon.png"/>
+          </div>
+          <div class="desc-container">
+            <p class="nav-desc course-details-desc">Course Details</p>
+          </div>
+        </div>
+      </a>
+      <a href="course-creation-page.php">
         <div class="full-nav courses-nav">
           <div class="icon-container">
             <img class="icon courses-icon" src="assets/icons/book-icon.png"/>
@@ -92,7 +102,7 @@
           echo "</table>";
           echo"</div>";
         } else {
-          echo "<div class='err-msg-container'><span class='err-message'>No results found.</span></div>";
+          echo "<div class='err-msg-container'><span class='err-message'>No Students found.</span></div>";
         }
         $conn->close();
       } else {
@@ -106,10 +116,5 @@
     <!-- Your right sidebar content -->
   </div>
 
-  <script src="jquery/jquery-3.7.1.min.js"></script>
-  <script src="owlcarousel/owl.carousel.min.js"></script>
-  <script>
-    // Your JavaScript code
-  </script>
 </body>
 </html>
