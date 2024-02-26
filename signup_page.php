@@ -26,7 +26,7 @@ if (isset($_POST['signup-btn'])) {
             echo "Password and Confirm Password do not match.";
         } else {
             // Check if dept or email already exists in the database
-            $check_query = "SELECT * FROM users WHERE deptno='$deptno' OR email='$email'";
+            $check_query = "SELECT * FROM student_details WHERE deptno='$deptno' OR email='$email'";
             $result = mysqli_query($conn, $check_query);
 
             if (mysqli_num_rows($result) > 0) {
@@ -36,7 +36,7 @@ if (isset($_POST['signup-btn'])) {
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
                 // Insert user data into the database
-                $sql = "INSERT INTO users (full_name, deptno, email, password)
+                $sql = "INSERT INTO student_details (full_name, deptno, email, password)
                         VALUES ('$full_name', '$deptno', '$email', '$hashed_password')";
 
                 if (mysqli_query($conn, $sql)) {

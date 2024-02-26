@@ -76,7 +76,7 @@
         if ($conn->connect_error) {
           die("Connection failed: " . $conn->connect_error);
         }
-        $sql = "SELECT * FROM users WHERE deptno LIKE '%$search_query%' OR full_name LIKE '%$search_query%'";
+        $sql = "SELECT * FROM student_details WHERE deptno LIKE '%$search_query%' OR full_name LIKE '%$search_query%'";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
           echo"<div class='students-table'>";

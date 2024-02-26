@@ -18,7 +18,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
     // SQL query to fetch the hashed password for the provided username
-    $sql = "SELECT * FROM users WHERE deptno = ?";
+    $sql = "SELECT * FROM student_details WHERE deptno = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $deptNumber);
     $stmt->execute();
