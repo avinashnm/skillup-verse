@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="course-details-page.css">
+    <link rel="stylesheet" type="text/css" href="instructor-details-page.css">
 </head>
 <body>
     <div class="left-sidebar">
@@ -19,7 +19,7 @@
             <a href="admin-home-page.html">
                 <div class="full-nav home-nav" id="home-nav">
                     <div class="icon-container">
-                        <img class="icon home-icon" src="assets\icons\home-icon-dark.png" />
+                        <img class="icon home-icon" src="assets/icons/home-icon-dark.png" />
                     </div>
                     <div class="desc-container">
                         <p class="nav-desc home-desc">Home</p>
@@ -37,26 +37,26 @@
                 </div>
             </a>
             <a href="instructor-details-page.php">
-            <div class="full-nav instructor-details-nav">
-                <div class="icon-container">
-                    <img class="icon courses-icon" src="assets/icons/prof-details-icon.png" />
-                </div>
-                <div class="desc-container">
-                    <p class="nav-desc instructor-details-desc">Instructor Details</p>
-                </div>
-            </div>
-        </a>
-            <a href="course-details-page.php">
-                <div class="full-nav course-details-nav">
+                <div class="full-nav instructor-details-nav" id="instructor-details-nav">
                     <div class="icon-container">
-                        <img class="icon courses-icon" src="assets/icons/course-details-icon-white.png" />
+                        <img class="icon courses-icon" src="assets/icons/prof-details-icon-white.png" />
                     </div>
                     <div class="desc-container">
-                        <p class="nav-desc course-details-desc">Course Details</p>
+                        <p class="nav-desc instructor-details-desc">Instructor Details</p>
                     </div>
                 </div>
             </a>
-            <a href="course-creation-page.php">
+            <a href="course-details-page.php">
+            <div class="full-nav course-details-nav">
+                <div class="icon-container">
+                    <img class="icon courses-icon" src="assets/icons/course-details-icon.png" />
+                </div>
+                <div class="desc-container">
+                    <p class="nav-desc course-details-desc">Course Details</p>
+                </div>
+            </div>
+        </a>
+        <a href="course-creation-page.php">
             <div class="full-nav create-course-nav" id="create-course-nav">
                 <div class="icon-container">
                     <img class="icon courses-icon" src="assets/icons/course-creation-icon.png" />
@@ -80,12 +80,12 @@
     </div>
 
     <div class="main-section">
-        <h2 class="search-std-hdn">Search Courses</h2>
+        <h2 class="search-std-hdn">Search Instructors</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="search-form">
             <div class="search-container">
                 <div class="form-floating mb-3 search-input">
                     <input type="text" name="search-query" class="form-control border-0" id="search" placeholder="eg: 21-ucs-008">
-                    <label for="search-query">Enter Course Details</label>
+                    <label for="search-query">Enter Intructor Details</label>
                 </div>
                 <div class="search-btn-container">
                     <button type="submit" name="search-btn" class="search-btn">Search</button>
@@ -106,7 +106,7 @@
         if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
         }
-        $sql = "SELECT * FROM course_details WHERE course_id LIKE '%$search_query%' OR course_title LIKE '%$search_query%' OR category LIKE '%$search_query%' OR semester LIKE '%$search_query%'";
+        $sql = "SELECT * FROM instructor_details WHERE full_name LIKE '%$search_query%' OR username LIKE '%$search_query%' OR shift LIKE '%$search_query%' OR department LIKE '%$search_query%'";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
         echo"<div class='students-table'>
@@ -114,19 +114,17 @@
             echo "<table class='table-bordered table-striped'>
                 ";
                 echo "
-                <tr><th class='header'>Course ID</th><th class='header'>Course title</th><th class='header'>Category</th><th class='header'>Semester</th></tr>";
+                <tr><th class='header'>Instructor Name</th><th class='header'>Shift</th><th class='header'>Department</th></tr>";
                 while ($row = $result->fetch_assoc()) {
                 echo "
                 <tr>
                     ";
                     echo "
-                    <td>" . $row["course_id"] . "</td>";
+                    <td>" . $row["full_name"] . "</td>";
                     echo "
-                    <td class='course-title-column'>" . $row["course_title"] . "</td>";
+                    <td class=''>" . $row["shift"] . "</td>";
                     echo "
-                    <td class='category-column'>" . $row["category"] . "</td>";
-                    echo "
-                    <td>" . $row["semester"] . "</td>";
+                    <td class=''>" . $row["department"] . "</td>";
                     echo "
                 </tr>";
                 }
@@ -135,11 +133,11 @@
             echo"
         </div>";
         } else {
-        echo "<div class='err-msg-container'><span class='err-message'>No Courses found.</span></div>";
+        echo "<div class='err-msg-container'><span class='err-message'>No Instructors found.</span></div>";
         }
         $conn->close();
         } else {
-        echo "<div class='err-msg-container'><span class='err-message'>Please enter the Course Details</span></div>";
+        echo "<div class='err-msg-container'><span class='err-message'>Please enter the Instructors Details</span></div>";
         }
         }
         ?>

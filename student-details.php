@@ -19,7 +19,7 @@
       <a href="admin-home-page.html">
         <div class="full-nav home-nav" id="home-nav">
           <div class="icon-container">
-            <img class="icon home-icon" src="assets/icons/home-icon.png"/>
+            <img class="icon home-icon" src="assets/icons/home-icon-dark.png"/>
           </div>
           <div class="desc-container">
             <p class="nav-desc home-desc">Home</p>
@@ -29,33 +29,53 @@
       <a href="student-details.php">
         <div class="full-nav student-details-nav"  id="student-details-nav">
           <div class="icon-container">
-            <img class="icon dashboard-icon" src="assets/icons/dashboard-icon.png"/>
+            <img class="icon dashboard-icon" src="assets/icons/student-details-icon-white.png"/>
           </div>
           <div class="desc-container">
             <p class="nav-desc student-details-desc">Student Details</p>
           </div>
         </div>
       </a>
-      <a href="course-details-page.php">
-        <div class="full-nav course-details-nav">
-          <div class="icon-container">
-            <img class="icon courses-icon" src="assets/icons/book-icon.png"/>
-          </div>
-          <div class="desc-container">
-            <p class="nav-desc course-details-desc">Course Details</p>
-          </div>
-        </div>
-      </a>
-      <a href="course-creation-page.php">
-        <div class="full-nav courses-nav">
-          <div class="icon-container">
-            <img class="icon courses-icon" src="assets/icons/book-icon.png"/>
-          </div>
-          <div class="desc-container">
-            <p class="nav-desc course-desc">Create course</p>
-          </div>
-        </div>
-      </a>
+      <a href="instructor-details-page.php">
+            <div class="full-nav instructor-details-nav">
+                <div class="icon-container">
+                    <img class="icon courses-icon" src="assets/icons/prof-details-icon.png" />
+                </div>
+                <div class="desc-container">
+                    <p class="nav-desc instructor-details-desc">Instructor Details</p>
+                </div>
+            </div>
+        </a>
+        <a href="course-details-page.php">
+            <div class="full-nav course-details-nav">
+                <div class="icon-container">
+                    <img class="icon courses-icon" src="assets/icons/course-details-icon.png" />
+                </div>
+                <div class="desc-container">
+                    <p class="nav-desc course-details-desc">Course Details</p>
+                </div>
+            </div>
+        </a>
+        <a href="course-creation-page.php">
+            <div class="full-nav create-course-nav" id="create-course-nav">
+                <div class="icon-container">
+                    <img class="icon courses-icon" src="assets/icons/course-creation-icon.png" />
+                </div>
+                <div class="desc-container">
+                    <p class="nav-desc create-course-desc">Create course</p>
+                </div>
+            </div>
+        </a>
+        <a href="add-instructor-page.php">
+            <div class="full-nav add-instructor-nav">
+                <div class="icon-container">
+                    <img class="icon courses-icon" src="assets/icons/add-instructor-icon.png" />
+                </div>
+                <div class="desc-container">
+                    <p class="nav-desc add-instructor-desc">Add Instructor</p>
+                </div>
+            </div>
+        </a>
     </div>
   </div>
 
