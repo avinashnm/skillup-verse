@@ -1,4 +1,4 @@
-body {
+﻿body {
     display: flex;
     flex-direction: row;
     background-color: hsl(230, 50%, 30%);
@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: hsl(230, 50%, 30%);
-    max-width: 20vw;
+    width: 23vw;
     min-height: 100vh;
     padding-right: 10px;
 }
@@ -109,7 +109,7 @@ body {
 
 .profile-desc {
     padding-top: 10px;
-    font-size: 25px;
+    font-size: 20px !important;
     margin-left: 5px !important;
 }
 
@@ -240,7 +240,7 @@ a {
 
 .right-sidebar {
     background-color: hsl(0, 0%, 80%);
-    min-width: 25vw;
+    max-width: 22vw;
     min-height: 100vh;
 }
 

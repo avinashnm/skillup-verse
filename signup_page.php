@@ -1,4 +1,5 @@
 <?php
+session_start(); 
 if (isset($_POST['signup-btn'])) {
     $ServerName = "localhost";
     $db_Username = "root";
@@ -34,13 +35,20 @@ if (isset($_POST['signup-btn'])) {
             } else {
                 // Hash the password for security
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
                 // Insert user data into the database
                 $sql = "INSERT INTO student_details (full_name, deptno, email, password)
                         VALUES ('$full_name', '$deptno', '$email', '$hashed_password')";
 
                 if (mysqli_query($conn, $sql)) {
-                    header("Location: student-home-page.html");
+                    header("Location: student-home-page.php");
+                    $full_name = $row["full_name"];
+
+            // Extract first two names
+            $names = explode(" ", $full_name); // Split full name into an array of names
+            $first_two_names = implode(" ", array_slice($names, 0, 2)); // Take the first two names and join them back into a string
+
+            // Save the first two names in the session
+            $_SESSION["name"] = $first_two_names;
                     exit(); // stop further execution
                 } else {
                     echo "Error: " . $sql . "<br>" . mysqli_error($conn);

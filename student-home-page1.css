@@ -2,6 +2,8 @@ body{
   display: flex;
   flex-direction: row;
   background-color: hsl(230, 50%, 30%);
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .left-sidebar
 {
@@ -30,8 +32,8 @@ body{
 .logo-desc
 {
   position: absolute;
-  left: 100;
-  top: 40;
+  left: 100px;
+  top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,16 +58,15 @@ body{
   flex-direction: column;
   justify-content: center;
 }
-.nav-container
-{
-  margin-top: 45px;
+.nav-container {
+    margin-top: 45px;
+    margin-left: 20px;
 }
 .full-nav
 {
   display: flex;
   flex-direction: row;
   padding: 10px 50px 0px 10px;
-  margin-left: 20px;
   margin-top: 10px;
   border-radius: 10px;
   font-family: 'Kanit', sans-serif;
@@ -90,11 +91,22 @@ font-weight: bold;
   height: 25px;
   width: 25px;
 }
+.profile-icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+    margin-left: 10px !important;
+}
 .nav-desc
 {
   font-size: 20px;
   margin-left: 20px;
   margin-top: 2px;
+}
+.profile-desc{
+    padding-top: 10px;
+    font-size: 25px;
+    margin-left: 5px !important;
 }
 a
 {
@@ -104,6 +116,12 @@ a
 {
 background-color: hsla(230, 90%, 60%, 0.1);
 color:hsl(0, 0%, 80%);
+}
+.nav-profile-container{
+    height: 80vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .main-section
 {

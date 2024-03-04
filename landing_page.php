@@ -54,17 +54,6 @@
     </div>
   </nav>
 <div class="main-section">
-  <!--<div class="icons-section">
-    <img class="decorative-icon satellite" src="satellite.png"/>
-    <img class="decorative-icon rocket" src="rocket.png"/>
-    <img class="decorative-icon planet" src="planet.png"/>
-    <img class="decorative-icon startup" src="startup.png"/>
-    <img src=""/>
-    <img src=""/>
-    <img src=""/>
-    <img src=""/>
-    <img src=""/>
-  </div>-->
   <div class="desc-section">
     <h1 class="desc-heading">Your Gateway to </br>The World of  Knowledge.</h1>
     <div class="desc">

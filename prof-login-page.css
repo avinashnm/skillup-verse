@@ -1,366 +1,1895 @@
-.entire-bg
-{
-  overflow: hidden;
+body {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(230, 50%, 30%);
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
-.back-icon{
-  padding: 5px 8px 5px 5px;
-    margin: 10px 0px 0px 10px;
-    height: 30px;
-    width: 30px;
-    transition: background-color 0.3s ease-in-out;
-    background-color: hsl(230, 50%, 50%);
-    border: 2 px solid black;
-    border-radius: 100px;
-}
-.back-icon:hover{
-  background-color: hsl(230, 80%, 50%)
-}
-.logo-container
-{
-  margin-top: 10px;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-.logo
-{
-  height: 60px;
-  width: 60px;
-  margin-left: 10px;
-}
-.logo-desc
-{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-left: 5px;
-}
-.skillup
-{
-  font-size: 20px;
-  color: hsl(168, 50%, 53%);
-  margin-right: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.verse
-{
-  font-size: 20px;
-  color:  hsl(0, 0%, 70%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.intro-section
-{
-  min-height: 100vh;
-  min-width: 50vw;
-  margin-bottom: 50px;
-  background-color : hsl(230, 60%, 30%);
-}
-.welcome{
-  font-family: 'Kanit', sans-serif;
-  color: White;
-  margin: 20px 0px 0px 50px;
-}
-.break
-{
-  color: hsl(45, 100%, 50%) ;
-}
-.features-section
-{
-  margin-top: 20px;
-  min-width: 50vw;
-  display: flex;
-  justify-content: center;
-}
-.features
-{
-  font-family: 'Titillium Web', sans-serif;
-  color: White;
-  font-weight: bold;
-  min-width: 320px;
-  max-width: 320px;
-  margin: 20px 10px 20px 10px;
-  font-size: 20px;
-  background-color: hsl(230, 50%, 50%) ;
-  padding: 10px 0px 10px 0px;
-  border: none;
-  border-radius: 10px;
-}
-.icons
-{
-  height: 50px !important;
-  width: 50px !important;
-  margin-right: 30px;
 
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(230, 50%, 30%);
+    max-width: 20vw;
+    min-height: 100vh;
+    padding-right: 10px;
 }
-.features-right
-{
-  margin-left: 10px;
+
+.logo-container {
+    width: 20vw;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
 }
-.signup-form
-{
-  z-index: 4;
-  min-width: 70%;
-  min-height: 90vh;
-  margin: 50px 100px 100px 100px;
-  padding: 20px 30px 20px 30px;
-  background-color: White;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+.logo {
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    margin-left: 30px;
 }
-.students-img
-{
-  min-width: 50vw;
+
+.logo-desc {
+    position: absolute;
+    left: 100px;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 35px;
 }
-.hdn-section
-{
-  text-align: center;
-  margin-bottom: 20px;
+
+.skillup {
+    font-size: 34px;
+    color: hsl(168, 50%, 53%);
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.login-hdn {
-  font-family: 'Oswald', sans-serif;
-    font-size: 35px;
+
+.verse {
+    position: absolute;
+    margin-top: 65px;
+    font-size: 44px;
+    color: hsl(0, 0%, 80%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-container {
+    margin-top: 45px;
+    margin-left: 20px;
+}
+
+.full-nav {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 50px 0px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-family: 'Kanit', sans-serif;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: hsl(0, 0%, 50%);
+}
+
+.home-nav {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+#home-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+.home-desc {
+    color: hsla(230, 50%, 90%) !important;
     font-weight: bold;
-    color: hsl(230, 50%, 50%);
 }
-.choose-section{
-display: flex;
-justify-content:center;
+
+.icon {
+    margin-top: 2px;
+    height: 25px;
+    width: 25px;
 }
-.student-section, .professor-section{
-  background-color: hsl(0, 0%, 90%);
-    border: 1px solid hsl(0, 0%, 70%);
-    padding: 2px 10px 0px 10px;
-    transition: box-shadow 0.3s ease-in-out;
+
+.profile-icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+    margin-left: 10px !important;
 }
-.student-section:hover
-{
-box-shadow: 0 0 10px 5px hsl(230, 50%, 50%);
+
+.nav-desc {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 2px;
 }
-.professor-section
-{
-  margin-left: 40px;
-  border: 2px solid hsl(230, 50%, 50%);
+
+.profile-desc {
+    padding-top: 10px;
+    font-size: 20px;
+    margin-left: 5px !important;
 }
-.approve-icon
-{
-  position: absolute;
-  max-height: 600px;
-  height: 25px;
-  width: 25px;
-  margin-left: 100px;
-  top: 305px;
-  right: 218px;
+
+a {
+    text-decoration: none;
 }
-.login-choose-icon
-{
-  display: flex;
-  justify-content: center;
-  height: 100px;
-  width: 100px;
+
+.full-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.1);
+    color: hsl(0, 0%, 80%);
 }
-.student-icon-desc
-{
-  text-decoration: none;
+
+.nav-profile-container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.login-icon-desc
-{
-  text-decoration: none !important;
-color: hsl(230, 50%, 50%);
-  font-size: 13px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  font-family: 'Kanit', sans-serif;
+
+.main-section {
+    background-color: White;
+    min-width: 55vw;
+    min-height: 100vh;
+    border-radius: 30px 0px 0px 30px;
 }
-.message
-{
-  font-family: 'Josefin Sans', sans-serif;
-  margin-top: 15px;
-text-align: center;
+
+.carousel {
+    margin: 20px 10px;
 }
-.signup-fullsection
-{
-  display: flex;
-  flex-direction: row;
-  min-height: 100vh;
-  overflow-y: hidden;
+
+#carouselExampleAutoplaying {
+    border-radius: 10px !important; /* Adjust this value as needed */
+    overflow: hidden; /* Ensure content doesn't overflow rounded corners */
 }
-.signup-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-    min-width: 50vw;
-    height: 100vh;
-    background-color : hsl(230, 80%, 80%);
+
+.carousel-students-img {
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 20px;
 }
-label {
-  font-family: 'Raleway', sans-serif;
+
+.carousel-item {
+    position: relative;
+}
+
+.explore-courses-btn, .discover-instructors-btn, .dashboard-btn {
     font-size: 15px;
-    font-weight: bold;
-    color : hsl(230, 80%, 80%);
-    margin-bottom: 5px;
-}
-.dob-label, #dob, #gender
-{
-  font-size: 15px !important;
-  font-weight: bold !important;
-  color : hsl(230, 80%, 80%) !important;
-}
-.input
-{
-    border: none !important;
-    padding: 25px;
-    width: 100%;
-}
-.form-control, #gender
-{
-margin-top: 5px;
-  background-color: hsla(230, 90%, 90%, 0.2) !important;
-  border: none !important;
-}
-.dob_gender {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-.signup-cards-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.signup-card {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 90%;
-  max-width: 400px;
-  height: 200px;
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  transform: translateY(-90px); /* Adjust as needed */
-  transition: transform 0.3s ease-in-out;
-}
-.signup-card:nth-child(1) {
-  z-index: 3;
-  transform: translateY(35px); /* Adjust as needed */
-  min-width: 450px;
-  margin-left: 138px;
-}
-.signup-card:nth-child(2) {
-  z-index: 2;
-  transform: translateY(15px); /* Adjust as needed */
-  max-width: 400px;
-  margin-left: 165px;
-}
-.signup-card:nth-child(3) {
-  z-index: 1;
-  transform: translateY(10px); /* Adjust as needed */
-  max-width: 350px;
-  margin-left: 187px;
-}
-
-.form-group label,
-.form-group input {
-    margin: 5px;
-}
-.dob-group
-{
-margin-right: 20px;
-}
-.signup-link{
-  text-decoration: none;
-  color: hsl(168, 50%, 53%);
-  font-weight: bold;
-}
-.signup-link-container{
-  width: 90%;
-  text-align: center;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-.signup-link:hover{
-    text-decoration: underline;
-    color: hsl(168, 40%, 43%);
-}
-.login-btn
-{
-  font-family: 'Roboto Slab', sans-serif;
-  background-color: hsl(230, 50%, 50%) !important;
-  color: White;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  padding: 10px 128px;
+    font-weight: bolder;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: #87CEEB;
+    color: #000080;
+    border-radius: 5px;
+    padding: 5px 20px;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-}
-.login-btn:hover{
-  background-color: hsl(230, 60%, 30%) !important ;
-  color: White ;
-}
-.dob-input
-{
-margin-right: 10px;
+    position: absolute;
+    bottom: 10px;
+    margin-left: 20px;
+    z-index: 1; /* Ensure button is above the image */
 }
 
-a {
-    text-decoration: none;
-    color: #007bff;
-}
-a:hover {
-    text-decoration: underline;
+    .explore-courses-btn:hover {
+        background-color: #8A2BE2 !important;
+        color: #FFFFFF;
+    }
+
+    .discover-instructors-btn:hover {
+        background-color: #4169E1 !important;
+        color: #FFFFFF; /* White text color */
+    }
+
+    .dashboard-btn:hover {
+        background-color: #0FBB9C !important;
+        color: #FFFFFF; /* White text color */
+    }
+
+.carousel-control-prev, .carousel-control-next {
+    height: 20px; /* Set height to auto */
+    width: 20px; /* Set width to auto */
+    background: transparent; /* Make background transparent */
+    top: 50%; /* Position vertically in the middle */
+    transform: translateY(-50%);
 }
 
-.btn-section{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    font-size: 2rem; /* Adjust the icon size */
+    color: #000; /* Set the color */
 }
-.signup-btn-container
-{
-  margin-top: 10px;
-}
-.login-btn-container
-{
- margin-top: 5px;
- padding-bottom: 10px;
-}
-.dob_gender {
+
+.benefits-title-container {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    flex-direction: row;
+    margin-left: 15px;
 }
-.form-group {
+
+.features-section {
+    margin-top: 20px;
+    min-width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+.features {
+    font-family: 'Titillium Web', sans-serif;
+    color: White;
+    font-weight: bold;
+    min-width: 320px;
+    max-width: 320px;
+    margin: 20px 10px 20px 10px;
+    font-size: 20px;
+    background-color: hsl(230, 50%, 50%);
+    padding: 10px 0px 10px 0px;
+    border: none;
+    border-radius: 10px;
+}
+
+.icons {
+    height: 50px !important;
+    width: 50px !important;
+    margin-right: 30px;
+}
+
+.features-right {
+    margin-left: 10px;
+}
+
+.right-sidebar {
+    background-color: hsl(0, 0%, 80%);
+    min-width: 25vw;
+    min-height: 100vh;
+}
+
+.rc-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.course-card {
+    height: 240px !important;
+    width: 270px;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-left: 40px;
+}
+
+    .course-card:hover {
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+    }
+
+.card-img {
+    height: 120px;
+    width: 240px;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.card-body {
+    max-height: 70px;
+}
+
+.course-title {
+    font-size: 18px;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+.enroll-btn {
+    background-color: #2fdeb2;
+    color: White;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+    .enroll-btn:hover {
+        background-color: #1ca982;
+    }
+
+.featured-courses-section {
+    margin-top: 20px;
+    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.featured-courses-container {
+    margin: 10px 10px 10px 10px;
+    padding-right: 10px;
+    margin-bottom: 50px;
+}
+
+.featured-courses-title {
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: #000080;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(230, 50%, 30%);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.left-sidebar {
     display: flex;
     flex-direction: column;
+    background-color: hsl(230, 50%, 30%);
+    max-width: 20vw;
+    min-height: 100vh;
+    padding-right: 10px;
 }
 
-.form-group label,
-.form-group input {
-    margin: 5px;
+.logo-container {
+    width: 20vw;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
 }
-.dob-group
-{
-margin-right: 20px;
+
+.logo {
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    margin-left: 30px;
 }
-.dob-input
-{
-margin-right: 10px;
+
+.logo-desc {
+    position: absolute;
+    left: 100px;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 35px;
+}
+
+.skillup {
+    font-size: 34px;
+    color: hsl(168, 50%, 53%);
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.verse {
+    position: absolute;
+    margin-top: 65px;
+    font-size: 44px;
+    color: hsl(0, 0%, 80%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-container {
+    margin-top: 45px;
+    margin-left: 20px;
+}
+
+.full-nav {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 50px 0px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-family: 'Kanit', sans-serif;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: hsl(0, 0%, 50%);
+}
+
+.home-nav {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+#home-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+.home-desc {
+    color: hsla(230, 50%, 90%) !important;
+    font-weight: bold;
+}
+
+.icon {
+    margin-top: 2px;
+    height: 25px;
+    width: 25px;
+}
+
+.profile-icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+    margin-left: 10px !important;
+}
+
+.nav-desc {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+.profile-desc {
+    padding-top: 10px;
+    font-size: 25px;
+    margin-left: 5px !important;
+}
+
 a {
     text-decoration: none;
-    color: #007bff;
 }
-a:hover {
-    text-decoration: underline;
+
+.full-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.1);
+    color: hsl(0, 0%, 80%);
+}
+
+.nav-profile-container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-section {
+    background-color: White;
+    min-width: 55vw;
+    min-height: 100vh;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.carousel {
+    margin: 20px 10px;
+}
+
+#carouselExampleAutoplaying {
+    border-radius: 10px !important; /* Adjust this value as needed */
+    overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+}
+
+.carousel-students-img {
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 20px;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.explore-courses-btn, .discover-instructors-btn, .dashboard-btn {
+    font-size: 15px;
+    font-weight: bolder;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: #87CEEB;
+    color: #000080;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    margin-left: 20px;
+    z-index: 1; /* Ensure button is above the image */
+}
+
+    .explore-courses-btn:hover {
+        background-color: #8A2BE2 !important;
+        color: #FFFFFF;
+    }
+
+    .discover-instructors-btn:hover {
+        background-color: #4169E1 !important;
+        color: #FFFFFF; /* White text color */
+    }
+
+    .dashboard-btn:hover {
+        background-color: #0FBB9C !important;
+        color: #FFFFFF; /* White text color */
+    }
+
+.carousel-control-prev, .carousel-control-next {
+    height: 20px; /* Set height to auto */
+    width: 20px; /* Set width to auto */
+    background: transparent; /* Make background transparent */
+    top: 50%; /* Position vertically in the middle */
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    font-size: 2rem; /* Adjust the icon size */
+    color: #000; /* Set the color */
+}
+
+.benefits-title-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+}
+
+.features-section {
+    margin-top: 20px;
+    min-width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+.features {
+    font-family: 'Titillium Web', sans-serif;
+    color: White;
+    font-weight: bold;
+    min-width: 320px;
+    max-width: 320px;
+    margin: 20px 10px 20px 10px;
+    font-size: 20px;
+    background-color: hsl(230, 50%, 50%);
+    padding: 10px 0px 10px 0px;
+    border: none;
+    border-radius: 10px;
+}
+
+.icons {
+    height: 50px !important;
+    width: 50px !important;
+    margin-right: 30px;
+}
+
+.features-right {
+    margin-left: 10px;
+}
+
+.right-sidebar {
+    background-color: hsl(0, 0%, 80%);
+    min-width: 25vw;
+    min-height: 100vh;
+}
+
+.rc-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.course-card {
+    height: 240px !important;
+    width: 270px;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-left: 40px;
+}
+
+    .course-card:hover {
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+    }
+
+.card-img {
+    height: 120px;
+    width: 240px;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.card-body {
+    max-height: 70px;
+}
+
+.course-title {
+    font-size: 18px;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+.enroll-btn {
+    background-color: #2fdeb2;
+    color: White;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+    .enroll-btn:hover {
+        background-color: #1ca982;
+    }
+
+.featured-courses-section {
+    margin-top: 20px;
+    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.featured-courses-container {
+    margin: 10px 10px 10px 10px;
+    padding-right: 10px;
+    margin-bottom: 50px;
+}
+
+.featured-courses-title {
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: #000080;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(230, 50%, 30%);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(230, 50%, 30%);
+    max-width: 20vw;
+    min-height: 100vh;
+    padding-right: 10px;
+}
+
+.logo-container {
+    width: 20vw;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.logo {
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    margin-left: 30px;
+}
+
+.logo-desc {
+    position: absolute;
+    left: 100px;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 35px;
+}
+
+.skillup {
+    font-size: 34px;
+    color: hsl(168, 50%, 53%);
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.verse {
+    position: absolute;
+    margin-top: 65px;
+    font-size: 44px;
+    color: hsl(0, 0%, 80%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-container {
+    margin-top: 45px;
+    margin-left: 20px;
+}
+
+.full-nav {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 50px 0px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-family: 'Kanit', sans-serif;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: hsl(0, 0%, 50%);
+}
+
+.home-nav {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+#home-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+.home-desc {
+    color: hsla(230, 50%, 90%) !important;
+    font-weight: bold;
+}
+
+.icon {
+    margin-top: 2px;
+    height: 25px;
+    width: 25px;
+}
+
+.profile-icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+    margin-left: 10px !important;
+}
+
+.nav-desc {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+.profile-desc {
+    padding-top: 10px;
+    font-size: 25px;
+    margin-left: 5px !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.full-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.1);
+    color: hsl(0, 0%, 80%);
+}
+
+.nav-profile-container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-section {
+    background-color: White;
+    min-width: 55vw;
+    min-height: 100vh;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.carousel {
+    margin: 20px 10px;
+}
+
+#carouselExampleAutoplaying {
+    border-radius: 10px !important; /* Adjust this value as needed */
+    overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+}
+
+.carousel-students-img {
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 20px;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.explore-courses-btn, .discover-instructors-btn, .dashboard-btn {
+    font-size: 15px;
+    font-weight: bolder;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: #87CEEB;
+    color: #000080;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    margin-left: 20px;
+    z-index: 1; /* Ensure button is above the image */
+}
+
+    .explore-courses-btn:hover {
+        background-color: #8A2BE2 !important;
+        color: #FFFFFF;
+    }
+
+    .discover-instructors-btn:hover {
+        background-color: #4169E1 !important;
+        color: #FFFFFF; /* White text color */
+    }
+
+    .dashboard-btn:hover {
+        background-color: #0FBB9C !important;
+        color: #FFFFFF; /* White text color */
+    }
+
+.carousel-control-prev, .carousel-control-next {
+    height: 20px; /* Set height to auto */
+    width: 20px; /* Set width to auto */
+    background: transparent; /* Make background transparent */
+    top: 50%; /* Position vertically in the middle */
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    font-size: 2rem; /* Adjust the icon size */
+    color: #000; /* Set the color */
+}
+
+.benefits-title-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+}
+
+.features-section {
+    margin-top: 20px;
+    min-width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+.features {
+    font-family: 'Titillium Web', sans-serif;
+    color: White;
+    font-weight: bold;
+    min-width: 320px;
+    max-width: 320px;
+    margin: 20px 10px 20px 10px;
+    font-size: 20px;
+    background-color: hsl(230, 50%, 50%);
+    padding: 10px 0px 10px 0px;
+    border: none;
+    border-radius: 10px;
+}
+
+.icons {
+    height: 50px !important;
+    width: 50px !important;
+    margin-right: 30px;
+}
+
+.features-right {
+    margin-left: 10px;
+}
+
+.right-sidebar {
+    background-color: hsl(0, 0%, 80%);
+    min-width: 25vw;
+    min-height: 100vh;
+}
+
+.rc-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.course-card {
+    height: 240px !important;
+    width: 270px;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-left: 40px;
+}
+
+    .course-card:hover {
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+    }
+
+.card-img {
+    height: 120px;
+    width: 240px;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.card-body {
+    max-height: 70px;
+}
+
+.course-title {
+    font-size: 18px;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+.enroll-btn {
+    background-color: #2fdeb2;
+    color: White;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+    .enroll-btn:hover {
+        background-color: #1ca982;
+    }
+
+.featured-courses-section {
+    margin-top: 20px;
+    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.featured-courses-container {
+    margin: 10px 10px 10px 10px;
+    padding-right: 10px;
+    margin-bottom: 50px;
+}
+
+.featured-courses-title {
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: #000080;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(230, 50%, 30%);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(230, 50%, 30%);
+    max-width: 20vw;
+    min-height: 100vh;
+    padding-right: 10px;
+}
+
+.logo-container {
+    width: 20vw;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.logo {
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    margin-left: 30px;
+}
+
+.logo-desc {
+    position: absolute;
+    left: 100px;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 35px;
+}
+
+.skillup {
+    font-size: 34px;
+    color: hsl(168, 50%, 53%);
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.verse {
+    position: absolute;
+    margin-top: 65px;
+    font-size: 44px;
+    color: hsl(0, 0%, 80%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-container {
+    margin-top: 45px;
+    margin-left: 20px;
+}
+
+.full-nav {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 50px 0px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-family: 'Kanit', sans-serif;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: hsl(0, 0%, 50%);
+}
+
+.home-nav {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+#home-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+.home-desc {
+    color: hsla(230, 50%, 90%) !important;
+    font-weight: bold;
+}
+
+.icon {
+    margin-top: 2px;
+    height: 25px;
+    width: 25px;
+}
+
+.profile-icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+    margin-left: 10px !important;
+}
+
+.nav-desc {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+.profile-desc {
+    padding-top: 10px;
+    font-size: 25px;
+    margin-left: 5px !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.full-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.1);
+    color: hsl(0, 0%, 80%);
+}
+
+.nav-profile-container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-section {
+    background-color: White;
+    min-width: 55vw;
+    min-height: 100vh;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.carousel {
+    margin: 20px 10px;
+}
+
+#carouselExampleAutoplaying {
+    border-radius: 10px !important; /* Adjust this value as needed */
+    overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+}
+
+.carousel-students-img {
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 20px;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.explore-courses-btn, .discover-instructors-btn, .dashboard-btn {
+    font-size: 15px;
+    font-weight: bolder;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: #87CEEB;
+    color: #000080;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    margin-left: 20px;
+    z-index: 1; /* Ensure button is above the image */
+}
+
+    .explore-courses-btn:hover {
+        background-color: #8A2BE2 !important;
+        color: #FFFFFF;
+    }
+
+    .discover-instructors-btn:hover {
+        background-color: #4169E1 !important;
+        color: #FFFFFF; /* White text color */
+    }
+
+    .dashboard-btn:hover {
+        background-color: #0FBB9C !important;
+        color: #FFFFFF; /* White text color */
+    }
+
+.carousel-control-prev, .carousel-control-next {
+    height: 20px; /* Set height to auto */
+    width: 20px; /* Set width to auto */
+    background: transparent; /* Make background transparent */
+    top: 50%; /* Position vertically in the middle */
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    font-size: 2rem; /* Adjust the icon size */
+    color: #000; /* Set the color */
+}
+
+.benefits-title-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+}
+
+.features-section {
+    margin-top: 20px;
+    min-width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+.features {
+    font-family: 'Titillium Web', sans-serif;
+    color: White;
+    font-weight: bold;
+    min-width: 320px;
+    max-width: 320px;
+    margin: 20px 10px 20px 10px;
+    font-size: 20px;
+    background-color: hsl(230, 50%, 50%);
+    padding: 10px 0px 10px 0px;
+    border: none;
+    border-radius: 10px;
+}
+
+.icons {
+    height: 50px !important;
+    width: 50px !important;
+    margin-right: 30px;
+}
+
+.features-right {
+    margin-left: 10px;
+}
+
+.right-sidebar {
+    background-color: hsl(0, 0%, 80%);
+    min-width: 25vw;
+    min-height: 100vh;
+}
+
+.rc-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.course-card {
+    height: 240px !important;
+    width: 270px;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-left: 40px;
+}
+
+    .course-card:hover {
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+    }
+
+.card-img {
+    height: 120px;
+    width: 240px;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.card-body {
+    max-height: 70px;
+}
+
+.course-title {
+    font-size: 18px;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+.enroll-btn {
+    background-color: #2fdeb2;
+    color: White;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+    .enroll-btn:hover {
+        background-color: #1ca982;
+    }
+
+.featured-courses-section {
+    margin-top: 20px;
+    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.featured-courses-container {
+    margin: 10px 10px 10px 10px;
+    padding-right: 10px;
+    margin-bottom: 50px;
+}
+
+.featured-courses-title {
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: #000080;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(230, 50%, 30%);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(230, 50%, 30%);
+    max-width: 20vw;
+    min-height: 100vh;
+    padding-right: 10px;
+}
+
+.logo-container {
+    width: 20vw;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.logo {
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    margin-left: 30px;
+}
+
+.logo-desc {
+    position: absolute;
+    left: 100px;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 35px;
+}
+
+.skillup {
+    font-size: 34px;
+    color: hsl(168, 50%, 53%);
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.verse {
+    position: absolute;
+    margin-top: 65px;
+    font-size: 44px;
+    color: hsl(0, 0%, 80%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-container {
+    margin-top: 45px;
+    margin-left: 20px;
+}
+
+.full-nav {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 50px 0px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-family: 'Kanit', sans-serif;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: hsl(0, 0%, 50%);
+}
+
+.home-nav {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+#home-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+.home-desc {
+    color: hsla(230, 50%, 90%) !important;
+    font-weight: bold;
+}
+
+.icon {
+    margin-top: 2px;
+    height: 25px;
+    width: 25px;
+}
+
+.profile-icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+    margin-left: 10px !important;
+}
+
+.nav-desc {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+.profile-desc {
+    padding-top: 10px;
+    font-size: 25px;
+    margin-left: 5px !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.full-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.1);
+    color: hsl(0, 0%, 80%);
+}
+
+.nav-profile-container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-section {
+    background-color: White;
+    min-width: 55vw;
+    min-height: 100vh;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.carousel {
+    margin: 20px 10px;
+}
+
+#carouselExampleAutoplaying {
+    border-radius: 10px !important; /* Adjust this value as needed */
+    overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+}
+
+.carousel-students-img {
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 20px;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.explore-courses-btn, .discover-instructors-btn, .dashboard-btn {
+    font-size: 15px;
+    font-weight: bolder;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: #87CEEB;
+    color: #000080;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    margin-left: 20px;
+    z-index: 1; /* Ensure button is above the image */
+}
+
+    .explore-courses-btn:hover {
+        background-color: #8A2BE2 !important;
+        color: #FFFFFF;
+    }
+
+    .discover-instructors-btn:hover {
+        background-color: #4169E1 !important;
+        color: #FFFFFF; /* White text color */
+    }
+
+    .dashboard-btn:hover {
+        background-color: #0FBB9C !important;
+        color: #FFFFFF; /* White text color */
+    }
+
+.carousel-control-prev, .carousel-control-next {
+    height: 20px; /* Set height to auto */
+    width: 20px; /* Set width to auto */
+    background: transparent; /* Make background transparent */
+    top: 50%; /* Position vertically in the middle */
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    font-size: 2rem; /* Adjust the icon size */
+    color: #000; /* Set the color */
+}
+
+.benefits-title-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+}
+
+.features-section {
+    margin-top: 20px;
+    min-width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+.features {
+    font-family: 'Titillium Web', sans-serif;
+    color: White;
+    font-weight: bold;
+    min-width: 320px;
+    max-width: 320px;
+    margin: 20px 10px 20px 10px;
+    font-size: 20px;
+    background-color: hsl(230, 50%, 50%);
+    padding: 10px 0px 10px 0px;
+    border: none;
+    border-radius: 10px;
+}
+
+.icons {
+    height: 50px !important;
+    width: 50px !important;
+    margin-right: 30px;
+}
+
+.features-right {
+    margin-left: 10px;
+}
+
+.right-sidebar {
+    background-color: hsl(0, 0%, 80%);
+    min-width: 25vw;
+    min-height: 100vh;
+}
+
+.rc-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.course-card {
+    height: 240px !important;
+    width: 270px;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-left: 40px;
+}
+
+    .course-card:hover {
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+    }
+
+.card-img {
+    height: 120px;
+    width: 240px;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.card-body {
+    max-height: 70px;
+}
+
+.course-title {
+    font-size: 18px;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+.enroll-btn {
+    background-color: #2fdeb2;
+    color: White;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+    .enroll-btn:hover {
+        background-color: #1ca982;
+    }
+
+.featured-courses-section {
+    margin-top: 20px;
+    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.featured-courses-container {
+    margin: 10px 10px 10px 10px;
+    padding-right: 10px;
+    margin-bottom: 50px;
+}
+
+.featured-courses-title {
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: #000080;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(230, 50%, 30%);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(230, 50%, 30%);
+    max-width: 20vw;
+    min-height: 100vh;
+    padding-right: 10px;
+}
+
+.logo-container {
+    width: 20vw;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.logo {
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    margin-left: 30px;
+}
+
+.logo-desc {
+    position: absolute;
+    left: 100px;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 35px;
+}
+
+.skillup {
+    font-size: 34px;
+    color: hsl(168, 50%, 53%);
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.verse {
+    position: absolute;
+    margin-top: 65px;
+    font-size: 44px;
+    color: hsl(0, 0%, 80%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-container {
+    margin-top: 45px;
+    margin-left: 20px;
+}
+
+.full-nav {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 50px 0px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-family: 'Kanit', sans-serif;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: hsl(0, 0%, 50%);
+}
+
+.home-nav {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+#home-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+.home-desc {
+    color: hsla(230, 50%, 90%) !important;
+    font-weight: bold;
+}
+
+.icon {
+    margin-top: 2px;
+    height: 25px;
+    width: 25px;
+}
+
+.profile-icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+    margin-left: 10px !important;
+}
+
+.nav-desc {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+.profile-desc {
+    padding-top: 10px;
+    font-size: 25px;
+    margin-left: 5px !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.full-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.1);
+    color: hsl(0, 0%, 80%);
+}
+
+.nav-profile-container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-section {
+    background-color: White;
+    min-width: 55vw;
+    min-height: 100vh;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.carousel {
+    margin: 20px 10px;
+}
+
+#carouselExampleAutoplaying {
+    border-radius: 10px !important; /* Adjust this value as needed */
+    overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+}
+
+.carousel-students-img {
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 20px;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.explore-courses-btn, .discover-instructors-btn, .dashboard-btn {
+    font-size: 15px;
+    font-weight: bolder;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: #87CEEB;
+    color: #000080;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    margin-left: 20px;
+    z-index: 1; /* Ensure button is above the image */
+}
+
+    .explore-courses-btn:hover {
+        background-color: #8A2BE2 !important;
+        color: #FFFFFF;
+    }
+
+    .discover-instructors-btn:hover {
+        background-color: #4169E1 !important;
+        color: #FFFFFF; /* White text color */
+    }
+
+    .dashboard-btn:hover {
+        background-color: #0FBB9C !important;
+        color: #FFFFFF; /* White text color */
+    }
+
+.carousel-control-prev, .carousel-control-next {
+    height: 20px; /* Set height to auto */
+    width: 20px; /* Set width to auto */
+    background: transparent; /* Make background transparent */
+    top: 50%; /* Position vertically in the middle */
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    font-size: 2rem; /* Adjust the icon size */
+    color: #000; /* Set the color */
+}
+
+.benefits-title-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+}
+
+.features-section {
+    margin-top: 20px;
+    min-width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+.features {
+    font-family: 'Titillium Web', sans-serif;
+    color: White;
+    font-weight: bold;
+    min-width: 320px;
+    max-width: 320px;
+    margin: 20px 10px 20px 10px;
+    font-size: 20px;
+    background-color: hsl(230, 50%, 50%);
+    padding: 10px 0px 10px 0px;
+    border: none;
+    border-radius: 10px;
+}
+
+.icons {
+    height: 50px !important;
+    width: 50px !important;
+    margin-right: 30px;
+}
+
+.features-right {
+    margin-left: 10px;
+}
+
+.right-sidebar {
+    background-color: hsl(0, 0%, 80%);
+    min-width: 25vw;
+    min-height: 100vh;
+}
+
+.rc-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.course-card {
+    height: 240px !important;
+    width: 270px;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-left: 40px;
+}
+
+    .course-card:hover {
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+    }
+
+.card-img {
+    height: 120px;
+    width: 240px;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.card-body {
+    max-height: 70px;
+}
+
+.course-title {
+    font-size: 18px;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+.enroll-btn {
+    background-color: #2fdeb2;
+    color: White;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+    .enroll-btn:hover {
+        background-color: #1ca982;
+    }
+
+.featured-courses-section {
+    margin-top: 20px;
+    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.featured-courses-container {
+    margin: 10px 10px 10px 10px;
+    padding-right: 10px;
+    margin-bottom: 50px;
+}
+
+.featured-courses-title {
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: #000080;
 }
