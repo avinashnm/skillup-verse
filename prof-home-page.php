@@ -60,6 +60,17 @@ $name = $_SESSION['name'];
                     </div>
                 </div>
             </a>
+            <a href='upload_materials.php'>
+                <div class="full-nav upload-materials-nav" id="home-nav">
+                    <div class="icon-container">
+                        <img class="icon home-icon" src="assets/icons/home-icon.png" />
+                    </div>
+                    <div class="desc-container">
+                        <p class="nav-desc upload-materials-desc">Upload Materials</p>
+                    </div>
+                </div>
+            </a>
+            <a href=#>
             </div>
             <div class="profile-container">
             <a href=#>

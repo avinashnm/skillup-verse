@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="course-details-page.css">
+    <link rel="stylesheet" type="text/css" href="course-details-page1.css">
 </head>
 <body>
     <div class="left-sidebar">
@@ -114,7 +114,7 @@
             echo "<table class='table-bordered table-striped'>
                 ";
                 echo "
-                <tr><th class='header'>Course ID</th><th class='header'>Course title</th><th class='header'>Category</th><th class='header'>Semester</th></tr>";
+                <tr><th class='header'>Course ID</th><th class='header'>Course title</th><th class='header'>Category</th><th class='header'>Semester</th><th class='header'>Assign Instructors</th></tr>";
                 while ($row = $result->fetch_assoc()) {
                 echo "
                 <tr>
@@ -127,6 +127,7 @@
                     <td class='category-column'>" . $row["category"] . "</td>";
                     echo "
                     <td>" . $row["semester"] . "</td>";
+                    echo "<td><button class='assign-instructors-btn' name='assign-instructors-btn'>Assign Instructors</button></td>";
                     echo "
                 </tr>";
                 }
@@ -134,7 +135,8 @@
             </table>";
             echo"
         </div>";
-        } else {
+        }
+        else {
         echo "<div class='err-msg-container'><span class='err-message'>No Courses found.</span></div>";
         }
         $conn->close();
