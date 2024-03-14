@@ -364,3 +364,14 @@ a {
 a:hover {
     text-decoration: underline;
 }
+.err-msg-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.err-message {
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+}

@@ -6,7 +6,7 @@ function validateForm() {
     var courseDescription = document.getElementById("course-description").value.trim();
 
     // Check if any field is empty
-    if (courseId === "" || courseTitle === "" || category === "Select the course category" || semester === "Select the Semester" || courseDescription === "") {
+    if (courseId === "" || courseTitle === "" || category === "Select the course category" || semester === "Select the Semester" || courseDescription === "" || department === "Select the Department" || instructor === "") {
         alert("All fields are required");
         return false;
     }

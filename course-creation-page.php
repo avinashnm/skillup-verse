@@ -5,10 +5,13 @@
     <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="course-creation-page.css">
+    <link rel="stylesheet" type="text/css" href="course-creation-page1.css">
 </head>
 <body>
     <div class="left-sidebar">
+    <div class="back-icon-container">
+      <a href="prof-login-page.html"><img class="back-icon"src="assets/icons/back-icon.png" /></a>
+    </div>
         <div class="logo-container">
             <img class="logo" src="assets/icons/skillup_logo.png" />
             <div class="logo-desc">
@@ -100,6 +103,19 @@
                                 <label for="course-title">Course Title</label>
                             </div>
                         </div>
+                        <div class="form-floating">
+                                    <select name="department" class="form-select" id="department" aria-label="Floating label select example">
+                                        <option selected>Select the Department</option>
+                                        <option value="Computer Science">Computer Science</option>
+                                        <option value="Commerce">Commerce</option>
+                                        <option value="Mathematics">Mathematics</option>
+                                        <option value="English">English</option>
+                                        <option value="Tamil">Tamil</option>
+                                        <option value="Physics">Physics</option>
+                                        <option value="Chemistry">Chemistry</option>
+                                    </select>
+                                    <label for="department" id="department">Department</label>
+                                </div>
                         <div class="category_semester">
                             <div class="form-group category-group">
                                 <div class="form-floating mb-3">
@@ -130,6 +146,42 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-floating">
+                                    <select name="instructor" class="form-select" id="instructor" aria-label="Floating label select example">
+                                        <option selected>Assign the Instructor</option>
+                                        <?php
+                                            // Connect to the database
+                                            $ServerName = "localhost";
+                                            $db_Username = "root";
+                                            $db_Password = "";
+                                            $Dbname = "skillup_verse";
+                                            $conn = new mysqli($ServerName, $db_Username, $db_Password, $Dbname);
+                                            if ($conn->connect_error) {
+                                                die("Connection failed: " . $conn->connect_error);
+                                            }
+
+                                            // Retrieve selected department from the form
+                                            $department = $_POST["department"];
+
+                                            // Fetch instructors whose department matches the selected department
+                                            $sql = "SELECT username, full_name FROM instructor_details";
+                                            $result = $conn->query($sql);
+                                            if ($result->num_rows > 0) {
+                                                // Output data of each row
+                                                while ($row = $result->fetch_assoc()) {
+                                                    echo "<option value='" . $row["username"] . "'>Prof. " . $row["full_name"] . "</option>";
+
+                                                }
+                                            } else {
+                                                echo "<option value=''>No instructors found</option>";
+                                            }
+
+                                            // Close the database connection
+                                            $conn->close();
+                                        ?>
+                                    </select>
+                                    <label for="intructor" id="instructor">Instructor</label>
+                                </div>
                         <div class="form-floating">
                             <textarea name="course-description" class="form-control" placeholder="Enter the description of the course" id="course-description" style="height: 100px"></textarea>
                             <label for="course-description">Course Description</label>
@@ -162,6 +214,8 @@
                             $category = $_POST["category"];
                             $semester = $_POST["semester"];
                             $description = $_POST["course-description"];
+                            $dept = $_POST["department"];
+                            $instructor = $_POST["instructor"];
 
                             // Check if the course ID or course title already exists
                             $check_query = "SELECT * FROM course_details WHERE course_id = '$course_id' OR course_title = '$course_title'";
@@ -172,8 +226,8 @@
                             echo "<div class='err-msg-container'><span class='err-message'>The Course you are trying to create already exists!</span></div>";
                             } else {
                             // Insert new course details
-                            $insert_query = "INSERT INTO course_details (course_id, course_title, category, semester, course_description)
-                            VALUES ('$course_id', '$course_title', '$category', '$semester', '$description')";
+                            $insert_query = "INSERT INTO course_details (course_id, course_title, category, semester, course_description, department, instructor_username)
+                            VALUES ('$course_id', '$course_title', '$category', '$semester', '$description', '$department', '$instructor')";
 
                             if (mysqli_query($conn, $insert_query)) {
                             echo "<div class='err-msg-container'><span class='err-message'>Course Created Successfully!</span></div>";

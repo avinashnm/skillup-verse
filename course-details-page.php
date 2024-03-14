@@ -5,10 +5,13 @@
     <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
     <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="course-details-page1.css">
+    <link rel="stylesheet" type="text/css" href="course-details-page.css">
 </head>
 <body>
     <div class="left-sidebar">
+    <div class="back-icon-container">
+      <a href="prof-login-page.html"><img class="back-icon"src="assets/icons/back-icon.png" /></a>
+    </div>
         <div class="logo-container">
             <img class="logo" src="assets/icons/skillup_logo.png" />
             <div class="logo-desc">
@@ -94,8 +97,8 @@
         </form>
 
         <?php
-        if (isset($_POST['search-btn'])) {
-        if (!empty($_POST['search-query'])) {
+if (isset($_POST['search-btn'])) {
+    if (!empty($_POST['search-query'])) {
         $search_query = $_POST['search-query'];
         // Connect to database and retrieve search results
         $ServerName = "localhost";
@@ -104,52 +107,44 @@
         $Dbname = "skillup_verse";
         $conn = new mysqli($ServerName, $db_Username, $db_Password, $Dbname);
         if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+            die("Connection failed: " . $conn->connect_error);
         }
-        $sql = "SELECT * FROM course_details WHERE course_id LIKE '%$search_query%' OR course_title LIKE '%$search_query%' OR category LIKE '%$search_query%' OR semester LIKE '%$search_query%'";
+        $sql = "SELECT course_details.course_id, course_details.course_title, course_details.department, course_details.category, course_details.semester, instructor_details.full_name 
+                FROM course_details 
+                INNER JOIN instructor_details ON course_details.instructor_username = instructor_details.username
+                WHERE course_details.course_id LIKE '%$search_query%' 
+                OR course_details.course_title LIKE '%$search_query%' 
+                OR course_details.category LIKE '%$search_query%' 
+                OR course_details.semester LIKE '%$search_query%'";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
-        echo"<div class='students-table'>
-            ";
-            echo "<table class='table-bordered table-striped'>
-                ";
-                echo "
-                <tr><th class='header'>Course ID</th><th class='header'>Course title</th><th class='header'>Category</th><th class='header'>Semester</th><th class='header'>Assign Instructors</th></tr>";
-                while ($row = $result->fetch_assoc()) {
-                echo "
-                <tr>
-                    ";
-                    echo "
-                    <td>" . $row["course_id"] . "</td>";
-                    echo "
-                    <td class='course-title-column'>" . $row["course_title"] . "</td>";
-                    echo "
-                    <td class='category-column'>" . $row["category"] . "</td>";
-                    echo "
-                    <td>" . $row["semester"] . "</td>";
-                    echo "<td><button class='assign-instructors-btn' name='assign-instructors-btn'>Assign Instructors</button></td>";
-                    echo "
-                </tr>";
-                }
-                echo "
-            </table>";
-            echo"
-        </div>";
-        }
-        else {
-        echo "<div class='err-msg-container'><span class='err-message'>No Courses found.</span></div>";
+            echo "<div class='students-table'>";
+            echo "<table class='table-bordered table-striped'>";
+            echo "<tr><th class='header'>Course ID</th><th class='header'>Course title</th><th class='header'>department</th><th class='header'>Category</th><th class='header'>Semester</th><th class='header'>Assigned Instructor</th></tr>";
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row["course_id"] . "</td>";
+                echo "<td class='course-title-column'>" . $row["course_title"] . "</td>";
+                echo "<td>" . $row["department"] . "</td>";
+                echo "<td class='category-column'>" . $row["category"] . "</td>";
+                echo "<td>" . $row["semester"] . "</td>";
+                echo "<td>Prof. " . $row["full_name"] . "</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+            echo "</div>";
+        } else {
+            echo "<div class='err-msg-container'><span class='err-message'>No Courses found.</span></div>";
         }
         $conn->close();
-        } else {
+    } else {
         echo "<div class='err-msg-container'><span class='err-message'>Please enter the Course Details</span></div>";
-        }
-        }
-        ?>
+    }
+}
+?>
+
     </div>
 
-    <div class="right-sidebar">
-        <!-- Your right sidebar content -->
-    </div>
 
 </body>
 </html>

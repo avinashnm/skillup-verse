@@ -176,7 +176,7 @@ label {
     margin-bottom: 5px;
 }
 
-.category-label, #category, #semester {
+.category-label, #category, #semester, #department {
     font-size: 15px !important;
     font-weight: bold !important;
     color: hsl(168, 80%, 80%) !important;

@@ -3,6 +3,20 @@
   flex-direction: row;
   background-color: hsl(230, 50%, 30%);
 }
+.back-icon {
+    padding: 5px 8px 5px 5px;
+    margin: 10px 0px 0px 10px;
+    height: 30px;
+    width: 30px;
+    transition: background-color 0.3s ease-in-out;
+    background-color: hsl(230, 50%, 50%);
+    border: 2 px solid black;
+    border-radius: 100px;
+}
+
+    .back-icon:hover {
+        background-color: hsl(230, 80%, 50%)
+    }
 .left-sidebar
 {
   display: flex;
@@ -22,7 +36,6 @@
 }
 .logo
 {
-  margin-top: 10px;
   height: 100px;
   width: 100px;
   margin-left: 30px;
@@ -31,7 +44,7 @@
 {
   position: absolute;
   left: 100px;
-  top: 40px;
+  top: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -300,22 +313,6 @@ margin-top: 5px;
 .table-striped tr:nth-child(even) {
   background-color: #f2f2f2;
 }
-.assign-instructors-btn {
-    font-family: 'Roboto Slab', sans-serif;
-    background-color: hsl(168, 50%, 53%) !important;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    color: white;
-    padding: 10px 80px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 18px 0px 20px 20px;
-}
-
-    .assign-instructors-btn:hover {
-        background-color: hsl(168, 40%, 43%) !important;
-        color: White;
-    }
 .err-msg-container
 {
   display: flex;

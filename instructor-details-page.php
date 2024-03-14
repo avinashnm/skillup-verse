@@ -9,6 +9,9 @@
 </head>
 <body>
     <div class="left-sidebar">
+    <div class="back-icon-container">
+      <a href="prof-login-page.html"><img class="back-icon"src="assets/icons/back-icon.png" /></a>
+    </div>
         <div class="logo-container">
             <img class="logo" src="assets/icons/skillup_logo.png" />
             <div class="logo-desc">
