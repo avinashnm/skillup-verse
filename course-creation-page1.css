@@ -36,7 +36,6 @@
 }
 
 .logo {
-    margin-top: 10px;
     height: 100px;
     width: 100px;
     margin-left: 30px;
@@ -44,8 +43,8 @@
 
 .logo-desc {
     position: absolute;
-    left: 100;
-    top: 40;
+    left: 100px;
+    top: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;

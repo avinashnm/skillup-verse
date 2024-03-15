@@ -10,7 +10,7 @@
 <body>
     <div class="left-sidebar">
     <div class="back-icon-container">
-      <a href="prof-login-page.html"><img class="back-icon"src="assets/icons/back-icon.png" /></a>
+      <a href="prof-login-page.php"><img class="back-icon"src="assets/icons/back-icon.png" /></a>
     </div>
         <div class="logo-container">
             <img class="logo" src="assets/icons/skillup_logo.png" />
@@ -18,67 +18,63 @@
                 <h3 class="skillup">SKILLUP</h3> <h3 class="verse">VERSE</h3>
             </div>
         </div>
+        <div class="nav-profile-container">
         <div class="nav-container">
-            <a href="admin-home-page.html">
+            <a href=#>
                 <div class="full-nav home-nav" id="home-nav">
                     <div class="icon-container">
-                        <img class="icon home-icon" src="assets/icons/home-icon-dark.png" />
+                        <img class="icon home-icon" src="assets/icons/home-icon.png" />
                     </div>
                     <div class="desc-container">
                         <p class="nav-desc home-desc">Home</p>
                     </div>
                 </div>
             </a>
-            <a href="student-details.php">
+            <a href=#>
                 <div class="full-nav dashboard-nav">
                     <div class="icon-container">
-                        <img class="icon dashboard-icon" src="assets/icons/student-details-icon.png" />
+                        <img class="icon dashboard-icon" src="assets/icons/dashboard-icon.png" />
                     </div>
                     <div class="desc-container">
-                        <p class="nav-desc student-details-desc">Student Details</p>
+                        <p class="nav-desc dashboard-desc">Dashboard</p>
                     </div>
                 </div>
             </a>
-            <a href="instructor-details-page.php">
-            <div class="full-nav instructor-details-nav">
-                <div class="icon-container">
-                    <img class="icon courses-icon" src="assets/icons/prof-details-icon.png" />
-                </div>
-                <div class="desc-container">
-                    <p class="nav-desc instructor-details-desc">Instructor Details</p>
-                </div>
-            </div>
-        </a>
-            <a href="course-details-page.php">
-        <div class="full-nav course-details-nav">
-          <div class="icon-container">
-            <img class="icon courses-icon" src="assets/icons/course-details-icon.png"/>
-          </div>
-          <div class="desc-container">
-            <p class="nav-desc course-details-desc">Course Details</p>
-          </div>
-        </div>
-      </a>
-            <a href=#>
-                <div class="full-nav create-course-nav" id="create-course-nav">
+            <a href="course-oversight-page.html">
+                <div class="full-nav courses-nav">
                     <div class="icon-container">
-                        <img class="icon courses-icon" src="assets/icons/course-creation-icon-white.png" />
+                        <img class="icon courses-icon" src="assets/icons/book-icon.png" />
                     </div>
                     <div class="desc-container">
-                        <p class="nav-desc create-course-desc">Create course</p>
+                        <p class="nav-desc course-desc">Course Oversight</p>
                     </div>
                 </div>
             </a>
-            <a href="add-instructor-page.php">
-            <div class="full-nav add-instructor-nav">
-                <div class="icon-container">
-                    <img class="icon courses-icon" src="assets/icons/add-instructor-icon.png" />
+            <a href='upload_materials.php'>
+                <div class="full-nav upload-materials-nav" id="home-nav">
+                    <div class="icon-container">
+                        <img class="icon home-icon" src="assets/icons/home-icon.png" />
+                    </div>
+                    <div class="desc-container">
+                        <p class="nav-desc upload-materials-desc">Upload Materials</p>
+                    </div>
                 </div>
-                <div class="desc-container">
-                    <p class="nav-desc add-instructor-desc">Add Instructor</p>
-                </div>
+            </a>
+            <a href=#>
             </div>
-        </a>
+            <div class="profile-container">
+            <a href=#>
+                <div class="full-nav profile-nav">
+                    <div class="icon-container">
+                        <img class="icon profile-icon" src="assets/icons/profile-icon.png" />
+                    </div>
+                    <div class="desc-container">
+                        <p class="nav-desc profile-desc">Prof. <?php echo $name; ?></p>
+                    </div>
+                </div>
+            </a>
+            </div>
+            </div>
         </div>
     </div>
     <div class="main-section">
@@ -227,7 +223,7 @@
                             } else {
                             // Insert new course details
                             $insert_query = "INSERT INTO course_details (course_id, course_title, category, semester, course_description, department, instructor_username)
-                            VALUES ('$course_id', '$course_title', '$category', '$semester', '$description', '$department', '$instructor')";
+                            VALUES ('$course_id', '$course_title', 'q2w6$category', '$semester', '$description', '$department', '$instructor')";
 
                             if (mysqli_query($conn, $insert_query)) {
                             echo "<div class='err-msg-container'><span class='err-message'>Course Created Successfully!</span></div>";
