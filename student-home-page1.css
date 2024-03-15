@@ -5,6 +5,20 @@ body{
   overflow-x: hidden;
   overflow-y: hidden;
 }
+.back-icon {
+    padding: 5px 8px 5px 5px;
+    margin: 10px 0px 0px 10px;
+    height: 30px;
+    width: 30px;
+    transition: background-color 0.3s ease-in-out;
+    background-color: hsl(230, 50%, 50%);
+    border: 2 px solid black;
+    border-radius: 100px;
+}
+
+    .back-icon:hover {
+        background-color: hsl(230, 80%, 50%)
+    }
 .left-sidebar
 {
   display: flex;
@@ -24,7 +38,6 @@ body{
 }
 .logo
 {
-  margin-top: 10px;
   height: 100px;
   width: 100px;
   margin-left: 30px;
@@ -33,7 +46,7 @@ body{
 {
   position: absolute;
   left: 100px;
-  top: 40px;
+  top: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;

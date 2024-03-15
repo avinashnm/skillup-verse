@@ -23,6 +23,9 @@ $username = $_SESSION['username']
 </head>
 <body>
     <div class="left-sidebar">
+    <div class="back-icon-container">
+      <a href="prof-login-page.php"><img class="back-icon"src="assets/icons/back-icon.png" /></a>
+    </div>
         <div class="logo-container">
             <img class="logo" src="assets/icons/skillup_logo.png" />
             <div class="logo-desc">
@@ -34,7 +37,7 @@ $username = $_SESSION['username']
             <a href="prof-home-page.php">
                 <div class="full-nav home-nav" id="home-nav">
                     <div class="icon-container">
-                        <img class="icon home-icon" src="assets/icons/home-icon.png" />
+                        <img class="icon home-icon" src="assets/icons/home-icon-dark.png" />
                     </div>
                     <div class="desc-container">
                         <p class="nav-desc home-desc">Home</p>
@@ -51,7 +54,7 @@ $username = $_SESSION['username']
                     </div>
                 </div>
             </a>
-            <a href="course-oversight-page.html">
+            <a href=#>
                 <div class="full-nav courses-nav">
                     <div class="icon-container">
                         <img class="icon courses-icon" src="assets/icons/book-icon.png" />
@@ -64,7 +67,7 @@ $username = $_SESSION['username']
             <a href='upload_materials.php'>
                 <div class="full-nav upload-materials-nav" id="home-nav">
                     <div class="icon-container">
-                        <img class="icon home-icon" src="assets/icons/home-icon.png" />
+                        <img class="icon home-icon" src="assets/icons/file-icon.png" />
                     </div>
                     <div class="desc-container">
                         <p class="nav-desc upload-materials-desc">Upload Materials</p>
