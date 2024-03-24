@@ -379,9 +379,9 @@ a:hover {
 {
 margin-right: 20px;
 }
-.dob-input
-{
-margin-right: 10px;
+.dob-input {
+    margin-right: 10px;
+}
 a {
     text-decoration: none;
     color: #007bff;
@@ -389,3 +389,19 @@ a {
 a:hover {
     text-decoration: underline;
 }
+.err-msg-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.err-message {
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    font-size: 17px;
+    color: hsl(230, 50%, 50%) !important;
+    position: absolute;
+}
+

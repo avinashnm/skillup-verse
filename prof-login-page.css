@@ -160,7 +160,7 @@
     width: 25px;
     margin-left: 100px;
     top: 305px;
-    right: 206px;
+    right: 218px;
 }
 
 .login-choose-icon {
@@ -391,11 +391,14 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 5px;
 }
 
 .err-message {
+    font-weight: bold;
     text-align: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 17px;
     color: hsl(230, 50%, 50%) !important;
+    position: absolute;
 }

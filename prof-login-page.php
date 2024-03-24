@@ -113,7 +113,7 @@ if (isset($_POST['login-btn'])) {
       </div>
       <div class="choose-section">
         <div class="student-section">
-          <a class="student-icon-desc" href="student-login-page.html">
+          <a class="student-icon-desc" href="student-login-page.php">
         <img src="assets/icons/student-icon.png" class="login-choose-icon"/>
         <p class="login-icon-desc">STUDENT</p>
       </a>
