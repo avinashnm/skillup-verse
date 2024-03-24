@@ -104,6 +104,9 @@ font-weight: bold;
   height: 25px;
   width: 25px;
 }
+.profile-nav {
+    margin-bottom: 10px;
+}
 .profile-icon {
     height: 50px;
     width: 50px;

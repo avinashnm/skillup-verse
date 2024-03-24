@@ -55,13 +55,13 @@ $name = $_SESSION['name'];
                     </div>
                 </div>
             </a>
-            <a href=#>
+            <a href="learning-page.php">
                 <div class="full-nav courses-nav">
                     <div class="icon-container">
                         <img class="icon courses-icon" src="assets/icons/book-icon.png" />
                     </div>
                     <div class="desc-container">
-                        <p class="nav-desc course-desc">Courses</p>
+                        <p class="nav-desc course-desc">My Learning</p>
                     </div>
                 </div>
             </a>
@@ -80,6 +80,8 @@ $name = $_SESSION['name'];
             </div>
             </div>
         </div>
+    </div>
+
     <div class="main-section">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
