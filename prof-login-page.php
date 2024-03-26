@@ -144,7 +144,7 @@ if (isset($_POST['login-btn'])) {
             <input type="submit" name="login-btn" class="login-btn" value="Login">
           </div>
   <div class="signup-link-container">
-    <p class="signup-link-message">Not a member ? Let's get started - <a class="signup-link"href="signup_page.html">Sign Up</a> !</p>
+    <p class="signup-link-message">Not a member ? Let's get started - <a class="signup-link"href="signup_page.php">Sign Up</a> !</p>
   </div>
   <div class="error-message ">
             <?php

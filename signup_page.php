@@ -1,5 +1,8 @@
 <?php
-session_start(); 
+session_start();
+
+$errors = [];
+
 if (isset($_POST['signup-btn'])) {
     $ServerName = "localhost";
     $db_Username = "root";
@@ -24,14 +27,14 @@ if (isset($_POST['signup-btn'])) {
 
         // Check if passwords match
         if ($password != $confirm_password) {
-            echo "Password and Confirm Password do not match.";
+           $errors[] = "Password and Confirm Password do not match.";
         } else {
             // Check if dept or email already exists in the database
             $check_query = "SELECT * FROM student_details WHERE deptno='$deptno' OR email='$email'";
             $result = mysqli_query($conn, $check_query);
 
             if (mysqli_num_rows($result) > 0) {
-                echo "Department number or email already exists. Please choose a different department number or email.";
+                $errors[] = "Department number or email already exists. Please choose a different one or Login.";
             } else {
                 // Hash the password for security
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -54,7 +57,8 @@ if (isset($_POST['signup-btn'])) {
                     header("Location: student-home-page.php");
                     exit(); // stop further execution
                 } else {
-                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    echo "Error: " . $sql . "
+<br>" . mysqli_error($conn);
                 }
             }
         }
@@ -64,3 +68,119 @@ if (isset($_POST['signup-btn'])) {
     mysqli_close($conn);
 }
 ?>
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="signup_page.css">
+    <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css">
+    <script src="Bootstrap/JS/bootstrap.min.js"></script>
+</head>
+<body class="entire-bg">
+    <div class="signup-fullsection">
+        <div class="intro-section">
+            <div class="back-icon-container">
+                <a href="landing_page.php"><img class="back-icon" src="assets\icons\back-icon.png" /></a>
+            </div>
+            <div class="logo-container">
+                <img class="logo" src="assets\icons\skillup_logo.png" />
+                <div class="logo-desc">
+                    <h3 class="skillup">SKILLUP</h3> <h3 class="verse">VERSE</h3>
+                </div>
+            </div>
+            <div class="intro-desc">
+                <h1 class="welcome">Welcome to Your <div class="break">Personalized Learning Platform !</div> </h1>
+            </div>
+            <div class="features-section">
+                <div class="features-left">
+                    <button class="features f1"><img src="assets\icons\teacher-integration-icon.png" class="icons" />Faculty Integration</button>
+                    <button class="features f2"><img src="assets\icons\resource-library-icon.png" class="icons" />Rich Resource Library</button>
+                    <button class="features f3"><img src="assets\icons\learning-icon.png" class="icons" />Personalized Learning</button>
+                </div>
+                <div class="featues-right">
+                    <button class="features f4"><img src="assets\icons\performance-analytics-icon.png" class="icons" />Performance Analytics</button>
+                    <button class="features f5"><img src="assets\icons\supportive-community-icon.png" class="icons" />Supportive Community</button>
+                    <button class="features f6"><img src="assets\icons\course-specific-icon.png" class="icons" />Course-Specific Tools</button>
+                </div>
+            </div>
+            <img src="assets\images\students.png" class="students-img">
+        </div>
+        <div class="entire-signup-section">
+            <div class="signup-cards-container">
+                <div class="signup-section">
+                    <div class="signup-card"></div>
+                    <div class="signup-card"></div>
+                          <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="signup-form" onsubmit="return validateForm();">
+                        <div class="hdn-section">
+                            <div class="error-message "></div>
+                            <h1 class="signup-hdn">Sign Up</h1>
+                        </div>
+                        <div class="fullname-container">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="full_name" class="form-control border-0" id="fullname" placeholder="Enter your fullname" required>
+                                <label for="fullname">Full Name</label>
+                            </div>
+                        </div>
+                        <div class="dept-num-container">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="dept-num" class="form-control border-0" id="dept-num" placeholder="eg: 21-ucs-008" required>
+                                <label for="dept-num">Department Number</label>
+                            </div>
+                        </div>
+                        <!--<div class="dob_gender">
+        <div class="form-group dob-group">
+          <div class="form-floating mb-3">
+            <input name="dob" type="date" class="form-control" id="dob" placeholder="Enter your DOB">
+            <label for="dob" class="dob-label">Date Of Birth</label>
+        </div>
+        </div>
+        <div class="form-group gender-group">
+          <div class="form-floating">
+              <select name="gender" class="form-select" id="gender" aria-label="Floating label select example">
+                <option selected>Select your Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+              <label for="gender" id="gender">Gender</label>
+              </div>
+        </div>
+    </div>-->
+                        <div class="mail_section">
+                            <div class="form-floating mb-3">
+                                <input name="email" type="email" class="form-control" id="mail" placeholder="example@gmail.com" required>
+                                <label for="mail">Email Address </label>
+                            </div>
+                        </div>
+                        <div class="pw_section">
+                            <div class="form-floating mb-3">
+                                <input name="password" type="password" class="form-control" id="password" placeholder="Enter your Password" minlength="8" required>
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <div class="cpw_section">
+                            <div class="form-floating mb-3">
+                                <input name="confirm_password" type="password" class="form-control" id="confirmpassword" placeholder="Re-enter your Password" required>
+                                <label for="confirmpassword">Confirm Password</label>
+                            </div>
+                        </div>
+                        <div class="btn-section">
+                            <div class="signup-btn-container">
+                                <a href="#"><input type="submit" name="signup-btn" class="signup-btn" value="Sign Up"></a>
+                            </div>
+                            <div class="login-link-container">
+                                <p class="login-link-message">Back for another chapter ? - <a class="login-link" href="student-login-page.php">Login</a> !</p>
+                            </div>
+                        </div>
+                        <div class="error-message ">
+                            <?php
+                            foreach ($errors as $error) {
+                            echo "<div class='err-msg-container'><span class='err-message'>$error</span></div>";
+                            }
+                            ?>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="signup_page.js"></script>
+</body>
+</html>

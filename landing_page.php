@@ -46,7 +46,7 @@
               <a class="nav-link login-link login-link" href="student-login-page.php">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="signup_page.html"><button class="signup-btn">Sign up</button></a>
+              <a class="nav-link" href="signup_page.php"><button class="signup-btn">Sign up</button></a>
             </li>
           </ul>
         </div>
@@ -398,7 +398,7 @@
     <p class="popup-subhdn">Get ready for an enriching learning experience</p>
     <p class="popup-message">Sign Up or Login to get started</p>
     <div class="popup-btn-section">
-      <a class="nav-link" href="signup_page.html"><button id="signup-btn" class="signup-btn">Sign up</button></a>
+      <a class="nav-link" href="signup_page.php"><button id="signup-btn" class="signup-btn">Sign up</button></a>
       <div class="or-divider">
     <div class="or-line"></div>
     <div class="or-text">Or</div>

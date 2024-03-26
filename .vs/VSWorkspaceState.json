@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets"
+    "\\assets",
+    "\\assets\\icons",
+    "\\courses"
   ],
-  "SelectedNode": "\\upload_materials.php",
+  "SelectedNode": "\\signup_page.css",
   "PreviewInSolutionExplorer": false
 }

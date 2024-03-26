@@ -38,11 +38,6 @@ function validateForm() {
      }
 
 
-    // Check if password and confirm password match
-    if (password !== confirmPassword) {
-      alert("Password and Confirm Password do not match");
-      return false;
-    }
 
     // If all checks pass, the form will submit
     return true;
