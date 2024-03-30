@@ -1,8 +1,10 @@
 ﻿body {
+    background-color: White;
+    overflow: hidden;
+}
+.content-container {
     display: flex;
     flex-direction: row;
-    background-color: hsl(230, 50%, 30%);
-    overflow: hidden;
 }
 
 .back-icon {
@@ -32,22 +34,21 @@
 
 .logo-container {
     width: 20vw;
-    padding-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: start;
 }
 
 .logo {
-    height: 100px;
-    width: 100px;
-    margin-left: 30px;
+    height: 60px;
+    width: 60px;
+    margin-left: 10px;
 }
 
 .logo-desc {
     position: absolute;
-    left: 100px;
-    top: 70px;
+    left: 50px;
+    top: 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,7 +56,7 @@
 }
 
 .skillup {
-    font-size: 34px;
+    font-size: 18px;
     color: hsl(168, 50%, 53%);
     margin-right: 10px;
     display: flex;
@@ -65,9 +66,9 @@
 
 .verse {
     position: absolute;
-    margin-top: 65px;
-    font-size: 44px;
-    color: hsl(0, 0%, 80%);
+    margin-top: 35px;
+    font-size: 23px;
+    color: hsl(0, 0%, 50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
