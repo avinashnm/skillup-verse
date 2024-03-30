@@ -2,25 +2,64 @@
     background-color: White;
     overflow: hidden;
 }
+.navigation-bar {
+    font-size: 20px;
+    margin-left: 50px;
+}
+.nav-link {
+    color: hsl(230, 50%, 30%) !important;
+    margin-left: 0px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.active
+{
+    color: black !important;
+}
+.profile-nav {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+}
+
+.profile-desc {
+    font-size: 20px !important;
+    margin-left: 5px !important;
+}
+.profile-icon {
+    height: 30px !important;
+    width: 30px !important;
+}
 .content-container {
     display: flex;
     flex-direction: row;
 }
-
+.back-icon-container
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
 .back-icon {
-    padding: 5px 8px 5px 5px;
     margin: 10px 0px 0px 10px;
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     transition: background-color 0.3s ease-in-out;
-    background-color: hsl(230, 50%, 50%);
-    border: 2 px solid black;
-    border-radius: 100px;
+}
+.content-hdn {
+    color: hsl(180, 80%, 70%);
+    font-size: 18px;
+    height: 20px;
+    margin: 8px 0px 0px 15px;
+    text-decoration: underline;
 }
 
-    .back-icon:hover {
-        background-color: hsl(230, 80%, 50%)
-    }
+.course-name-container
+{
+    height: 5vh;
+    width: 100vw;
+    background-color: white;
+}
 
 .left-sidebar {
     display: flex;
@@ -109,12 +148,7 @@
     width: 25px;
 }
 
-.profile-icon {
-    height: 50px;
-    width: 50px;
-    margin-bottom: 10px;
-    margin-left: 10px !important;
-}
+
 
 .nav-desc {
     font-size: 20px;
@@ -122,15 +156,7 @@
     margin-top: 2px;
 }
 
-.profile-nav {
-    margin-bottom: 10px;
-}
 
-.profile-desc {
-    padding-top: 10px;
-    font-size: 20px !important;
-    margin-left: 5px !important;
-}
 
 a {
     text-decoration: none;
@@ -142,7 +168,6 @@ a {
 }
 
 .nav-profile-container {
-    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -153,131 +178,6 @@ a {
     overflow-y: scroll !important;
     width: 80vw;
     height: 100vh;
+    background-color: black;
 }
-
-.course-row {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.course-card {
-    height: 380px !important;
-    width: 23%;
-    transition: box-shadow 0.3s ease-in-out;
-    position: relative;
-}
-
-    .course-card:hover {
-        cursor: pointer;
-    }
-
-.card-img {
-    height: 120px;
-    width: 100%;
-    border-bottom-left-radius: 0px !important;
-    border-bottom-right-radius: 0px !important;
-}
-
-.course-body {
-    width: 100%;
-}
-
-.course-title {
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-    font-family: 'Titillium Web', sans-serif;
-    margin-bottom: 20px;
-}
-
-.double-line-title {
-    margin-bottom: 10px !important;
-}
-
-.course-desc {
-    font-size: 12px;
-    display: flex;
-    text-align: justify;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Titillium Web', sans-serif;
-}
-
-.card-footer {
-    text-align: center;
-}
-
-.enroll-btn {
-    background-color: #2fdeb2;
-    color: White;
-    border-radius: 5px;
-    padding: 5px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-    .enroll-btn:hover {
-        background-color: #1ca982;
-    }
-
-.featured-courses-section {
-    background: url('assets/images/landing-page-bg2.png');
-}
-
-.featured-courses-container {
-    margin: 10px 20px 10px 20px;
-    padding-bottom: 20px;
-}
-
-.featured-courses-title {
-    font-size: 40px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 20px;
-    margin-bottom: 20px;
-    color: White;
-}
-
-.fc-tagline-container {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-}
-
-.featured-courses-tagline {
-    text-align: center;
-    color: White;
-    margin-bottom: 50px;
-    font-family: 'Raleway', sans-serif;
-    width: 600px;
-}
-/* Add this to your existing CSS */
-
-.card-img-top {
-    transition: filter 0.3s ease-in-out;
-}
-
-.course-card:hover .card-img-top {
-    filter: brightness(50%); /* Darken the card image on hover */
-}
-
-.play-icon {
-    position: absolute;
-    height: 70px;
-    width: 70px;
-    top: 18%; /* Adjust the position of the play button vertically */
-    left: 50%; /* Adjust the position of the play button horizontally */
-    transform: translate(-50%, -50%); /* Center the play button */
-    opacity: 0; /* Initially hide the play button */
-    transition: opacity 0.3s ease-in-out;
-}
-
-.course-card:hover .play-icon {
-    opacity: 1; /* Show the play button on hover */
-}
+   

@@ -21,7 +21,7 @@ $name = $_SESSION['name'];
 <body>
 <div class="nav-bar-container">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
+      <div class="container-fluid">
         <div class="logo-container">
             <img class="logo" src="../assets/icons/skillup_logo.png" />
             <div class="logo-desc">
@@ -29,31 +29,34 @@ $name = $_SESSION['name'];
             </div>
         </div>
       </div>
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav nav-underline navigation-bar">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="../student-home-page.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link active" href="#">My Learning</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown link
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
+            <li class="nav-item">
+                <div class="profile-container">
+                    <a href=#>
+                        <div class="full-nav profile-nav">
+                            <div class="icon-container">
+                                <img class="icon profile-icon" src="../assets/icons/profile-icon.png" />
+                            </div>
+                            <div class="desc-container">
+                                <p class="nav-desc profile-desc"><?php echo $name; ?></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>       
             </li>
           </ul>
         </div>
@@ -64,6 +67,7 @@ $name = $_SESSION['name'];
 <div class="left-sidebar">
     <div class="back-icon-container">
       <a href="../learning-page.php"><img class="back-icon" src="../assets/icons/back-icon.png"></a>
+      <span class="content-hdn">CONTENTS</span>
     </div>
         <div class="nav-profile-container">
         <div class="nav-container">
@@ -98,22 +102,8 @@ $name = $_SESSION['name'];
                 </div>
             </a>
         </div>
-        <div class="profile-container">
-            <a href=#>
-                <div class="full-nav profile-nav">
-                    <div class="icon-container">
-                        <img class="icon profile-icon" src="../assets/icons/profile-icon.png" />
-                    </div>
-                    <div class="desc-container">
-                        <p class="nav-desc profile-desc"><?php echo $name; ?></p>
-                    </div>
-                </div>
-            </a>
-            </div>
-            </div>
-        </div>
+        
     </div>
-</div>
 </div>
     </body>
 </html>
