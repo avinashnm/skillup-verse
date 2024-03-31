@@ -64,6 +64,16 @@ $username = $_SESSION['username']
                     </div>
                 </div>
             </a>
+            <a href="add_chapters_page.php">
+                <div class="full-nav chapters-nav">
+                    <div class="icon-container">
+                        <img class="icon chapters-icon" src="assets/icons/book-icon.png" />
+                    </div>
+                    <div class="desc-container">
+                        <p class="nav-desc chapters-desc">Add Chapters</p>
+                    </div>
+                </div>
+            </a>
             <a href='upload_materials.php'>
                 <div class="full-nav upload-materials-nav" id="home-nav">
                     <div class="icon-container">

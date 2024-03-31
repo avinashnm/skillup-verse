@@ -5,6 +5,7 @@
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
 .back-icon {
     padding: 5px 8px 5px 5px;
     margin: 10px 0px 0px 10px;
@@ -19,6 +20,7 @@
     .back-icon:hover {
         background-color: hsl(230, 80%, 50%)
     }
+
 .left-sidebar {
     display: flex;
     flex-direction: column;
@@ -87,16 +89,17 @@
     color: hsl(0, 0%, 50%);
 }
 
-.upload-materials-nav {
+.chapters-nav {
     background-color: hsla(230, 90%, 60%, 0.3) !important;
     padding-right: 0px !important;
 }
 
-#upload-materials-nav:hover {
+#chapters-nav:hover {
     background-color: hsla(230, 90%, 60%, 0.3) !important;
 }
 
-.upload-materials-desc {
+.chapters-desc {
+
     color: hsla(230, 50%, 90%) !important;
     font-weight: bold;
 }
@@ -205,11 +208,11 @@ a {
     background-color: hsl(168, 80%, 80%);
 }
 
-label {
+label, #course, #chapter-no, #course-label {
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
     font-weight: bold;
-    color: hsl(168, 80%, 70%);
+    color: hsl(168, 80%, 70%) !important;
     margin-bottom: 5px;
 }
 
@@ -242,10 +245,12 @@ label {
     display: flex;
     flex-direction: column;
 }
-.material-upload
-{
+
+#chapter-no, #chapter-name, #course {
     margin-top: 20px;
+    background-color: hsla(168, 90%, 90%, 0.2) !important;
 }
+
 
 .signup-cards-container {
     position: relative;
@@ -255,7 +260,7 @@ label {
 }
 
 .form-group label,
-.form-group input {
+.form-group input, #chapter-no {
     margin: 5px;
 }
 
@@ -318,12 +323,15 @@ label {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 5px;
 }
 
 .err-message {
-    margin-top: 20px;
+    font-weight: bold;
     text-align: center;
     align-items: center;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 17px;
+    color: hsl(168, 50%, 40%) !important;
+    position: absolute;
+    width: 400px;
 }

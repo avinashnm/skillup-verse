@@ -57,8 +57,7 @@ if (isset($_POST['signup-btn'])) {
                     header("Location: student-home-page.php");
                     exit(); // stop further execution
                 } else {
-                    echo "Error: " . $sql . "
-<br>" . mysqli_error($conn);
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
                 }
             }
         }
