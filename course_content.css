@@ -1,0 +1,182 @@
+﻿body {
+    background-color: White;
+    overflow: hidden;
+}
+.navigation-bar {
+    font-size: 20px;
+    margin-left: 50px;
+}
+.nav-link {
+    color: hsl(230, 50%, 30%) !important;
+    margin-left: 0px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.active
+{
+    color: black !important;
+}
+.profile-nav {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+}
+
+.profile-desc {
+    font-size: 20px !important;
+    margin-left: 5px !important;
+}
+.profile-icon {
+    height: 30px !important;
+    width: 30px !important;
+}
+.content-container {
+    display: flex;
+    flex-direction: row;
+}
+.back-icon-container
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.back-icon {
+    margin: 10px 0px 0px 10px;
+    height: 20px;
+    width: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+.content-hdn {
+    color: hsl(180, 80%, 70%);
+    font-size: 18px;
+    height: 20px;
+    margin: 8px 0px 0px 15px;
+    text-decoration: underline;
+}
+
+.course-name-container
+{
+    height: 5vh;
+    width: 100vw;
+    background-color: white;
+}
+
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(230, 50%, 30%);
+    max-width: 20vw;
+    min-height: 100vh;
+    padding-right: 10px;
+    overflow: hidden !important;
+}
+
+.logo-container {
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    margin-left: 10px;
+}
+
+.logo-desc {
+    position: absolute;
+    left: 50px;
+    top: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 35px;
+}
+
+.skillup {
+    font-size: 18px;
+    color: hsl(168, 50%, 53%);
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.verse {
+    position: absolute;
+    margin-top: 35px;
+    font-size: 23px;
+    color: hsl(0, 0%, 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-container {
+    margin-top: 45px;
+    margin-left: 20px;
+}
+
+.full-nav {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 50px 0px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-family: 'Kanit', sans-serif;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: hsl(0, 0%, 50%);
+}
+
+.courses-nav {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+#courses-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.3) !important;
+}
+
+.courses-desc {
+    color: hsla(230, 50%, 90%) !important;
+    font-weight: bold;
+}
+
+.icon {
+    margin-top: 2px;
+    height: 25px;
+    width: 25px;
+}
+
+
+
+.nav-desc {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+.full-nav:hover {
+    background-color: hsla(230, 90%, 60%, 0.1);
+    color: hsl(0, 0%, 80%);
+}
+
+.nav-profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-section {
+    overflow-x: hidden;
+    overflow-y: scroll !important;
+    width: 80vw;
+    height: 100vh;
+    background-color: black;
+}

@@ -86,7 +86,7 @@ $name = $_SESSION['name'];
         <div class="featured-courses-container">
         <div class="course-row">
               
-                <div class="card h-100 course-card" id = "UCS-1502">
+                <div class="card h-100 course-card" data-course-id="UCS-5501">
                     <img src="assets/images/course-1.jpg" class="card-img-top card-img" alt="...">
                     <div class="card-body course-body">
                         <h5 class="card-title course-title">PHP and MYSQL</h5>
@@ -96,7 +96,7 @@ $name = $_SESSION['name'];
                 </div>
               
 
-                <div class="card h-100 course-card">
+                <div class="card h-100 course-card" data-course-id="UCS-5503">
                     <img src="assets/images/course-2.jpg" class="card-img-top card-img" alt="...">
                     <div class="card-body course-body">
                         <h5 class="card-title course-title double-line-title">Web Programming with ASP.NET</h5>
@@ -105,7 +105,7 @@ $name = $_SESSION['name'];
                     </div>
                 </div>
 
-                <div class="card h-100 course-card">
+                <div class="card h-100 course-card" data-course-id="UCS-5604">
                     <img src="assets/images/course-3.png" class="card-img-top card-img" alt="...">
                     <div class="card-body course-body">
                         <h5 class="card-title course-title double-line-title">Data Communication and Networks</h5>
@@ -114,7 +114,7 @@ $name = $_SESSION['name'];
                     </div>
                 </div>
 
-                <div class="card h-100 course-card">
+                <div class="card h-100 course-card" data-course-id="UCS-5601">
                     <img src="assets/images/course-4.jpeg" class="card-img-top card-img" alt="...">
                     <div class="card-body course-body">
                         <h5 class="card-title course-title">Cyber Security</h5>
@@ -123,8 +123,8 @@ $name = $_SESSION['name'];
                     </div>
                 </div>
         </div>
-        <div class="course-row">
-                <div class="card h-100 course-card">
+        <div class="course-row"> 
+                <div class="card h-100 course-card" data-course-id="UCS-3503">
                     <img src="assets/images/course-5.jpeg" class="card-img-top card-img" alt="...">
                     <div class="card-body course-body">
                         <h5 class="card-title course-title">Data Structures</h5>
@@ -133,16 +133,16 @@ $name = $_SESSION['name'];
                     </div>
                 </div>
 
-                 <div class="card h-100 course-card">
+                 <div class="card h-100 course-card" data-course-id="UCS-1501">
                     <img src="assets/images/course-6.jpg" class="card-img-top card-img" alt="...">
                     <div class="card-body course-body">
-                        <h5 class="card-title course-title">Web Programming</h5>
+                        <h5 class="card-title course-title">Web Programming Lab</h5>
                         <p class="card-text course-desc">Empower Your Web Development Journey: Learn the Core Principles, Languages, and Technologies Behind Web Programming, Crafting Dynamic and Interactive Websites and Applications.</p>
                         <img src="assets/icons/play-button.png" class="play-icon" alt="Play Icon">
                     </div>
                 </div>
 
-                <div class="card h-100 course-card">
+                <div class="card h-100 course-card" data-course-id="UCA-1502">
                     <img src="assets/images/course-7.jpg" class="card-img-top card-img" alt="...">
                     <div class="card-body course-body">
                         <h5 class="card-title course-title double-line-title">Computer Organization and Architecture</h5>
@@ -151,7 +151,7 @@ $name = $_SESSION['name'];
                     </div>
                 </div>
 
-                <div class="card h-100 course-card">
+                <div class="card h-100 course-card" data-course-id="UCA-1301">
                     <img src="assets/images/course-8.png" class="card-img-top card-img" alt="...">
                     <div class="card-body course-body">
                         <h5 class="card-title course-title double-line-title">Mathematics for Computer Science</h5>
@@ -161,7 +161,7 @@ $name = $_SESSION['name'];
                 </div>
         </div>
             <div class="course-row">
-                <div class="card h-100 course-card">
+                <div class="card h-100 course-card" data-course-id="UCS-2501">
                     <img src="assets/images/course-9.jpg" class="card-img-top card-img" alt="...">
                     <div class="card-body course-body">
                         <h5 class="card-title course-title vdouble-line-title">Object Oriented Programming using C++</h5>
@@ -170,7 +170,7 @@ $name = $_SESSION['name'];
                     </div>
                 </div>
 
-                <div class="card h-100 course-card">
+                <div class="card h-100 course-card" data-course-id="UCS-2503">
                     <img src="assets/images/course-10.jpg" class="card-img-top card-img" alt="...">
                     <div class="card-body course-body">
                         <h5 class="card-title course-title">Operating Systems</h5>
@@ -184,20 +184,27 @@ $name = $_SESSION['name'];
     </div>
     </div>
    <script>
-    // Get all course cards
-    const courseCards = document.querySelectorAll('.course-card');
+ // Get all course cards
+const courseCards = document.querySelectorAll('.course-card');
 
-    // Add click event listener to each course card
-    courseCards.forEach(card => {
-        card.addEventListener('click', () => {
-            // Get the ID of the clicked card
-            const courseId = card.id;
+// Add click event listener to each course card
+courseCards.forEach(card => {
+    card.addEventListener('click', () => {
+        // Get the ID of the clicked card
+        let courseId = card.getAttribute('data-course-id');
 
-            // Redirect the user to the respective page
-            window.location.href = `courses/${courseId}.php`;
-        });
+        // Replace hyphen with space in the course ID
+        courseId = courseId.replace(/-/g, ' ');
+
+        // Encode the modified course ID to ensure it's URL safe
+        const encodedCourseId = encodeURIComponent(courseId);
+
+        // Send the selected course ID to the course_content.php page
+        window.location.href = `course_content.php?courseId=${encodedCourseId}`;
     });
+});
+
+
 </script>
-    <script src="courses-page.js"></script>
 </body>
 </html>

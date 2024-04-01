@@ -10,6 +10,39 @@ if (!isset($_SESSION['name'])) {
 
 // Get the name from the session
 $name = $_SESSION['name'];
+
+// Database connection configuration
+$servername = "localhost";
+$username = "your_username";
+$password = "your_password";
+$database = "your_database";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Check if course ID is provided in the URL parameters
+if(isset($_GET['courseId'])) {
+    // Sanitize the received courseId
+    $courseId = filter_var($_GET['courseId'], FILTER_SANITIZE_STRING);
+
+    // Fetch course title from the database based on the course ID
+    $sql = "SELECT course_title FROM course_details WHERE course_id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $courseId);
+    $stmt->execute();
+    $stmt->bind_result($courseTitle);
+    $stmt->fetch();
+    $stmt->close();
+} else {
+    // If course ID is not provided in URL parameters, redirect to learning page
+    header("Location: learning_page.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <head>
@@ -64,7 +97,7 @@ $name = $_SESSION['name'];
     </nav>
 </div>
 <div class="content-container">
-<div class="left-sidebar">
+ <div class="left-sidebar">
     <div class="back-icon-container">
       <a href="../learning-page.php"><img class="back-icon" src="../assets/icons/back-icon.png"></a>
       <span class="content-hdn">CONTENTS</span>
@@ -104,6 +137,11 @@ $name = $_SESSION['name'];
         </div>
         
     </div>
+    <div class="course-content-section">
+            <h2>Course Content</h2>
+            <p>Course ID: <?php echo $courseId; ?></p>
+            <p>Course Title: <?php echo $courseTitle; ?></p>
+        </div>
 </div>
     </body>
 </html>

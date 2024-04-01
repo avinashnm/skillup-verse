@@ -113,7 +113,8 @@ if (isset($_POST['search-btn'])) {
                 FROM course_details 
                 INNER JOIN instructor_details ON course_details.instructor_username = instructor_details.username
                 WHERE course_details.course_id LIKE '%$search_query%' 
-                OR course_details.course_title LIKE '%$search_query%' 
+                OR course_details.course_title LIKE '%$search_query%'
+                OR course_details.department LIKE '%$search_query%' 
                 OR course_details.category LIKE '%$search_query%' 
                 OR course_details.semester LIKE '%$search_query%'";
         $result = $conn->query($sql);
