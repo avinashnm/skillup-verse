@@ -1,6 +1,8 @@
 ﻿<?php
 session_start(); // Ensure session is started
 
+$errors = [];
+
 // Check if the user is logged in
 if (!isset($_SESSION['name'])) {
     // If not logged in, redirect to the login page
@@ -10,7 +12,7 @@ if (!isset($_SESSION['name'])) {
 
 // Get the name from the session
 $name = $_SESSION['name'];
-$username = $_SESSION['username']
+$username = $_SESSION['username'];
 ?>
 <html>
 <head>
@@ -165,6 +167,24 @@ $username = $_SESSION['username']
                                     <label for="course" id="course">Course</label>
                                 </div>
                         </div>
+                        <div class="form-group chapter-no-group">
+                                <div class="form-floating">
+                                    <select name="chapter-no" class="form-select" id="chapter-no" aria-label="Floating label select example" required>
+                                        <option selected>Select the Chapter Number</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                    <label for="chapter-no" id="chapter-no">Chapter Number</label>
+                                </div>
+                            </div>
                             <div class="form-floating material-upload">
 
                                 <div class="input-group mb-3">
@@ -185,9 +205,8 @@ $username = $_SESSION['username']
                             
                            
                         </div>
-                    </form>
-                </div>
-            </div>
+                        
+                    
            <?php
             // Check if the form is submitted
             if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["upload-btn"])) {
@@ -197,14 +216,12 @@ $username = $_SESSION['username']
                 // Get the course ID and instructor username from the form
                 $courseID = $_POST["course"];
                 $instructorUsername = $username;
+                $chapterNo = $_POST["chapter-no"];
 
                 // Create the directory if it doesn't exist
                 if (!file_exists($uploadDir)) {
                     mkdir($uploadDir, 0777, true);
                 }
-
-                // Flag to check if any file upload failed
-                $uploadSuccess = true;
 
                 // Loop through each uploaded file
                 foreach ($_FILES["files"]["name"] as $key => $filename) {
@@ -212,49 +229,62 @@ $username = $_SESSION['username']
                     $customFilename = $_POST["file-name"];
                     
                     // Generate a unique filename for each file
-                    $uniqueFilename = $courseID . '_' . $customFilename;
-
+                    $uniqueFilename = $courseID . '_' . $chapterNo. '_' .$customFilename;
+                    
                     // Set the destination path for the file
                     $targetPath = $uploadDir . $uniqueFilename;
 
-                    // Move the uploaded file to the destination directory
-                    if (move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetPath)) {
-                        // File uploaded successfully, insert the record into the database
-                        $conn = new mysqli($ServerName, $db_Username, $db_Password, $Dbname);
-                        if ($conn->connect_error) {
-                            die("Connection failed: " . $conn->connect_error);
-                        }
-
-                        // Prepare SQL statement to insert the record into the database
-                        $sql = "INSERT INTO uploaded_files (id, file_name, instructor_username) VALUES (?, ?, ?)";
-                        $stmt = $conn->prepare($sql);
-                        $stmt->bind_param("sss", $uniqueFilename, $filename, $instructorUsername);
-
-                        // Execute the SQL statement
-                        if ($stmt->execute()) {
-                            // File uploaded successfully
-                        } else {
-                            // Error occurred during database insertion
-                            $uploadSuccess = false;
-                            echo "Error: " . $sql . "<br>" . $conn->error;
-                        }
-
-                        // Close the database connection
-                        $conn->close();
+                    // Check if file already exists
+                    if (file_exists($targetPath)) {
+                        $errors[] = "'$customFilename' material already exists in the given chapter!";
                     } else {
-                        // Error occurred during file upload
-                        $uploadSuccess = false;
-                        echo "Error uploading file.";
+                        // Move the uploaded file to the destination directory
+                        if (move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetPath)) {
+                            // File uploaded successfully, insert the record into the database
+                            $conn = new mysqli($ServerName, $db_Username, $db_Password, $Dbname);
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
+
+                            // Prepare SQL statement to insert the record into the database
+                            $sql = "INSERT INTO uploaded_files (material_id, material_name, file_name, instructor_username, chapter_number, course_id) VALUES (?, ?, ?, ?, ?, ?)";
+                            $stmt = $conn->prepare($sql);
+                            $stmt->bind_param("ssssss", $uniqueFilename, $customFilename, $filename, $instructorUsername, $chapterNo, $courseID);
+
+                            // Execute the SQL statement
+                            if ($stmt->execute()) {
+                                // File uploaded successfully
+                            } else {
+                                // Error occurred during database insertion
+                                $errors[] = "Error: " . $sql . "<br>" . $conn->error;
+                            }
+
+                            // Close the database connection
+                            $conn->close();
+                        } else {
+                            // Error occurred during file upload
+                            $errors[] = "Error uploading file!";
+                        }
                     }
                 }
 
                 // Check if all file uploads were successful
-                if ($uploadSuccess) {
-                    echo "<h1>All files uploaded successfully.</h1>";
+                if (empty($errors)) {
+                   $errors[] = "File uploaded successfully!";
                 }
             }
             ?>
-
+            <div class="error-message ">
+                            <?php
+                            // Display error messages
+                            foreach ($errors as $error) {
+                                echo "<div class='err-msg-container'><span class='err-message'>$error</span></div>";
+                            }
+                            ?>
+                        </div>
+            </form>
+                </div>
+            </div>
         </div>
     </div>
     <div class="right-sidebar">

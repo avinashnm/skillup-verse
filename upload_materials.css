@@ -205,7 +205,7 @@ a {
     background-color: hsl(168, 80%, 80%);
 }
 
-label {
+label, #course,#chapter-no, #material {
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
     font-weight: bold;
@@ -225,7 +225,7 @@ label {
     width: 100%;
 }
 
-.form-control {
+.form-control, #course, #chapter-no, #material {
     margin-top: 5px;
     background-color: hsla(168, 90%, 90%, 0.2) !important;
     border: none !important;
@@ -318,12 +318,15 @@ label {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 5px;
 }
 
 .err-message {
-    margin-top: 20px;
+    font-weight: bold;
     text-align: center;
     align-items: center;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 17px;
+    color: hsl(168, 50%, 40%) !important;
+    position: absolute;
+    width: 400px;
 }

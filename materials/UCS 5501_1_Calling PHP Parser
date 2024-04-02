@@ -1,0 +1,5 @@
+Calling PHP Parser
+PHP Parser:
+
+PHP scripts are executed by a PHP parser, which interprets the PHP code and generates HTML output.
+When a client requests a PHP page from a web server, the server passes the PHP file to the PHP parser for execution.
