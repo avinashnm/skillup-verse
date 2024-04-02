@@ -1,0 +1,5 @@
+Structure of PHP
+PHP Structure:
+
+PHP code is enclosed within <?php ?> tags, indicating the beginning and end of PHP code blocks.
+PHP files typically have a .php extension and can contain a mix of PHP code and HTML markup.

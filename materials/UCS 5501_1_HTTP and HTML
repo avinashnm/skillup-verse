@@ -1,0 +1,15 @@
+HTTP and HTML
+HTTP (Hypertext Transfer Protocol):
+
+HTTP is the foundation of data communication on the World Wide Web.
+It's a protocol used for transmitting hypertext requests and responses between web servers and clients.
+HTTP operates as a request-response protocol, where a client sends a request to a server, and the server responds with the requested resource.
+HTML (Hypertext Markup Language):
+
+HTML is the standard markup language for creating web pages.
+It defines the structure and content of web pages using elements, tags, and attributes.
+HTML documents consist of nested elements representing the hierarchical structure of content, such as headings, paragraphs, lists, and links.
+Benefits:
+
+HTTP enables efficient communication between web servers and clients, facilitating the retrieval and display of web content.
+HTML provides a standardized way to structure web pages, ensuring consistency and interoperability across different browsers and platforms.
