@@ -50,8 +50,9 @@
     color: hsl(180, 80%, 70%);
     font-size: 18px;
     height: 20px;
-    margin: 8px 0px 0px 15px;
+    margin: 8px 0px 40px 15px;
     text-decoration: underline;
+    text-underline-offset: 10px;
 }
 
 .course-name-container
@@ -66,9 +67,10 @@
     flex-direction: column;
     background-color: hsl(230, 50%, 30%);
     max-width: 20vw;
-    min-height: 100vh;
+    height: 100vh;
     padding-right: 10px;
-    overflow: hidden !important;
+    padding-bottom: 100px;
+    overflow-y: auto !important;
 }
 
 .logo-container {
@@ -178,5 +180,47 @@ a {
     overflow-y: scroll !important;
     width: 80vw;
     height: 100vh;
-    background-color: black;
+}
+.course-content-section {
+    background-color: white;
+    display: flex;
+    width: 80vw;
+    height: 40px;
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.5);
+}
+.course-desc {
+    display: flex;
+    font-size: 20px;
+    color: hsl(230, 50%, 30%);
+    margin-top: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.ms-course-title
+{
+    margin-left: 20px;
+}
+.chapter-dropdown{
+    width: 20vw !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+}
+.chapter-details-dd{
+    color: white;
+    width: 100%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.chapter-btn{
+    margin-bottom: 20px;
+    width: 20vw !important;
+    text-align: left;
+}
+.dd-chapter-no{
+    font-size: 16px;
+}
+.dd-chapter-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
 }

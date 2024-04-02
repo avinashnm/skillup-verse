@@ -38,6 +38,15 @@ if(isset($_GET['courseId'])) {
     $stmt->bind_result($courseTitle);
     $stmt->fetch();
     $stmt->close();
+
+    // Fetch chapters from the database
+    $sql = "SELECT chapter_id, chapter_number, chapter_title FROM chapters WHERE course_id = ? ORDER BY chapter_number";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $courseId);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $chapters = $result->fetch_all(MYSQLI_ASSOC);
+    $stmt->close();
 } else {
     // If course ID is not provided in URL parameters, redirect to learning page
     header("Location: learning_page.php");
@@ -101,48 +110,34 @@ if(isset($_GET['courseId'])) {
             <div class="back-icon-container">
                 <a href="learning-page.php"><img class="back-icon" src="assets/icons/back-icon.png"></a>
                 <span class="content-hdn">CONTENTS</span>
+            </div>   
+            <div class="chapter-dropdown">
+                <?php foreach($chapters as $chapter): ?>
+                      <button class="btn chapter-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" aria-expanded="false">
+                            <span class="chapter-details-dd">  
+                            <span class="dd-chapter-no">Chapter <?php echo $chapter['chapter_number']; ?> </span></br>
+                            <span class="dd-chapter-title"><?php echo $chapter['chapter_title']; ?> </span>
+                            </span>
+                      </button>
+                      <div class="collapse" id="collapseExample">
+                      <ul>
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                      </div>
+                    
+                <?php endforeach; ?>
             </div>
-            <div class="nav-profile-container">
-                <div class="nav-container">
-                    <a href="student-home-page.php">
-                        <div class="full-nav home-nav" id="home-nav">
-                            <div class="icon-container">
-                                <img class="icon home-icon" src="assets/icons/home-icon-dark.png" />
-                            </div>
-                            <div class="desc-container">
-                                <p class="nav-desc home-desc">Home</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href=#>
-                        <div class="full-nav dashboard-nav">
-                            <div class="icon-container">
-                                <img class="icon dashboard-icon" src="assets/icons/dashboard-icon.png" />
-                            </div>
-                            <div class="desc-container">
-                                <p class="nav-desc dashboard-desc">Dashboard</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href=#>
-                        <div class="full-nav courses-nav">
-                            <div class="icon-container">
-                                <img class="icon courses-icon" src="assets/icons/book-icon-white.png" />
-                            </div>
-                            <div class="desc-container">
-                                <p class="nav-desc courses-desc">My Learning</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-            
         </div>
-        <div class="course-content-section">
-                <h2>Course Content</h2>
-                <p>Course ID: <?php echo $courseId; ?></p>
-                <p>Course Title: <?php echo $courseTitle; ?></p>
+        <div class="main-section">
+            <div class="course-content-section">
+                <div class="course-desc">
+                    <div><p class="ms-course-id"><?php echo $courseId; ?></p></div>
+                    <div><p class="ms-course-title"><?php echo $courseTitle; ?></p></div>
+                </div>
             </div>
+        </div>
+    </div>
 </body>
 </html>
