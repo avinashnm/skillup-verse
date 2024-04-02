@@ -142,7 +142,7 @@ $name = $_SESSION['name'];
                     </div>
                 </div>
 
-                <div class="card h-100 course-card" data-course-id="UCA-1502">
+                <div class="card h-100 course-card" data-course-id="UCS-1502">
                     <img src="assets/images/course-7.jpg" class="card-img-top card-img" alt="...">
                     <div class="card-body course-body">
                         <h5 class="card-title course-title double-line-title">Computer Organization and Architecture</h5>
