@@ -45,7 +45,22 @@ if(isset($_GET['courseId'])) {
     $stmt->bind_param("s", $courseId);
     $stmt->execute();
     $result = $stmt->get_result();
-    $chapters = $result->fetch_all(MYSQLI_ASSOC);
+    $chapters = [];
+    while ($row = $result->fetch_assoc()) {
+        $chapter = $row;
+        $materials_sql = "SELECT material_name FROM uploaded_files WHERE chapter_number = ? AND course_id = ?";
+        $materials_stmt = $conn->prepare($materials_sql);
+        $materials_stmt->bind_param("ss", $chapter['chapter_number'], $courseId);
+        $materials_stmt->execute();
+        $materials_result = $materials_stmt->get_result();
+        $materials = [];
+        while ($material_row = $materials_result->fetch_assoc()) {
+            $materials[] = $material_row;
+        }
+        $chapter['materials'] = $materials;
+        $chapters[] = $chapter;
+        $materials_stmt->close();
+    }
     $stmt->close();
 } else {
     // If course ID is not provided in URL parameters, redirect to learning page
@@ -113,21 +128,25 @@ if(isset($_GET['courseId'])) {
             </div>   
             <div class="chapter-dropdown">
                 <?php foreach($chapters as $chapter): ?>
-                      <button class="btn chapter-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" aria-expanded="false">
-                            <span class="chapter-details-dd">  
-                            <span class="dd-chapter-no">Chapter <?php echo $chapter['chapter_number']; ?> </span></br>
-                            <span class="dd-chapter-title"><?php echo $chapter['chapter_title']; ?> </span>
-                            </span>
-                      </button>
-                      <div class="collapse" id="collapseExample">
-                      <ul>
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                      </div>
-                    
+    <button class="btn chapter-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $chapter['chapter_id']; ?>" aria-expanded="false" aria-controls="collapse<?php echo $chapter['chapter_id']; ?>">
+        <span class="chapter-details-dd">  
+            <span class="dd-chapter-no">Chapter <?php echo $chapter['chapter_number']; ?> </span><br>
+            <span class="dd-chapter-title"><?php echo $chapter['chapter_title']; ?> </span>
+        </span>
+    </button>
+    <div class="collapse" id="collapse<?php echo $chapter['chapter_id']; ?>">
+        <ul>
+            <?php if (!empty($chapter['materials'])): ?>
+                <?php foreach ($chapter['materials'] as $material): ?>
+                    <li><a class="dropdown-item" href="#"><?php echo $material['material_name']; ?></a></li>
                 <?php endforeach; ?>
+            <?php else: ?>
+                <li>Materials are yet to be uploaded</li>
+            <?php endif; ?>
+        </ul>
+    </div>
+<?php endforeach; ?>
+
             </div>
         </div>
         <div class="main-section">

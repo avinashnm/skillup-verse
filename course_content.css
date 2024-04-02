@@ -69,7 +69,6 @@
     max-width: 20vw;
     height: 100vh;
     padding-right: 10px;
-    padding-bottom: 100px;
     overflow-y: auto !important;
 }
 
@@ -200,11 +199,15 @@ a {
 {
     margin-left: 20px;
 }
-.chapter-dropdown{
+.chapter-dropdown {
     width: 20vw !important;
-    overflow-y: scroll !important;
     overflow-x: hidden !important;
+    height: auto !important; /* Ensure height is set to auto */
+    /* Adjust margins or paddings if necessary */
+    margin-top: 10px;
+    margin-bottom: 100px;
 }
+
 .chapter-details-dd{
     color: white;
     width: 100%;
