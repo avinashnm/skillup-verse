@@ -1,0 +1,75 @@
+
+PHP Functions and Objects
+PHP Functions:
+
+Functions in PHP are blocks of code that perform a specific task and can be reused throughout a script or application.
+They help in organizing code, improving readability, and promoting code reusability.
+PHP provides a wide range of built-in functions for common tasks, and developers can also create their own custom functions.
+Defining a Function:
+
+To define a function in PHP, use the function keyword followed by the function name and parentheses containing optional parameters.
+The function body is enclosed within curly braces {}.
+Syntax:
+php
+Copy code
+function functionName($param1, $param2, ...) {
+    // Function body
+}
+Example:
+php
+Copy code
+function greet($name) {
+    echo "Hello, $name!";
+}
+In the example above, greet is the function name, and $name is a parameter passed to the function.
+To call a function, simply use its name followed by parentheses containing any required arguments.
+Example:
+php
+Copy code
+greet("John");
+Function Parameters:
+
+Parameters are variables that are declared in the function definition and used to accept input values when the function is called.
+Functions can accept zero or more parameters, separated by commas within the parentheses.
+Parameters can have default values, making them optional.
+Example:
+php
+Copy code
+function add($num1, $num2 = 0) {
+    return $num1 + $num2;
+}
+echo add(5); // Output: 5
+echo add(5, 3); // Output: 8
+Return Statement:
+
+Functions can return values using the return statement.
+The return statement terminates the function execution and passes the specified value back to the caller.
+Example:
+php
+Copy code
+function add($num1, $num2) {
+    return $num1 + $num2;
+}
+$result = add(5, 3);
+echo $result; // Output: 8
+Scope of Variables:
+
+Variables declared inside a function have local scope, meaning they can only be accessed within that function.
+Variables declared outside of any function have global scope, making them accessible throughout the entire script.
+Example:
+php
+Copy code
+$globalVar = 10;
+
+function test() {
+    $localVar = 5;
+    echo $globalVar; // Error: $globalVar is not accessible
+}
+
+test();
+echo $localVar; // Error: $localVar is not accessible
+Conclusion:
+
+PHP functions provide a way to encapsulate reusable code blocks and improve code organization.
+By defining functions with parameters and return values, developers can create modular and maintainable code.
+Understanding function scope is crucial for managing variable visibility and avoiding conflicts in PHP scripts.
