@@ -202,6 +202,7 @@ a {
 .chapter-dropdown {
     width: 20vw !important;
     overflow-x: hidden !important;
+    word-wrap: break-word !important;
     height: auto !important; /* Ensure height is set to auto */
     /* Adjust margins or paddings if necessary */
     margin-top: 10px;
@@ -227,3 +228,20 @@ a {
     font-weight: bold;
     margin-left: 10px;
 }
+.materials-container {
+    width: 20vw !important;
+    padding-right: 20px;
+    word-wrap: break-word !important;
+}
+.material {
+    color: white;
+    width: 100% !important;
+    margin-bottom: 15px;
+    list-style-type: circle;
+    padding-left: 10px;
+    padding-right: 100px;
+    word-wrap: break-word !important;
+    hyphens: auto;
+}
+
+
