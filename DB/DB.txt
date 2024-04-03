@@ -1,0 +1,194 @@
+
+CREATE TABLE `chapters` (
+  `chapter_id` int(11) NOT NULL,
+  `course_id` varchar(20) NOT NULL,
+  `chapter_number` int(11) NOT NULL,
+  `chapter_title` varchar(255) NOT NULL
+);
+
+
+INSERT INTO `chapters` (`chapter_id`, `course_id`, `chapter_number`, `chapter_title`) VALUES
+(1, 'UCS 1502', 2, 'COA Basics'),
+(2, 'UCS 1502', 3, 'Coa Intermediate'),
+(6, 'UCS 6702', 1, 'IPython: Beyond Normal Python'),
+(7, 'UCS 6702', 2, 'Data Manipulation with Pandas'),
+(8, 'UCS 6702', 3, 'Visualization with Matplotlib'),
+(9, 'UCS 6702', 4, 'Machine Learning'),
+(10, 'UCS 6702', 5, 'Unsupervised Learning'),
+(11, 'UCS 5501', 1, 'Introduction to Dynamic web content'),
+(12, 'UCS 5501', 2, 'PHP functions and objects'),
+(13, 'UCS 5501', 3, 'PHP arrays'),
+(14, 'UCS 5501', 4, 'Form Handling'),
+(15, 'UCS 5501', 5, 'Practical MySQL');
+
+
+
+
+CREATE TABLE `course_details` (
+  `course_id` varchar(20) NOT NULL,
+  `course_title` varchar(255) NOT NULL,
+  `category` varchar(50) NOT NULL,
+  `semester` int(11) NOT NULL,
+  `department` varchar(25) DEFAULT NULL,
+  `course_description` varchar(255) NOT NULL,
+  `instructor_username` varchar(255) DEFAULT NULL
+);
+
+INSERT INTO `course_details` (`course_id`, `course_title`, `category`, `semester`, `department`, `course_description`, `instructor_username`) VALUES
+('UCA 1301', 'Mathematics for Computer Science', 'Allied Required (AR)', 1, 'Computer Science', '1. This course is designed to understand the mathematical foundations needed for computer science.\r\n2. This course aims to explore the various concepts of numerical and computational techniques for problem\r\nsolving.\r\n3. This course focuses on the fundamen', 'gangadevi'),
+('UCS 1501', 'Web Programming Lab', 'Major Core (MC)', 1, 'Computer Science', '1. Web Programming course enables standard website design using HTML, CSS, JavaScript and Angular JS.\r\n2. The aim of the course is to introduce planning and designing syntactically correct effective web pages.\r\n3. JavaScript is commonly utilized on the cl', 'justinsophia'),
+('UCS 1502', 'Computer Organization and Architecture', 'Allied Optional (AO)', 1, 'Computer Science', '', 'jeraldinico'),
+('UCS 2501', 'Object Oriented Programming using C++', 'Major Core (MC)', 2, 'Computer Science', '1. This course aims to introduce the Objects Oriented Programming (OOP) concepts.\r\n2. The course illustrates to define and use classes and objects.\r\n3. It aims to solve the real-world problems using OOPs concepts.\r\n4. It facilitates code reusability in pr', 'justinsophia'),
+('UCS 2503', 'Operating Systems', 'Major Core (MC)', 2, 'Computer Science', '1. This course describes the major services, structures, and components of Operating Systems.\r\n2. This course explains Process management, Memory management, Input Output Devices and file management,\r\nResource Management and Communication.\r\n3. It illustra', 'regina'),
+('UCS 3503', 'Data Structures', 'Major Core (MC)', 3, 'Computer Science', '1. This course introduces the fundamentals of data structures.\r\n2. It deals with the representation and utilization of abstract data types.\r\n3. This aims at designing efficient algorithms to handle the data.\r\n4. This course provides the systematic organiz', 'rexline'),
+('UCS 5501', 'PHP and MySql', 'Major Core (MC)', 5, 'Computer Science', '1. PHP is the most popular free, open source and server-side scripting language.\r\n2. MySQL is a Relational Database Management System (RDBMS) which is free and open source.\r\n3. This course gives in-depth knowledge of developing web applications usingPHP a', 'regina'),
+('UCS 5503', 'Web Programming with ASP.net', 'Major Core (MC)', 5, 'Computer Science', '1. ASP.NET is a framework to design web applications, web services, and dynamic content-driven websites.\r\n2. It deals with ASP.NET Server Controls, HTML Controls, Validation Controls and Data Controls.\r\n3. This course introduces database-driven web develo', 'mariavinitha'),
+('UCS 5601', 'Cyber Security', 'Major Elective (ME)', 5, 'Computer Science', '1. This course is designed to investigate cybercrime and its characteristics.\r\n2. It helps to identify various kinds of crimes and their nature to take corresponding actions.\r\n3. It also provides the fundamentals of investigating and demonstrating forensi', 'jasminejinitha'),
+('UCS 5604', 'Data Communication and Networks', 'Major Core (MC)', 5, 'Computer Science', '1. This course outlines the fundamental techniques of computer networks.\r\n2. This course deals with the network architecture and the functionalities of different layers.\r\n3. It also focuses on network principles, data transmission standards and transmissi', 'mariavinitha'),
+('UCS 6702', 'Data Science Using Python', 'Major Core (MC)', 6, 'Computer Science', '1. Data science deals with huge volume of data, discover unseen patterns, derive meaningful information, and make\r\nbusiness decisions.\r\n2. This course covers complex machine learning algorithms to build predictive models using python.\r\n3. It enables bette', 'bharathidason');
+
+
+
+CREATE TABLE `instructor_course` (
+  `instructor_name` varchar(255) NOT NULL,
+  `course_id` varchar(255) NOT NULL
+);
+
+
+CREATE TABLE `instructor_details` (
+  `username` varchar(255) NOT NULL,
+  `full_name` varchar(255) NOT NULL,
+  `shift` enum('I','II') NOT NULL,
+  `department` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `assigned_courses` varchar(255) DEFAULT NULL
+);
+
+INSERT INTO `instructor_details` (`username`, `full_name`, `shift`, `department`, `password`, `created_at`, `assigned_courses`) VALUES
+('amaliasha', 'Amali Asha A', 'II', 'Computer Science', '$2y$10$uaMSPFgA1BTKD0NCI1wN.O.HswjktX/Rf0DglXLUhYXsF8689IW7e', '2024-03-15 14:52:33', NULL),
+('anandarajmd', 'Ananda Raj M D', 'II', 'Computer Science', '$2y$10$wRCGXYXFixVRfr1GxR4pVuijdN1t.sbGDSpk6QXh47vcAeMKaJQGq', '2024-03-15 15:09:24', NULL),
+('AntonySAlexander', 'Antony S. Alexander', 'II', 'Computer Science', '$2y$10$qRa3WxRelPNnBoOzGPKPA.9WeSrXH3IQ13Mzy8QG0LRfQLg/4RyzS', '2024-03-15 15:23:57', NULL),
+('bharathidason', 'Bharathidason S', 'II', 'Computer Science', '$2y$10$Ffjfwxt8OHkaOQ7H1N1gPubNT5IzX29hP1v.GN2COpI2qHzCUQKP.', '2024-03-15 16:04:12', NULL),
+('deepa', 'Deeba M', 'II', 'Computer Science', '$2y$10$U207HuRROhuZCYMepuFazOdbzOsqdHdA3/QIpWMBToXztCG9ROCha', '2024-03-15 14:52:51', NULL),
+('edison', 'Edison M', 'II', 'Computer Science', '$2y$10$dh2d9G4Cm/RaZrug/iY0l.qYHLhvCYvR/9oxkgRdHzpdNkq1onms2', '2024-03-15 14:54:31', NULL),
+('gangadevi', 'Gangadevi E', 'II', 'Computer Science', '$2y$10$y4qAwS46yYNWgNRwvwaaU.2O08NGKnQ73McO0h/SqeZx16oqb8eh6', '2024-03-15 14:53:46', NULL),
+('jasminejinitha', 'Jasmine Jinitha A', 'II', 'Computer Science', '$2y$10$3IbxqRV2iyBMsmfhN3reK.w0bf6DGtqYpOjivgjpVZoDc.qf2eALa', '2024-03-15 14:53:23', NULL),
+('jeraldinico', 'Jerald Inico J', 'II', 'Computer Science', '$2y$10$LZtWBb8XdLZwkprYEuh3z.anzUS.cCOupZT7AG6f4b2u3ZhRrrdny', '2024-03-15 15:10:50', NULL),
+('justinsophia', 'Justin Sophia I', 'II', 'Computer Science', '$2y$10$HG.zTn30JbN723cqPUntsOUi0XE11QDnQo22sAx5/KdmT9jL0hjEK', '2024-03-15 14:50:42', NULL),
+('mariavinitha', 'Maria Vinitha A', 'II', 'Computer Science', '$2y$10$ySvC3yBU5nQO52iTcLcCoedFlQc/bbI/XyBDf5Df/27rhot1/jHba', '2024-03-15 14:51:10', NULL),
+('michaelraj', 'Michael Raj', 'I', 'Tamil', '$2y$10$kj9ASC6dbo1Oh44O6ts8KujmWDr1er8mhRYOLV9kL2YKc95OqX71K', '2024-03-15 15:39:46', NULL),
+('nesterjeyakumar', 'Nester Jeyakumar M', 'II', 'Computer Science', '$2y$10$bIy6jQZalCcN6F3.NjPuAu6oNAtVJyGsbYB718J1pVPGJCLsTpyl.', '2024-03-15 14:55:28', NULL),
+('regina', 'Regina M', 'II', 'Computer Science', '$2y$10$asOzgQOka5Fvycf42OCTBOHPbfcEl4YQT1er3taozq9lv1BwmgFOm', '2024-03-15 14:51:40', NULL),
+('rexline', 'Rexline S. J.', 'II', 'Computer Science', '$2y$10$A7t0bKgqYt.cXNvK3wdcw.eTZAxiSP5jqTQP4c5Ed11YEzgawmgXC', '2024-03-15 14:50:07', NULL),
+('stella', 'Stella A', 'II', 'Computer Science', '$2y$10$LrIBKdNO/vOKKvfszvi7HuEYgOvxbaJ/mv/OqOPRskxw1/RqL5ZPi', '2024-03-15 14:54:53', NULL),
+('venkatalakshmi', 'Venkatalakshmi S', 'II', 'Computer Science', '$2y$10$2Y909oN3LAYbJPKrIXZF0ubeAetmibcDHut/fTbSxDsY6XVCTzbTS', '2024-03-15 14:52:07', NULL),
+('vijaya', 'Vijaya S', 'II', 'Computer Science', '$2y$10$tVfc5bNoXgW.AVvEK2./SORGTiAP2.vzgqnYrW61Ir8/qGQuOlNG6', '2024-03-15 14:54:09', NULL);
+
+
+
+CREATE TABLE `student_details` (
+  `full_name` varchar(255) NOT NULL,
+  `deptno` varchar(50) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+);
+
+
+
+INSERT INTO `student_details` (`full_name`, `deptno`, `email`, `password`, `created_at`) VALUES
+('Jodhish Raj S', '21-UCA-032', '21uca032@loyolacollege.edu', '$2y$10$ylUYdoCCelf1HAzP1S/8gOboCpi0wzBenXUfU/osvbaP3kKvldjhO', '2024-03-04 17:32:12'),
+('Krishnan', '21-UCS-001', '21ucs001@loyolacollege.edu', '$2y$10$zAR5Z/O/qBKuvpDhdSLJAef7xHGEtIFu5/l1cPwpivzpzHqAtPpLy', '2024-03-04 17:25:40'),
+('Raphael Augusto A', '21-UCS-002', '21ucs002@loyolacollege.edu', '$2y$10$kusYZgO734jhNJpxwpPcpuQhWI.AjVaHuWwYGUZZyDM/cqoqkLVHC', '2024-03-04 19:10:15'),
+('John Vincent A', '21-UCS-005', '21ucs005@loyolacollege.edu', '$2y$10$zMi3wo3LHrFEgWcrnwPDNufKHrI.MYX5wVM3yTpYJg7WKJYJ6c0iC', '2024-03-04 19:35:40'),
+('Samsun Sylvester S', '21-UCS-006', '21ucs006@loyolacollege.edu', '$2y$10$eT.UTMTKsGAOMrJ9iS.TN.2MjMejFHuA/YV.e6TFchozJeKv6WolS', '2024-03-04 19:12:43'),
+('Avinash N', '21-UCS-008', '21ucs008@loyolacollege.edu', '$2y$10$7/0UFS.SHk1uUDd76O0QQeYzAeTpcXDwi1VSuZq.ro5.O/wUi8L7O', '2024-02-27 16:05:51'),
+('Dinesh Raju S', '21-UCS-010', '21ucs010@loyolacollege.edu', '$2y$10$prIzV2Xcd/W7j7fDF3TjE.JaoKS5Y2WIta9Aud1uHNsm2inWZgA/G', '2024-03-04 19:24:45'),
+('Pinniti Swapna Rishi', '21-UCS-011', '21ucs011@loyolacollege.edu', '$2y$10$EdwqhK3l5dctAeM7b4RGl.yokz/31Jrgqlcm9F0.aLPasRfHogltq', '2024-03-04 19:37:44');
+
+
+
+CREATE TABLE `uploaded_files` (
+  `material_id` varchar(255) NOT NULL,
+  `material_name` varchar(255) NOT NULL,
+  `file_name` varchar(255) DEFAULT NULL,
+  `instructor_username` varchar(255) DEFAULT NULL,
+  `upload_date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `chapter_number` int(11) DEFAULT NULL,
+  `course_id` varchar(20) DEFAULT NULL
+);
+
+
+
+INSERT INTO `uploaded_files` (`material_id`, `material_name`, `file_name`, `instructor_username`, `upload_date`, `chapter_number`, `course_id`) VALUES
+('UCS 5501_1_Apache Web Server', 'Apache Web Server', 'Apache Web Server.txt', 'regina', '2024-03-15 10:14:45', 1, 'UCS 5501'),
+('UCS 5501_1_Benefits of PHP, MySQL, Javascript and CSS', 'Benefits of PHP, MySQL, Javascript and CSS', 'Benefits of PHP, MySQL, JavaScript,.txt', 'regina', '2024-03-15 10:14:20', 1, 'UCS 5501'),
+('UCS 5501_1_Calling PHP Parser', 'Calling PHP Parser', 'Calling PHP Parser.txt', 'regina', '2024-03-15 10:15:56', 1, 'UCS 5501'),
+('UCS 5501_1_Control flow in PHP', 'Control flow in PHP', 'Control Flow in PHP.txt', 'regina', '2024-03-15 10:16:39', 1, 'UCS 5501'),
+('UCS 5501_1_HTTP and HTML', 'HTTP and HTML', 'HTTP and HTML.txt', 'regina', '2024-03-15 10:13:44', 1, 'UCS 5501'),
+('UCS 5501_1_Introduction to PHP', 'Introduction to PHP', 'Introduction to PHP.txt', 'regina', '2024-03-15 10:15:15', 1, 'UCS 5501'),
+('UCS 5501_1_Structure of PHP', 'Structure of PHP', 'Structure of PHP.txt', 'regina', '2024-03-15 10:16:17', 1, 'UCS 5501'),
+('UCS 5501_2_Defining a Function', 'Defining a Function', 'Defining a Function.txt', 'regina', '2024-03-15 10:44:06', 2, 'UCS 5501'),
+('UCS 5501_3_Basic Access', 'Basic Access', 'PHP Arrays - Basic Access.txt', 'regina', '2024-03-15 10:45:23', 3, 'UCS 5501'),
+('UCS 5501_4_Building Forms', 'Building Forms', 'Form Handling - Building Forms.txt', 'regina', '2024-03-15 10:46:54', 4, 'UCS 5501'),
+('UCS 5501_5_Creating a Table with Key Constraints', 'Creating a Table with Key Constraints', 'Practical MySQL Creating a Table with constraint.txt', 'regina', '2024-03-15 10:49:10', 5, 'UCS 5501');
+
+
+ALTER TABLE `chapters`
+  ADD PRIMARY KEY (`chapter_id`),
+  ADD KEY `course_id` (`course_id`);
+
+
+ALTER TABLE `course_details`
+  ADD PRIMARY KEY (`course_id`),
+  ADD KEY `fk_instructor_username` (`instructor_username`);
+
+
+ALTER TABLE `instructor_course`
+  ADD PRIMARY KEY (`instructor_name`,`course_id`),
+  ADD KEY `course_id` (`course_id`);
+
+
+ALTER TABLE `instructor_details`
+  ADD PRIMARY KEY (`username`),
+  ADD KEY `fk_assigned_courses` (`assigned_courses`);
+
+
+ALTER TABLE `student_details`
+  ADD PRIMARY KEY (`deptno`);
+
+
+ALTER TABLE `uploaded_files`
+  ADD PRIMARY KEY (`material_id`),
+  ADD KEY `course_id` (`course_id`),
+  ADD KEY `instructor_username` (`instructor_username`),
+  ADD KEY `chapter_number` (`chapter_number`);
+
+
+
+ALTER TABLE `chapters`
+  MODIFY `chapter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+
+ALTER TABLE `chapters`
+  ADD CONSTRAINT `chapters_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `course_details` (`course_id`);
+
+
+ALTER TABLE `course_details`
+  ADD CONSTRAINT `fk_instructor_username` FOREIGN KEY (`instructor_username`) REFERENCES `instructor_details` (`username`) ON DELETE SET NULL;
+
+
+ALTER TABLE `instructor_course`
+  ADD CONSTRAINT `instructor_course_ibfk_1` FOREIGN KEY (`instructor_name`) REFERENCES `instructor_details` (`username`),
+  ADD CONSTRAINT `instructor_course_ibfk_2` FOREIGN KEY (`course_id`) REFERENCES `course_details` (`course_id`);
+
+
+ALTER TABLE `instructor_details`
+  ADD CONSTRAINT `fk_assigned_courses` FOREIGN KEY (`assigned_courses`) REFERENCES `course_details` (`course_id`) ON DELETE CASCADE;
+
+
+ALTER TABLE `uploaded_files`
+  ADD CONSTRAINT `uploaded_files_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `course_details` (`course_id`),
+  ADD CONSTRAINT `uploaded_files_ibfk_2` FOREIGN KEY (`instructor_username`) REFERENCES `instructor_details` (`username`);
+
